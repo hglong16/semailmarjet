@@ -1,0 +1,1246 @@
+<mjml>
+ <mj-head>
+   <mj-breakpoint width="300px" />
+   <mj-style>
+     a {
+ color: #161616;
+ text-decoration: none;
+ text-underline-offset: none;
+
+}
+
+
+.sub-img {
+ width: 110px!important;
+}
+
+.sub-img img{
+    width: 120px!important;
+    height: auto!important;
+      position: absolute;
+  clip: rect(0px,120px,120px,0px)!important;
+     
+     }
+
+@media (min-width: 385px) {
+ .big-title p {
+   font-size: 42px !important;
+   line-height: 57.2px !important;
+ }
+ .big-title td {
+   width: 300px !important;
+ }
+ .main-image img{
+   padding: 16px 0 6px 0 !important;
+ }
+ .author-card {
+   padding: 18px 0 0 0 !important;
+ }
+ .sub-hr {
+   padding: 11px 0 26px 0 !important;
+ }
+ .sub-har {
+   padding: 40px 0 18px 0!important;
+ }
+ .img-author{
+   padding:5px 27px 0 0!important;
+ }
+ .img-author img {
+   width: 32px !important;
+   height: 32px !important;
+   bottom: 0 !important;
+ }
+ .sub-img {
+   width: 128px !important;
+ }
+ .sub-img img{
+   width: 128px !important;
+ }
+ .sub-content {
+   margin: 0 0 0 6.5%!important;
+   width: calc(93.5% - 128px)!important;
+ }
+ .sub-2 {
+   padding: 0 0 48px 0!important;
+ }
+ .big-title {
+   width:55% !important;
+ }
+}
+
+@media (min-width: 520px) {
+ .big-title p {
+   font-size: 38px !important;
+   line-height: 50px !important;
+ }
+ .big-title {
+   width: 70% !important;
+ }
+ .sub-title {
+   padding: 6px 0 14px 0 !important;
+ }
+}
+
+a:hover,
+img:hover {
+ color: #161616;
+ opacity: 0.7;
+}
+
+.container {
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+}
+
+.sub-img {
+ float: left;
+ padding: 0 0 0 0;
+ width: 120px;
+
+}
+
+.sub-img img {
+ border-radius: 3px;
+}
+
+.sub-content {
+ float: left;
+ width: calc(100% - 148px);
+
+ margin: 0;
+ padding: 0;
+}
+
+.sub-content p {
+ font-size: 16px;
+ line-height: 21.79px;
+ font-weight: 700;
+}
+
+.sub-author-container {
+ text-align: left;
+ max-width: 420px;
+ line-height: 0px;
+ float: left;
+ height: 36px;
+}
+/*# sourceMappingURL=final.css.map */
+
+   </mj-style>
+   <mj-font
+     name="Noto Serif"
+     href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@0,400;0,700;1,400;1,700&display=swap"
+   />
+   <mj-font
+     name="Noto Sans"
+     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+   />
+   <mj-font
+     name="Raleway"
+     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+   />
+   
+   <mj-attributes>
+     <mj-all padding="0px" align="center" />
+     <mj-section background-color="#f9f9f9"> </mj-section>
+     <<mj-text color="#161616" text-decoration="none"> </mj-text>
+   </mj-attributes>
+ </mj-head>
+ <mj-body width="680px">
+   <!-- Headder -->
+
+   <mj-wrapper>
+     <mj-section css-class="">
+       <mj-column width="100%" padding="27px 0 0 0">
+         <mj-image
+           src="./img/logo-16px.png"
+           alt="Spiderum log"
+           width="166px"
+           height="166px"
+         />
+       </mj-column>
+       <mj-column css-class="big-title" width="80%" padding="22px 0 0 0">
+         <mj-text
+           font-family="Noto Serif, serif"
+           font-size="32px"
+           align="center"
+           line-height="43.58px"
+           font-weight="500"
+         >
+           <p>Những bài viết thú vị từ Spiderum.</p>
+         </mj-text>
+       </mj-column>
+       <!-- user-card -->
+       <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+         <mj-raw>
+           <div
+             style="
+               display: flex;
+               align-item: center;
+               justify-content: center;
+               height: 36px;
+             "
+           >
+             <div style="padding: 5px 12px 0 0; height: 36px">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-avatar/953eeaa0096811ec9ec5131d8341f662.jpeg"
+                 alt=""
+                 style="width: 32px; height: 32px; border-radius: 50%"
+               />
+             </div>
+             <div
+               style="
+                 text-align: left;
+                 max-width: 420px;
+                 line-height: 0px;
+
+                 height: 36px;
+               "
+             >
+               <div>
+                 <p
+                   style="
+                     width: auto;
+                     font-size: 14px;
+                     color: #161616;
+                     font-family: 'Noto Sans', sans-serif;
+                   "
+                 >
+                   Danh cho <span style="font-weight: 700">Thcccccccc</span>
+                 </p>
+                 <p
+                   style="
+                     font-size: 12px;
+                     color: #616161;
+                     font-family: 'Noto Sans', sans-serif;
+                     line-height: 5px;
+                   "
+                 >
+                   @nguudau
+                 </p>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+     </mj-section>
+   </mj-wrapper>
+
+   <!-- Content card -->
+   <mj-wrapper>
+     <mj-section background-color="#E3EBF6" padding="12px 0 0 0">
+       <!-- card header -->
+       <mj-column width="100%">
+         <mj-text
+           font-family="Raleway, sans-serif"
+           font-size="20px"
+           line-height="25.08px"
+           font-weight="700"
+         >
+           <p>Được xem nhiều nhất</p>
+         </mj-text>
+         <mj-divider
+           border-width="1px"
+           border-color="#616161"
+           padding="16px 0 0 0"
+           width="91%"
+         />
+       </mj-column>
+       <!-- Main content -->
+       <mj-column css-class="main-image" width="89.58%" padding="10px 0 0 0">
+         <mj-image
+           href="https://spiderum.com/bai-dang/Nguoi-trong-muon-nghe-Kenh-podcast-co-gi-3yxsRRdQBy03"
+           border-radius="3px"
+           src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/e17ae7700b2011ec929d4505f162a47e.jpg"
+           alt='Kênh podcast "Người trong muôn nghề" đã chính thức ra mắt trên các nền tảng phát thanh trực tuyến.'
+         />
+         <!-- Category | Time -->
+         <mj-text
+           font-size="13px"
+           line-height="0px"
+           padding="11px 0 0 0"
+           align="left"
+           font-family="Noto Sans, sans-serif"
+         >
+           <p>
+             <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
+               >  Khoa học - Công nghệ  
+               <span style="font-size: 12px; color: #616161"
+                 > |  </span
+               ></a
+             >
+           </p>
+         </mj-text>
+         <!-- Title -->
+         <mj-text
+           font-size="20px"
+           font-weight="700"
+           line-height="25.08px"
+           padding="10px 0 0 0"
+           align="left"
+           font-family="Raleway, sans-serif"
+         >
+           <a
+             href="https://spiderum.com/bai-dang/Nguoi-trong-muon-nghe-Kenh-podcast-co-gi-3yxsRRdQBy03"
+           >
+             Người trong muôn nghề: Kênh podcast có gì?</a
+           >
+         </mj-text>
+         <!-- Description -->
+         <mj-text
+           css-class="main-des"
+           font-size="16px"
+           line-height="21.79px"
+           font-weight="400"
+           padding="16px 0 0 0"
+           align="left"
+           font-family="Nota Sans, sans-serif"
+           color="#616161"
+         >
+           <a
+             style="color: #616161"
+             href="https://spiderum.com/bai-dang/Nguoi-trong-muon-nghe-Kenh-podcast-co-gi-3yxsRRdQBy03"
+           >
+             Kênh podcast "Người trong muôn nghề" đã chính thức ra mắt trên các nền tảng phát thanh trực tuyến.
+           </a>
+         </mj-text>
+       </mj-column>
+
+       <!-- author -->
+       <mj-column css-class="author-card" width="89.58%" padding="13px 0 0 0">
+         <mj-raw>
+           <div style="display: flex; align-items: center; height: 36px">
+             <div style="padding: 5px 12px 0 0; height: 36px">
+               <a href="https://spiderum.com/nguoi-dung/spiderum">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c3edf44040da11e88c56e97b1d97fbce.png"
+                 alt=""
+                 style="width: 32px; height: 32px; border-radius: 50%"
+               /></a>
+             </div>
+             <div
+               style="
+                 text-align: left;
+                 max-width: 420px;
+                 line-height: 0px;
+
+                 height: 36px;
+               "
+             >
+               <div>
+                   <a href="https://spiderum.com/nguoi-dung/spiderum">
+                 <p
+                   style="
+                     width: auto;
+                     font-size: 14px;
+                     color: #161616;
+                     font-family: 'Noto Sans', sans-serif;
+                   "
+                 >
+                   <span style="font-weight: 700">Spiderum Team</span>
+                 </p>
+                 <p
+                   style="
+                     font-size: 12px;
+                     color: #616161;
+                     font-family: 'Noto Sans', sans-serif;
+                     line-height: 5px;
+                   "
+                 >
+                    1 tháng 9 
+                 </p>
+                 <a/>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+
+       <!-- hr subcontent 1 -->
+       <mj-column css-class="sub-hr" width="91%" padding="11px 0 10px 0">
+         <mj-divider border-width="1px" border-color="#e3e3e3" />
+       </mj-column>
+       <!-- sub-content 1 -->
+       <mj-column width="89.58%" padding="0 0 0 0">
+         <mj-raw>
+           <div class="container">
+             <!-- sub-img 1 -->
+             <div class="sub-img" style="margin: 5px 0 0 0">
+               <a href="https://spiderum.com/bai-dang/Phu-thuy-thoi-gian-lw8">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/9244bfb05d7411ea87866d53759a3817.jpg"
+                 alt="10 tuổi, tôi dành phần lớn thời gian rảnh để chơi Gameboy và đọc Doremon. Đây là một trong những điều tuyệt vời của tuổi thơ mà tôi..."
+               /> </a>
+             </div>
+             <!-- sub category -->
+             <div class="sub-content" style="margin: 0 0 0 18px">
+               <p style="font-size: 12px; line-height: 0px">
+                 <a href='https://spiderum.com/danh-muc/chuyen-tro-tam-su'> Chuyện trò - Tâm sự </a> |
+                 <span style="color: #616161"> </span>
+               </p>
+               <!-- sub title -->
+               <p class="sub-title" style="margin: 0; font-family:'Noto Sans', sans-serif; font-size: 14px;">
+                 <a
+                   href="https://spiderum.com/bai-dang/Phu-thuy-thoi-gian-lw8"
+                   >Phù thuỷ thời gian
+                 </a>
+               </p>
+               <div
+                 style="
+                   display: flex;
+                   align-items: center;
+                   position: relative;
+                   height: 36px;
+                 "
+               >
+                 <div
+                   class="img-author"
+                   style="
+                     padding: 5px 12px 0 0;
+                     height: 36px;
+
+                     height: 20px;
+                   "
+                 >
+                   <img
+                     src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg"
+                     alt=""
+                     style="
+                       width: 18px;
+                       height: 18px;
+                       border-radius: 50%;
+                       align-items: center;
+                       position: absolute;
+                       bottom: 5px;
+                     "
+                   />
+                 </div>
+                 <div class="sub-author-container" style="padding-left: 12px">
+                   <p
+                     class="author-name"
+                     style="
+                       font-size: 11px;
+                       color: #161616;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 0px;
+                     "
+                   ><a href="https://spiderum.com/nguoi-dung/Mytwingo">
+                     
+                     <span style="font-weight: 700">Absolutely</span>
+                   </p>
+                   <p
+                     style="
+                       font-size: 10px;
+                       color: #616161;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 5px;
+                     "
+                   >
+                      4 tháng 3 2020 </a>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+
+       <!-- hr subcontent 2 -->
+       <mj-column css-class="sub-har" width="91%" padding="11px 0 10px 0">
+         <mj-divider border-width="1px" border-color="#e3e3e3" />
+       </mj-column>
+
+       <mj-column css-class="sub-2" width="89.58%" padding="0 0 36px 0">
+         <mj-raw>
+           <div class="container">
+             <!-- sub-img 1 -->
+             <div class="sub-img" style="margin: 5px 0 0 0">
+             <a href="https://spiderum.com/bai-dang/Tu-Ton-Dan-Toc-Thai-Qua-Hay-Boi-Ban-La-Dua-Me-Tay-Vong-Ngoai-dhd">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/54d70de0f86711e89eafc1502ee13398.jpg"
+                 alt="Mình vừa có một cuộc tranh luận khá là sôi nổi trên một Group tập trung khá đông các bạn du học sinh, xem lại cảm thấy đây là chủ đề..."
+               /></a>
+             </div>
+             <!-- sub category -->
+             <div class="sub-content" style="margin: 0 0 0 18px">
+               <p style="font-size: 12px; line-height: 0px">
+                 <a href="https://spiderum.com/bai-dang/Tu-Ton-Dan-Toc-Thai-Qua-Hay-Boi-Ban-La-Dua-Me-Tay-Vong-Ngoai-dhd"> Quan điểm - Tranh luận </a> |
+                 <span style="color: #616161"> </span>
+               </p>
+               <!-- sub title -->
+               <p class="sub-title" style="margin: 0; font-family:'Noto Sans', sans-serif; font-size: 14px;">
+                 <a
+                   href="https://spiderum.com/bai-dang/Tu-Ton-Dan-Toc-Thai-Qua-Hay-Boi-Ban-La-Dua-Me-Tay-Vong-Ngoai-dhd"
+                   >Tự Tôn Dân Tộc Thái Quá Hay Bởi Bạn Là Đứa Me Tây Vọng Ngoại? 
+                 </a>
+               </p>
+               <div
+                 style="
+                   display: flex;
+                   align-items: center;
+                   position: relative;
+                   height: 36px;
+                 "
+               >
+                 <div
+                   class="img-author"
+                   style="
+                     padding: 5px 12px 0 0;
+                     height: 36px;
+
+                     height: 20px;
+                   "
+                 >
+                   <img
+                     src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/6a2a6c70908711e89fe93d3f5d0fbe59.jpg"
+                     alt=""
+                     style="
+                       width: 18px;
+                       height: 18px;
+                       border-radius: 50%;
+                       align-items: center;
+                       position: absolute;
+                       bottom: 5px;
+                     "
+                   />
+                 </div>
+                 <div class="sub-author-container" style="padding-left: 12px">
+                   <p
+                     class="author-name"
+                     style="
+                       font-size: 11px;
+                       color: #161616;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 0px;
+                     "
+                   ><a href="https://spiderum.com/nguoi-dung/Longnguyen1991">
+                     
+                     <span style="font-weight: 700">Nguyễn Ngọc Long</span>
+                   </p>
+                   <p
+                     style="
+                       font-size: 10px;
+                       color: #616161;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 5px;
+                     "
+                   >
+                      3 tháng 12 2018 </a>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+     </mj-section>
+   </mj-wrapper>
+   <!-- Content card 2 -->
+    <mj-wrapper>
+     <mj-section background-color="#E3EBF6" padding="12px 0 0 0">
+       <!-- card header -->
+       <mj-column width="100%">
+         <mj-text
+           font-family="Raleway, sans-serif"
+           font-size="20px"
+           line-height="25.08px"
+           font-weight="700"
+         >
+           <p>Hoạt động sôi nổi</p>
+         </mj-text>
+         <mj-divider
+           border-width="1px"
+           border-color="#616161"
+           padding="16px 0 0 0"
+           width="91%"
+         />
+       </mj-column>
+       <!-- Main content -->
+       <!-- Main content -->
+       <mj-column css-class="main-image" width="89.58%" padding="10px 0 0 0">
+         <mj-image
+           href="https://spiderum.com/bai-dang/Cau-Vang-Thoi-dai-khan-gia-ti-toe-lam-Thuong-De-i4i"
+           border-radius="3px"
+           src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/a3b17730c93f11e99368d7c9e46880f4.jpg"
+           alt="Gần đây rộ lên tin rằng truyện ngắn  Lão Hạc  của nhà văn Nam Cao đang được phóng tác để làm phim rạp mang tên  Cậu Vàng . Dự án Cậu..."
+         />
+         <!-- Category | Time -->
+         <mj-text
+           font-size="13px"
+           line-height="0px"
+           padding="11px 0 0 0"
+           align="left"
+           font-family="Noto Sans, sans-serif"
+         >
+           <p>
+             <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
+               >  Quan điểm - Tranh luận  
+               <span style="font-size: 12px; color: #616161"
+                 > |  </span
+               ></a
+             >
+           </p>
+         </mj-text>
+         <!-- Title -->
+         <mj-text
+           font-size="20px"
+           font-weight="700"
+           line-height="25.08px"
+           padding="10px 0 0 0"
+           align="left"
+           font-family="Raleway, sans-serif"
+         >
+           <a
+             href="https://spiderum.com/bai-dang/Cau-Vang-Thoi-dai-khan-gia-ti-toe-lam-Thuong-De-i4i"
+           >
+             Cậu Vàng: Thời đại khán giả nhảy lên làm Thượng Đế</a
+           >
+         </mj-text>
+         <!-- Description -->
+         <mj-text
+           css-class="main-des"
+           font-size="16px"
+           line-height="21.79px"
+           font-weight="400"
+           padding="16px 0 0 0"
+           align="left"
+           font-family="Nota Sans, sans-serif"
+           color="#616161"
+         >
+           <a
+             style="color: #616161"
+             href="https://spiderum.com/bai-dang/Cau-Vang-Thoi-dai-khan-gia-ti-toe-lam-Thuong-De-i4i"
+           >
+             Gần đây rộ lên tin rằng truyện ngắn  Lão Hạc  của nhà văn Nam Cao đang được phóng tác để làm phim rạp mang tên  Cậu Vàng . Dự án Cậu...
+           </a>
+         </mj-text>
+       </mj-column>
+
+       <!-- author -->
+       <mj-column css-class="author-card" width="89.58%" padding="13px 0 0 0">
+         <mj-raw>
+           <div style="display: flex; align-items: center; height: 36px">
+             <div style="padding: 5px 12px 0 0; height: 36px">
+               <a href="https://spiderum.com/nguoi-dung/Tornad">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d1ed5d30e7ab11eb98ff15dd3f8ec114.jpg"
+                 alt=""
+                 style="width: 32px; height: 32px; border-radius: 50%"
+               /></a>
+             </div>
+             <div
+               style="
+                 text-align: left;
+                 max-width: 420px;
+                 line-height: 0px;
+
+                 height: 36px;
+               "
+             >
+               <div>
+                   <a href="https://spiderum.com/nguoi-dung/Tornad">
+                 <p
+                   style="
+                     width: auto;
+                     font-size: 14px;
+                     color: #161616;
+                     font-family: 'Noto Sans', sans-serif;
+                   "
+                 >
+                   <span style="font-weight: 700">Tornad</span>
+                 </p>
+                 <p
+                   style="
+                     font-size: 12px;
+                     color: #616161;
+                     font-family: 'Noto Sans', sans-serif;
+                     line-height: 5px;
+                   "
+                 >
+                    27 tháng 8 2019 
+                 </p>
+                 <a/>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+
+       <!-- hr subcontent 1 -->
+       <mj-column css-class="sub-hr" width="91%" padding="11px 0 10px 0">
+         <mj-divider border-width="1px" border-color="#e3e3e3" />
+       </mj-column>
+       <!-- sub-content 1 -->
+       <mj-column width="89.58%" padding="0 0 0 0">
+         <mj-raw>
+           <div class="container">
+             <!-- sub-img 1 -->
+             <div class="sub-img" style="margin: 5px 0 0 0">
+               <a href="https://spiderum.com/bai-dang/TU-MOT-DUA-KHONG-THE-CHAY-CHO-TOI-MOT-NGUOI-CHAY-10KM-MOI-NGAY-we0Fyx0WGfX0">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/f912c1e00a4511ec97a689ec21020be2.jpg"
+                 alt="NẾU MUỐN KHOẺ MẠNH ĐỂ CÒN CƯỚI VỢ THÌ TỪ BÂY GIỜ CHÁU HÃY NGỒI YÊN MỘT CHỖ..."
+               /> </a>
+             </div>
+             <!-- sub category -->
+             <div class="sub-content" style="margin: 0 0 0 18px">
+               <p style="font-size: 12px; line-height: 0px">
+                 <a href='https://spiderum.com/danh-muc/truyen-cam-hung'> Truyền cảm hứng </a> |
+                 <span style="color: #616161"> </span>
+               </p>
+               <!-- sub title -->
+               <p class="sub-title" style="margin: 0; font-family:'Noto Sans', sans-serif; font-size: 14px;">
+                 <a
+                   href="https://spiderum.com/bai-dang/TU-MOT-DUA-KHONG-THE-CHAY-CHO-TOI-MOT-NGUOI-CHAY-10KM-MOI-NGAY-we0Fyx0WGfX0"
+                   >TỪ MỘT ĐỨA KHÔNG THỂ CHẠY CHO TỚI MỘT NGƯỜI CHẠY 10KM MỖI NGÀY
+                 </a>
+               </p>
+               <div
+                 style="
+                   display: flex;
+                   align-items: center;
+                   position: relative;
+                   height: 36px;
+                 "
+               >
+                 <div
+                   class="img-author"
+                   style="
+                     padding: 5px 12px 0 0;
+                     height: 36px;
+
+                     height: 20px;
+                   "
+                 >
+                   <img
+                     src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/2389ff00f7f311e8ad5b2bd8dc0f8c6b.jpg"
+                     alt=""
+                     style="
+                       width: 18px;
+                       height: 18px;
+                       border-radius: 50%;
+                       align-items: center;
+                       position: absolute;
+                       bottom: 5px;
+                     "
+                   />
+                 </div>
+                 <div class="sub-author-container" style="padding-left: 12px">
+                   <p
+                     class="author-name"
+                     style="
+                       font-size: 11px;
+                       color: #161616;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 0px;
+                     "
+                   ><a href="https://spiderum.com/nguoi-dung/Ducnhan1989">
+                     
+                     <span style="font-weight: 700">Đức Nhân</span>
+                   </p>
+                   <p
+                     style="
+                       font-size: 10px;
+                       color: #616161;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 5px;
+                     "
+                   >
+                      22 tháng 8 </a>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+
+       <!-- hr subcontent 2 -->
+       <mj-column css-class="sub-har" width="91%" padding="11px 0 10px 0">
+         <mj-divider border-width="1px" border-color="#e3e3e3" />
+       </mj-column>
+
+       <mj-column css-class="sub-2" width="89.58%" padding="0 0 36px 0">
+         <mj-raw>
+           <div class="container">
+             <!-- sub-img 1 -->
+             <div class="sub-img" style="margin: 5px 0 0 0">
+             <a href=" https://spiderum.com/bai-dang/STEM-va-tinh-kien-nhan-h39">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/dcbc0800a14011e9a20e1f84bdfe0a31.jpg"
+                 alt="Mấy năm trước mình cùng một người bạn thân có tình nguyện dạy lớp học STEM về chủ đề bóng thám không, sensor, lập trình cho một trường..."
+               /></a>
+             </div>
+             <!-- sub category -->
+             <div class="sub-content" style="margin: 0 0 0 18px">
+               <p style="font-size: 12px; line-height: 0px">
+                 <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe}"> Khoa học - Công nghệ </a> |
+                 <span style="color: #616161"> </span>
+               </p>
+               <!-- sub title -->
+               <p class="sub-title" style="margin: 0; font-family:'Noto Sans', sans-serif; font-size: 14px;">
+                 <a
+                   href=" https://spiderum.com/bai-dang/STEM-va-tinh-kien-nhan-h39"
+                   >STEM và tính kiên nhẫn
+                 </a>
+               </p>
+               <div
+                 style="
+                   display: flex;
+                   align-items: center;
+                   position: relative;
+                   height: 36px;
+                 "
+               >
+                 <div
+                   class="img-author"
+                   style="
+                     padding: 5px 12px 0 0;
+                     height: 36px;
+
+                     height: 20px;
+                   "
+                 >
+                   <img
+                     src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/6af98060633a11e9a28fd11406bd98c6.jpg"
+                     alt=""
+                     style="
+                       width: 18px;
+                       height: 18px;
+                       border-radius: 50%;
+                       align-items: center;
+                       position: absolute;
+                       bottom: 5px;
+                     "
+                   />
+                 </div>
+                 <div class="sub-author-container" style="padding-left: 12px">
+                   <p
+                     class="author-name"
+                     style="
+                       font-size: 11px;
+                       color: #161616;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 0px;
+                     "
+                   ><a href="https://spiderum.com/nguoi-dung/wasabi">
+                     
+                     <span style="font-weight: 700">Curly Rae Braces</span>
+                   </p>
+                   <p
+                     style="
+                       font-size: 10px;
+                       color: #616161;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 5px;
+                     "
+                   >
+                      8 tháng 7 2019 </a>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+     </mj-section>
+   </mj-wrapper>
+   <!-- Content card 3 -->
+    <mj-wrapper>
+     <mj-section background-color="#E3EBF6" padding="12px 0 0 0">
+       <!-- card header -->
+       <mj-column width="100%">
+         <mj-text
+           font-family="Raleway, sans-serif"
+           font-size="20px"
+           line-height="25.08px"
+           font-weight="700"
+         >
+           <p>Cây viết nổi bật</p>
+         </mj-text>
+         <mj-divider
+           border-width="1px"
+           border-color="#616161"
+           padding="16px 0 0 0"
+           width="91%"
+         />
+       </mj-column>
+       <!-- Main content -->
+        <!-- Main content -->
+       <mj-column css-class="main-image" width="89.58%" padding="10px 0 0 0">
+         <mj-image
+           href="https://spiderum.com/bai-dang/Cau-Chuyen-Tesla-Xay-Nha-May-O-Duc-0rvhQ462J03U"
+           border-radius="3px"
+           src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/979538800b9e11ec929d4505f162a47e.jpg"
+           alt='...hay chính xác hơn là: "Ôi trời ơi, quá khó để Tesla xây nhà máy ở Đức"'
+         />
+         <!-- Category | Time -->
+         <mj-text
+           font-size="13px"
+           line-height="0px"
+           padding="11px 0 0 0"
+           align="left"
+           font-family="Noto Sans, sans-serif"
+         >
+           <p>
+             <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
+               >  Quan điểm - Tranh luận  
+               <span style="font-size: 12px; color: #616161"
+                 > |  </span
+               ></a
+             >
+           </p>
+         </mj-text>
+         <!-- Title -->
+         <mj-text
+           font-size="20px"
+           font-weight="700"
+           line-height="25.08px"
+           padding="10px 0 0 0"
+           align="left"
+           font-family="Raleway, sans-serif"
+         >
+           <a
+             href="https://spiderum.com/bai-dang/Cau-Chuyen-Tesla-Xay-Nha-May-O-Duc-0rvhQ462J03U"
+           >
+             Câu Chuyện Tesla Xây Nhà Máy Ở Đức</a
+           >
+         </mj-text>
+         <!-- Description -->
+         <mj-text
+           css-class="main-des"
+           font-size="16px"
+           line-height="21.79px"
+           font-weight="400"
+           padding="16px 0 0 0"
+           align="left"
+           font-family="Nota Sans, sans-serif"
+           color="#616161"
+         >
+           <a
+             style="color: #616161"
+             href="https://spiderum.com/bai-dang/Cau-Chuyen-Tesla-Xay-Nha-May-O-Duc-0rvhQ462J03U"
+           >
+             ...hay chính xác hơn là: "Ôi trời ơi, quá khó để Tesla xây nhà máy ở Đức"
+           </a>
+         </mj-text>
+       </mj-column>
+
+       <!-- author -->
+       <mj-column css-class="author-card" width="89.58%" padding="13px 0 0 0">
+         <mj-raw>
+           <div style="display: flex; align-items: center; height: 36px">
+             <div style="padding: 5px 12px 0 0; height: 36px">
+               <a href="https://spiderum.com/nguoi-dung/Huskywannafly">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/0343e540c6df11eb9be3793afa050621.jpg"
+                 alt=""
+                 style="width: 32px; height: 32px; border-radius: 50%"
+               /></a>
+             </div>
+             <div
+               style="
+                 text-align: left;
+                 max-width: 420px;
+                 line-height: 0px;
+
+                 height: 36px;
+               "
+             >
+               <div>
+                   <a href="https://spiderum.com/nguoi-dung/Huskywannafly">
+                 <p
+                   style="
+                     width: auto;
+                     font-size: 14px;
+                     color: #161616;
+                     font-family: 'Noto Sans', sans-serif;
+                   "
+                 >
+                   <span style="font-weight: 700">Huskywannafly</span>
+                 </p>
+                 <p
+                   style="
+                     font-size: 12px;
+                     color: #616161;
+                     font-family: 'Noto Sans', sans-serif;
+                     line-height: 5px;
+                   "
+                 >
+                    31 tháng 8 
+                 </p>
+                 <a/>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+
+       <!-- hr subcontent 1 -->
+       <mj-column css-class="sub-hr" width="91%" padding="11px 0 10px 0">
+         <mj-divider border-width="1px" border-color="#e3e3e3" />
+       </mj-column>
+       <!-- sub-content 1 -->
+       <mj-column width="89.58%" padding="0 0 0 0">
+         <mj-raw>
+           <div class="container">
+             <!-- sub-img 1 -->
+             <div class="sub-img" style="margin: 5px 0 0 0">
+               <a href="https://spiderum.com/bai-dang/Tai-sao-dia-ly-nuoc-Nga-lai-TE-cTQPQLWJJwHd">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/b4577370094b11ec9ec5131d8341f662.png"
+                 alt="Sự ảnh hưởng của địa lý đã ngăn cản nước Nga trở thành một thế lực toàn cầu như thế nào"
+               /> </a>
+             </div>
+             <!-- sub category -->
+             <div class="sub-content" style="margin: 0 0 0 18px">
+               <p style="font-size: 12px; line-height: 0px">
+                 <a href='https://spiderum.com/danh-muc/quan-diem-tranh-luan'> Quan điểm - Tranh luận </a> |
+                 <span style="color: #616161"> </span>
+               </p>
+               <!-- sub title -->
+               <p class="sub-title" style="margin: 0; font-family:'Noto Sans', sans-serif; font-size: 14px;">
+                 <a
+                   href="https://spiderum.com/bai-dang/Tai-sao-dia-ly-nuoc-Nga-lai-TE-cTQPQLWJJwHd"
+                   >Tại sao địa lý nước Nga lại TỆ
+                 </a>
+               </p>
+               <div
+                 style="
+                   display: flex;
+                   align-items: center;
+                   position: relative;
+                   height: 36px;
+                 "
+               >
+                 <div
+                   class="img-author"
+                   style="
+                     padding: 5px 12px 0 0;
+                     height: 36px;
+
+                     height: 20px;
+                   "
+                 >
+                   <img
+                     src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/dbb6eca0fd0e11eb815ddd4307f37617.jpeg"
+                     alt=""
+                     style="
+                       width: 18px;
+                       height: 18px;
+                       border-radius: 50%;
+                       align-items: center;
+                       position: absolute;
+                       bottom: 5px;
+                     "
+                   />
+                 </div>
+                 <div class="sub-author-container" style="padding-left: 12px">
+                   <p
+                     class="author-name"
+                     style="
+                       font-size: 11px;
+                       color: #161616;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 0px;
+                     "
+                   ><a href="https://spiderum.com/nguoi-dung/viethung292905">
+                     
+                     <span style="font-weight: 700">Navyblue Nerd</span>
+                   </p>
+                   <p
+                     style="
+                       font-size: 10px;
+                       color: #616161;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 5px;
+                     "
+                   >
+                      29 tháng 8 </a>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+
+       <!-- hr subcontent 2 -->
+       <mj-column css-class="sub-har" width="91%" padding="11px 0 10px 0">
+         <mj-divider border-width="1px" border-color="#e3e3e3" />
+       </mj-column>
+
+       <mj-column css-class="sub-2" width="89.58%" padding="0 0 36px 0">
+         <mj-raw>
+           <div class="container">
+             <!-- sub-img 1 -->
+             <div class="sub-img" style="margin: 5px 0 0 0">
+             <a href="https://spiderum.com/bai-dang/Sony-vu-hack-vao-Play-Station-Network-va-BKAV-jy0k6s0NWPJZ">
+               <img
+                 src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/697523100adc11ec97a689ec21020be2.jpg"
+                 alt="Sự tự đắc và hiếu thắng ngu xuẩn"
+               /></a>
+             </div>
+             <!-- sub category -->
+             <div class="sub-content" style="margin: 0 0 0 18px">
+               <p style="font-size: 12px; line-height: 0px">
+                 <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe}"> Khoa học - Công nghệ </a> |
+                 <span style="color: #616161"> </span>
+               </p>
+               <!-- sub title -->
+               <p class="sub-title" style="margin: 0; font-family:'Noto Sans', sans-serif; font-size: 14px;">
+                 <a
+                   href="https://spiderum.com/bai-dang/Sony-vu-hack-vao-Play-Station-Network-va-BKAV-jy0k6s0NWPJZ"
+                   >Sony, vụ hack vào Play Station Network, và BKAV
+                 </a>
+               </p>
+               <div
+                 style="
+                   display: flex;
+                   align-items: center;
+                   position: relative;
+                   height: 36px;
+                 "
+               >
+                 <div
+                   class="img-author"
+                   style="
+                     padding: 5px 12px 0 0;
+                     height: 36px;
+
+                     height: 20px;
+                   "
+                 >
+                   <img
+                     src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/6af98060633a11e9a28fd11406bd98c6.jpg"
+                     alt=""
+                     style="
+                       width: 18px;
+                       height: 18px;
+                       border-radius: 50%;
+                       align-items: center;
+                       position: absolute;
+                       bottom: 5px;
+                     "
+                   />
+                 </div>
+                 <div class="sub-author-container" style="padding-left: 12px">
+                   <p
+                     class="author-name"
+                     style="
+                       font-size: 11px;
+                       color: #161616;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 0px;
+                     "
+                   ><a href="https://spiderum.com/nguoi-dung/wasabi">
+                     
+                     <span style="font-weight: 700">Curly Rae Braces</span>
+                   </p>
+                   <p
+                     style="
+                       font-size: 10px;
+                       color: #616161;
+                       font-family: 'Noto Sans', sans-serif;
+                       line-height: 5px;
+                     "
+                   >
+                      20 tháng 8 </a>
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </mj-raw>
+       </mj-column>
+     </mj-section>
+   </mj-wrapper>
+       <!-- Social -->
+   <mj-section background-color="#3398D4">
+     <mj-column width="77.86%" padding="16px 0 0 0">
+       <mj-text
+         align="center"
+         font-family="Noto Sans, sans-serif"
+         line-height="21.9px"
+         color="#FFFFFF"
+         font-size="16px"
+         font-weight="700"
+         font-family="Noto, sand"
+       >
+         Follow ngay Spiderum để đọc thêm nhiều thông tim thú vị!
+       </mj-text>
+     </mj-column>
+     <mj-column width="100%"> </mj-column>
+     <mj-column width="40px" padding="10px 10px 16px 0px">
+       <mj-image
+         css-class="social-icon"
+         src="img/Spiderum.png"
+         alt="spiderum"
+         href="https://spiderum.com"
+         width="40px"
+         border-radius="50%"
+       />
+       <
+     </mj-column>
+     <mj-column width="40px" padding="10px 10px 16px 0px">
+       <mj-image
+         css-class="social-icon"
+         src="img/spotify.png"
+         alt="spiderum"
+         href="https://youtube.com/spiderum"
+         width="40px"
+         border-radius="50%"
+       />
+     </mj-column>
+     <mj-column width="40px" padding="10px 10px 16px 0px">
+       <mj-image
+         css-class="social-icon"
+         src="img/Youtube.png"
+         alt="spiderum"
+         href="https://open.spotify.com/show/73NBSJpoAxNyHLYGrraSXd"
+         width="40px"
+         border-radius="50%"
+       />
+     </mj-column>
+   </mj-section>
+   <!-- Footer -->
+   <mj-section>
+     <mj-column width="87.5%">
+       <mj-text align="center" font-size="12px" line-height="20px" font-family="Noto Sans,sans-serif">
+         <p>
+           Theo dõi những chủ đề bạn quan tâm hoặc bỏ theo dõi chúng
+           <a class="link-blue" href="/" style="font-weight: 700; color:#3398D4">qua đây</a>
+         </p>
+
+         <p>
+           <span style="font-weight: 700">CÔNG TY CỔ PHẦN FELIZZ<br /></span>
+           Trực thực Công ty Cổ phần Spiderum Việt Nam (Spiderum Vietnam
+           JSC)<br />
+           Người chịu trách nhiệm nội dung Trần Việt Anh<br />
+           Giấy phép MXH số 341/GP-TTTT do Bộ TTTT cấp ngày 27 tháng 6 năm
+           2016<br />
+           <span style="font-weight: 700">Liên hệ:</span> 0946.042.093<span
+             style="font-weight: 700"
+           >
+             Email:</span
+           >
+           contact@spiderum.com<br />
+           <span style="font-weight: 700">Địa chỉ: </span> Tầng 5, 1/186 đường
+           Bưởi, Cống Vị, Ba Đình, Hà Nội
+         </p>
+
+         <p style="font-weight: 700">© 2021 CÔNG TY CỔ PHẦN FELIZZ</p>
+       </mj-text>
+       <mj-image
+         href="https://spiderum.com"
+         src="https://spiderum.com/assets/icons/wideLogo.png"
+         align="center"
+         padding="0 0 25px 0"
+         width="131.94px"
+         alt="spiderumLogo"
+       />
+     </mj-column>
+   </mj-section>
+ </mj-body>
+</mjml>
