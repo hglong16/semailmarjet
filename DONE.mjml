@@ -3,185 +3,190 @@
    <mj-breakpoint width="60px" />
 
    <mj-style>
-     * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
 }
 body {
-  min-width: 300px !important;
-  
+ min-width: 300px !important;
+ 
+}
+
+.main-cate p{
+ text-transform: uppercase!important;
 }
 
 .created-day {
-  font-size: 12px !important;
-  margin: 0 !important;
-  padding:2px 0 0 0 !important;
-  color: #b5b5b5 !important;
-  font-family: "Noto Sans", sans-serif !important;
-  line-height: 10px !important;
-  vertical-align: top !important;
-  font-weight: 40!important;
+ font-size: 12px !important;
+ margin: 0 !important;
+ padding:2px 0 0 0 !important;
+ color: #b5b5b5 !important;
+ font-family: "Noto Sans", sans-serif !important;
+ line-height: 10px !important;
+ vertical-align: top !important;
+ font-weight: 40!important;
 }
 
 .img-author img {
-  bottom: 8px !important;
+ bottom: 8px !important;
 }
 .sub-cate {
-  margin: 4px 0 4px 0 !important;
-  font-weight: 400!important;
-  text-transform: uppercase !important;
-  font-size: 14px!important;
-  line-height: 16px!important;
-  font-family: "Noto Sans", sans-serif;
-  color: #616161 !important;
+ margin: 4px 0 4px 0 !important;
+ font-weight: 400!important;
+ text-transform: uppercase !important;
+ font-size: 14px!important;
+ line-height: 16px!important;
+ font-family: "Noto Sans", sans-serif;
+ color: #616161 !important;
 
 }
 .author-name {
-  line-height: 1 !important;
-  margin: 0 0 0 0 !important;
-  padding: 0 !important;
+ line-height: 1 !important;
+ margin: 0 0 0 0 !important;
+ padding: 0 !important;
 
-  font-size: 14px !important;
-  color: #161616 !important;
-  font-family: "Noto Sans", sans-serif !important;
-  line-height: 20px !important;
+ font-size: 14px !important;
+ color: #161616 !important;
+ font-family: "Noto Sans", sans-serif !important;
+ line-height: 20px !important;
 }
 .sub-author-container p {
-  min-width: 115px;
-  margin: 5px 0 0 0;
+ min-width: 115px;
+ margin: 5px 0 0 0;
 }
 a {
-  color: #161616;
-  text-decoration: none;
-  text-underline-offset: none;
+ color: #161616;
+ text-decoration: none;
+ text-underline-offset: none;
 }
 
 .sub-title {
-  font-family: "Raleway", sans-serif!important;
-  margin: 0 0 0 0 !important;
+ font-family: "Raleway", sans-serif!important;
+ margin: 0 0 0 0 !important;
 }
 
 .sub-title-cont {
-  min-height: 40px !important;
+ min-height: 40px !important;
 }
 .sub-img {
-  height: 120px !important;
-  width: 120px !important;
+ height: 120px !important;
+ width: 120px !important;
 }
 .sub-img img {
-  width: 100% !important;
-  object-fit: cover !important;
-  height: 100%;
+ width: 100% !important;
+ object-fit: cover !important;
+ height: 100%;
 }
 @media (min-width: 385px) {
-  .author-name {
-    font-size: 14px !important;
-  }
-  .sub-cate {
-    margin: 4px 0 0px 0!important;
-    font-size: 14px !important;
-  }
-  .big-title p {
-    font-size: 42px !important;
-    line-height: 57.2px !important;
-  }
-  .big-title td {
-    width: 300px !important;
-  }
-  .main-image img {
-    padding: 16px 0 6px 0 !important;
-  }
-  .author-card {
-    padding: 18px 0 0 0 !important;
-  }
-  .sub-hr {
-    padding: 11px 0 26px 0 !important;
-  }
-  .sub-har {
-    padding: 40px 0 18px 0 !important;
-  }
-  .img-author {
-    padding: 5px 27px 0 0 !important;
-  }
-  .img-author img {
-    width: 32px !important;
-    height: 32px !important;
-    bottom: 0 !important;
-  }
-  .sub-img {
-    height: 128px !important;
-    width: 128px !important;
-  }
-  .sub-img img {
-    width: 100% !important;
-    object-fit: cover !important;
-    height: 100%;
-  }
-  .sub-content {
-    margin: 0 0 0 4% !important;
-    width: calc(93.5% - 128px) !important;
-  }
-  .sub-2 {
-    padding: 0 0 48px 0 !important;
-  }
-  .big-title {
-    width: 55% !important;
-  }
-  .sub-title {
-    font-size: 20px !important;
-    line-height: 25.08px !important;
-    padding: 8px 0 14px 0 !important;
-  }
-  .sub-title-cont {
-    min-height: 50px !important;
-  }
+ .author-name {
+   font-size: 14px !important;
+ }
+ .sub-cate {
+   margin: 4px 0 0px 0!important;
+   font-size: 14px !important;
+ }
+ .big-title p {
+   font-size: 42px !important;
+   line-height: 57.2px !important;
+ }
+ .big-title td {
+   width: 300px !important;
+ }
+ .main-image img {
+   padding: 16px 0 6px 0 !important;
+ }
+ .author-card {
+   padding: 18px 0 0 0 !important;
+ }
+ .sub-hr {
+   padding: 11px 0 26px 0 !important;
+ }
+ .sub-har {
+   padding: 40px 0 18px 0 !important;
+ }
+ .img-author {
+   padding: 5px 27px 0 0 !important;
+ }
+ .img-author img {
+   width: 32px !important;
+   height: 32px !important;
+   bottom: 0 !important;
+ }
+ .sub-img {
+   height: 128px !important;
+   width: 128px !important;
+ }
+ .sub-img img {
+   width: 100% !important;
+   object-fit: cover !important;
+   height: 100%;
+ }
+ .sub-content {
+   margin: 0 0 0 4% !important;
+   width: calc(93.5% - 128px) !important;
+ }
+ .sub-2 {
+   padding: 0 0 0 0 !important;
+ }
+ .big-title {
+   width: 55% !important;
+ }
+ .sub-title {
+   font-size: 20px !important;
+   line-height: 25.08px !important;
+   padding: 8px 0 14px 0 !important;
+ }
+ .sub-title-cont {
+   min-height: 50px !important;
+ }
 }
 @media (min-width: 520px) {
-  .big-title p {
-    font-size: 38px !important;
-    line-height: 50px !important;
-  }
-  .big-title {
-    width: 70% !important;
-  }
+ .big-title p {
+   font-size: 38px !important;
+   line-height: 50px !important;
+ }
+ .big-title {
+   width: 70% !important;
+ }
 }
 a:hover,
 img:hover {
-  color: #161616;
-  opacity: 0.7;
+ color: #161616;
+ opacity: 0.7;
 }
 .container {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
 }
 .sub-img {
-  float: left;
-  padding: 0 0 0 0;
-  width: 120px;
+ float: left;
+ padding: 0 0 0 0;
+ width: 120px;
 }
 .sub-img img {
-  border-radius: 3px;
+ border-radius: 3px;
 }
 .sub-content {
-  float: left;
-  width: calc(100% - 148px);
-  margin: 0;
-  padding: 0;
+ float: left;
+ width: calc(100% - 148px);
+ margin: 0;
+ padding: 0;
 }
 .sub-content p {
-  font-size: 16px;
-  line-height: 21.79px;
-  font-weight: 700;
+ font-size: 16px;
+ line-height: 21.79px;
+ font-weight: 700;
 }
 .sub-author-container {
-  text-align: left;
-  max-width: 420px;
-  line-height: 0px;
-  float: left;
-  height: 36px;
+ text-align: left;
+ max-width: 420px;
+ line-height: 0px;
+ float: left;
+ height: 36px;
 } /*# sourceMappingURL=final.css.map */
+
 
    </mj-style>
    <mj-font
@@ -314,6 +319,8 @@ img:hover {
          />
          <!-- Category class="sub-cate" Time -->
          <mj-text
+           css-class="main-cate"
+
            font-size="13px"
            line-height="0px"
            padding="11px 0 0 0"
@@ -623,6 +630,7 @@ img:hover {
          />
          <!-- Category class="sub-cate" Time -->
          <mj-text
+           css-class="main-cate"
            font-size="13px"
            line-height="0px"
            padding="11px 0 0 0"
@@ -934,6 +942,7 @@ img:hover {
          />
          <!-- Category class="sub-cate" Time -->
          <mj-text
+         css-class="main-cate"
            font-size="13px"
            line-height="0px"
            padding="11px 0 0 0"
