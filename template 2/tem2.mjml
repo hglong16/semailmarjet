@@ -1,65 +1,65 @@
 <mjml>
   <mj-head>
     <mj-breakpoint width="384px" />
+
     <mj-style>
       * { -webkit-box-sizing: border-box !important; box-sizing: border-box
       !important; } .confuse { background-color: #f9f9f9 !important; } .confuse
-      * { margin: 0 !important; padding: 0 !important; } .icon-container table {
-      text-align: center !important; } a { text-decoration: none !important; }
-      a:hover p, img:hover, a:hover { opacity: 0.7 !important; } .logo-spiderum
-      { margin: 27px 0 22px 0 !important; } @media (min-width: 385px) {
-      .logo-spiderum { margin-bottom: 8px !important; } } .heading-top {
-      font-family: Noto Serif; font-size: 32px; font-style: normal; font-weight:
-      400; line-height: 44px; letter-spacing: 0em; text-align: center; margin:
-      0px 30px 24px 30px !important; } @media (min-width: 385px) { .heading-top
-      { font-family: Noto Serif; font-size: 42px; font-style: normal;
-      font-weight: 500; line-height: 57px; letter-spacing: 0em; text-align:
-      center; margin: 0 10% 30px 10% !important; } } .user-container { display:
-      -webkit-box !important; display: -ms-flexbox !important; display: flex
-      !important; -webkit-box-align: center !important; -ms-flex-align: center
-      !important; align-items: center !important; -webkit-box-pack: center
-      !important; -ms-flex-pack: center !important; justify-content: center
-      !important; height: 36px !important; margin: 0 0 62px 0 !important; }
-      .user-container img { width: 32px !important; height: 32px; border-radius:
-      50% !important; } @media (min-width: 385px) { .user-container { margin: 0
-      0 32px 0 !important; } } .sub-author-container { text-align: left
-      !important; line-height: 16px !important; height: 36px !important; margin:
-      3px 0 0 12px !important; } .sub-author-container p { width: auto
-      !important; font-size: 14px !important; color: #161616 !important;
-      font-family: "Noto Sans", sans-serif !important; } .sub-author-container
-      .author-id { font-size: 12px !important; color: #616161 !important;
-      font-family: "Noto Sans", sans-serif !important; line-height: 14px
-      !important; } .main-hr { padding: 12px 20px 25px 20px !important; } @media
-      (min-width: 385px) { .main-hr { padding: 12px 27px 25px 27px !important; }
-      } .content { padding: 0 20.5px 0 20.5px !important; } @media (min-width:
-      385px) { .content { padding: 0 6.3% 0 6.3% !important; } } .title-top {
-      font-family: Raleway; font-size: 32px; font-style: normal; font-weight:
-      700; line-height: 38px; letter-spacing: 0em; text-align: left; color:
-      #3398d4; } .category { font-family: Noto Sans; font-size: 12px;
-      font-style: normal; font-weight: 700; line-height: 16px; letter-spacing:
-      0em; text-align: left; color: #3398d4; padding: 12px 0 12px 0 !important;
-      } .category .info { color: #b5b5b5; font-weight: 700; } .main-content {
-      font-family: Noto Sans; font-size: 16px; font-style: normal; font-weight:
-      400; line-height: 22px; letter-spacing: 0em; text-align: left; padding: 0
-      0 48px 0 !important; } @media (min-width: 385px) { .main-content {
-      padding: 0 0 56px 0 !important; } } .article { padding: 0 20px 0 20px
-      !important; } @media (min-width: 385px) { .article { padding: 0 5.1% 0
-      5.1% !important; } } .author-container { -webkit-box-align: center
-      !important; -ms-flex-align: center !important; align-items: center
-      !important; -webkit-box-pack: left !important; -ms-flex-pack: left
-      !important; justify-content: left !important; padding: 0 20px 0 20px
-      !important; margin: 0 !important; } @media (min-width: 385px) {
-      .author-container { margin: 0px !important; padding: 0 5.1% 0 5.1%
-      !important; } } .author-container .author-id { color: #b5b5b5 !important;
-      } .author-container .sub-author-container { margin: 3px 0 0 12px
-      !important; } .article-img { padding: 11px 0 11px 0 !important; } @media
-      (min-width: 385px) { .article-img { padding: 10px 0 17px 0 !important; } }
-      .text-article .category a { font-family: Noto Sans; font-size: 12px;
-      font-style: normal; font-weight: 400; line-height: 16px; letter-spacing:
-      0em; text-align: left; color: #616161 !important; padding: 0px !important;
-      } .title-article { font-family: Raleway; font-size: 20px; font-style:
-      normal; font-weight: 700; line-height: 25px; letter-spacing: 0em;
-      text-align: left; color: #161616 !important; margin: 10px 0 16px 0
+      * { margin: 0 !important; padding: 0 !important; } a { text-decoration:
+      none !important; } a:hover, img:hover { opacity: 0.7 !important; }
+      .logo-spiderum { margin: 27px 0 22px 0 !important; } @media (min-width:
+      385px) { .logo-spiderum { margin-bottom: 8px !important; } } .heading-top
+      { font-family: Noto Serif; font-size: 32px; font-style: normal;
+      font-weight: 400; line-height: 44px; letter-spacing: 0em; text-align:
+      center; margin: 0px 30px 24px 30px !important; } @media (min-width: 385px)
+      { .heading-top { font-family: Noto Serif; font-size: 42px; font-style:
+      normal; font-weight: 500; line-height: 57px; letter-spacing: 0em;
+      text-align: center; margin: 0 10% 30px 10% !important; } } .user-container
+      { display: -webkit-box !important; display: -ms-flexbox !important;
+      display: flex !important; -webkit-box-align: center !important;
+      -ms-flex-align: center !important; align-items: center !important;
+      -webkit-box-pack: center !important; -ms-flex-pack: center !important;
+      justify-content: center !important; height: 36px !important; margin: 0 0
+      62px 0 !important; } .user-container img { width: 32px !important; height:
+      32px; border-radius: 50% !important; } @media (min-width: 385px) {
+      .user-container { margin: 0 0 32px 0 !important; } } .sub-author-container
+      { text-align: left !important; line-height: 16px !important; height: 36px
+      !important; margin: 3px 0 0 12px !important; } .sub-author-container p {
+      width: auto !important; font-size: 14px !important; color: #161616
+      !important; font-family: "Noto Sans", sans-serif !important; }
+      .sub-author-container .author-id { font-size: 12px !important; color:
+      #616161 !important; font-family: "Noto Sans", sans-serif !important;
+      line-height: 14px !important; } .main-hr { padding: 12px 20px 25px 20px
+      !important; } @media (min-width: 385px) { .main-hr { padding: 12px 27px
+      25px 27px !important; } } .content { padding: 0 20.5px 0 20.5px
+      !important; } @media (min-width: 385px) { .content { padding: 0 6.3% 0
+      6.3% !important; } } .title-top { font-family: Raleway; font-size: 32px;
+      font-style: normal; font-weight: 700; line-height: 38px; letter-spacing:
+      0em; text-align: left; color: #3398d4; } .category { font-family: Noto
+      Sans; font-size: 12px; font-style: normal; font-weight: 700; line-height:
+      16px; letter-spacing: 0em; text-align: left; color: #3398d4; padding: 12px
+      0 12px 0 !important; } .category .info { color: #b5b5b5; font-weight: 700;
+      } .main-content { font-family: Noto Sans; font-size: 16px; font-style:
+      normal; font-weight: 400; line-height: 22px; letter-spacing: 0em;
+      text-align: left; padding: 0 0 48px 0 !important; } @media (min-width:
+      385px) { .main-content { padding: 0 0 56px 0 !important; } } .article {
+      padding: 0 20px 0 20px !important; } @media (min-width: 385px) { .article
+      { padding: 0 5.1% 0 5.1% !important; } } .author-container {
+      -webkit-box-align: center !important; -ms-flex-align: center !important;
+      align-items: center !important; -webkit-box-pack: left !important;
+      -ms-flex-pack: left !important; justify-content: left !important; padding:
+      0 20px 0 20px !important; margin: 0 !important; } @media (min-width:
+      385px) { .author-container { margin: 0px !important; padding: 0 5.1% 0
+      5.1% !important; } } .author-container .author-id { color: #b5b5b5
+      !important; } .author-container .sub-author-container { margin: 3px 0 0
+      12px !important; } .article-img { padding: 11px 0 11px 0 !important; }
+      @media (min-width: 385px) { .article-img { padding: 10px 0 17px 0
+      !important; } } .text-article .category { font-family: Noto Sans;
+      font-size: 12px; font-style: normal; font-weight: 400; line-height: 16px;
+      letter-spacing: 0em; text-align: left; color: #616161 !important; padding:
+      0px !important; } .title-article { font-family: Raleway; font-size: 20px;
+      font-style: normal; font-weight: 700; line-height: 25px; letter-spacing:
+      0em; text-align: left; color: #161616 !important; margin: 10px 0 16px 0
       !important; } @media (min-width: 385px) { .title-article { margin-top:
       12px !important; } } .description-article { font-family: Noto Sans;
       font-size: 16px; font-style: normal; font-weight: 400; line-height: 22px;
@@ -173,20 +173,39 @@
         </mj-column>
 
         <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 0px 0">
+          <mj-raw>
+            <div class="content user-container author-container">
+              <div class="img-card">
+                <img
+                  src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-avatar/953eeaa0096811ec9ec5131d8341f662.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="sub-author-container">
+                <p class="author-name">
+                  <span style="font-weight: 700">Thcccc sad acccc</span>
+                </p>
+                <p class="author-id">@nguudau</p>
+              </div>
+            </div>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
 
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/a_dreamer">
+            <a href="${article1['authorLink']}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b54a6e406f3311e9b89da1d556449df3.jpg" alt="" />
+                  <img src="${article1['avatar']}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">Andy Luong</span>
+                    <span style="font-weight: 700">${article1['author']}</span>
                   </p>
-                  <p class="author-id"> 6 giờ trước </p>
+                  <p class="author-id">${article1['createdDay']}</p>
                 </div>
               </div>
             </a>
@@ -198,25 +217,77 @@
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/6585fdc00e2d11ec8a2eaf1bb36cc01d.png"
+            src="${article1['img']}"
             alt=""
-            href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP"
+            href="${url1}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
-                > Khoa học - Công nghệ <span class="info"> </span
+              <a href="${article1['categoryLink']}"
+                >${article1['category']}<span class="info"> </span
               ></a>
             </p>
+            <p>
+              <!-- title article -->
+              <a href="${url1}">
+                <p class="title-article">${article1['title']}</p>
 
+                <!-- description article -->
+                <p class="description-article">${article1['description']}</p>
+
+                <p class="link-article">Đọc bài viết tại đây.</p>
+              </a>
+            </p></mj-text
+          >
+        </mj-column>
+        <mj-column width="89.58%" css-class="sub-hr">
+          <mj-divider
+            border-width="1px"
+            border-color="rgba(227, 227, 227, 1)"
+          />
+        </mj-column>
+        <!-- end article -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article2['authorLink']}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article2['avatar']}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article2['author']}</span>
+                  </p>
+                  <p class="author-id">${article2['createdDay']}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article2['img']}"
+            alt=""
+            href="${url2}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article2['categoryLink']}"
+                >${article2['category']}<span class="info"> </span
+              ></a>
+            </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP">
-              <p class="title-article">[Stoicism] - Dịch Seneca (124): Đừng bao giờ tin mình đã hạnh phúc cho đến khi mọi hạnh phúc của bạn đều xuất phát từ bên trong</p>
+            <a href="${url2}">
+              <p class="title-article">${article2['title']}</p>
 
               <!-- description article -->
-              <p class="description-article">Lời tựa  :
-                      
-Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứng Stoicism của mình. Đọc Seneca không...</p>
+              <p class="description-article">${article2['description']}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -233,16 +304,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/loveless2001">
+            <a href="${article3['authorLink']}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg" alt="" />
+                  <img src="${article3['avatar']}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">loveless</span>
+                    <span style="font-weight: 700">${article3['author']}</span>
                   </p>
-                  <p class="author-id"> 31 tháng 7 </p>
+                  <p class="author-id">${article3['createdDay']}</p>
                 </div>
               </div>
             </a>
@@ -254,22 +325,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/a0611d60f1f611ebb8688f96b862c9a9.png"
+            src="${article3['img']}"
             alt=""
-            href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05"
+            href="${url3}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                > Quan điểm - Tranh luận <span class="info"> </span
+              <a href="${article3['categoryLink']}"
+                >${article3['category']}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05">
-              <p class="title-article">[WTDTY] Một xã hội chà đạp lên tất cả những tiến bộ của nền văn minh</p>
+            <a href="${url3}">
+              <p class="title-article">${article3['title']}</p>
 
               <!-- description article -->
-              <p class="description-article">Nhân tính, nhân quyền và khoa học là những gì mà xã hội Việt Nam đang vứt bỏ vì một mục tiêu không tưởng “0 ca nhiễm covid”</p>
+              <p class="description-article">${article3['description']}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -286,16 +357,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/duytang099">
+            <a href="${article4['authorLink']}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c412a610e96411eba7d6b3a25432202e.jpg" alt="" />
+                  <img src="${article4['avatar']}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">D2THEWORLD</span>
+                    <span style="font-weight: 700">${article4['author']}</span>
                   </p>
-                  <p class="author-id"> 30 tháng 8 </p>
+                  <p class="author-id">${article4['createdDay']}</p>
                 </div>
               </div>
             </a>
@@ -307,22 +378,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/e8e497f00e3a11ecbfa285ca4b16aa04.png"
+            src="${article4['img']}"
             alt=""
-            href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF"
+            href="${url4}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/ky-nang"
-                > Kỹ năng <span class="info"> </span
+              <a href="${article4['categoryLink']}"
+                >${article4['category']}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF">
-              <p class="title-article">Thuyết trình dễ ẹt - áp dụng công thức là ra</p>
+            <a href="${url4}">
+              <p class="title-article">${article4['title']}</p>
 
               <!-- description article -->
-              <p class="description-article">Công thức giúp bạn thuyết trình thành công</p>
+              <p class="description-article">${article4['description']}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -339,16 +410,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/fat_tuna">
+            <a href="${article5['authorLink']}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/535ca3d0eb8511eb9e5d0ff3814d80b3.jpg" alt="" />
+                  <img src="${article5['avatar']}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">fat_tuna</span>
+                    <span style="font-weight: 700">${article5['author']}</span>
                   </p>
-                  <p class="author-id"> 2 tháng 9 </p>
+                  <p class="author-id">${article5['createdDay']}</p>
                 </div>
               </div>
             </a>
@@ -360,22 +431,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/1996a7500be611ec929d4505f162a47e.jpg"
+            src="${article5['img']}"
             alt=""
-            href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s"
+            href="${url5}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                > Quan điểm - Tranh luận <span class="info"> </span
+              <a href="${article5['categoryLink']}"
+                >${article5['category']}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s">
-              <p class="title-article">Non-fungible Token và Crypto: Sự xâm lược của nghệ thuật hậu hiện đại</p>
+            <a href="${url5}">
+              <p class="title-article">${article5['title']}</p>
 
               <!-- description article -->
-              <p class="description-article">9,900 chữ cho sự hoài nghi về logic, niềm tin vào logic tối cao và sự unlearn.</p>
+              <p class="description-article">${article5['description']}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -392,16 +463,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/Mytwingo">
+            <a href="${article6['authorLink']}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg" alt="" />
+                  <img src="${article6['avatar']}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">Absolutely</span>
+                    <span style="font-weight: 700">${article6['author']}</span>
                   </p>
-                  <p class="author-id"> 31 tháng 8 </p>
+                  <p class="author-id">${article6['createdDay']}</p>
                 </div>
               </div>
             </a>
@@ -413,75 +484,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/cbf75a800c5d11ec979b61211f5f618d.jpg"
+            src="${article6['img']}"
             alt=""
-            href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB"
+            href="${url6}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/science2vn"
-                > Science2vn <span class="info"> </span
+              <a href="${article6['categoryLink']}"
+                >${article6['category']}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB">
-              <p class="title-article">[P5] Cần sa - Bao giờ được hợp pháp hóa?</p>
+            <a href="${url6}">
+              <p class="title-article">${article6['title']}</p>
 
               <!-- description article -->
-              <p class="description-article">So với người anh em thuốc phiện thì cần sa đa năng và lành tính hơn. Nhưng rất tiếc thế là không đủ.</p>
-
-              <p class="link-article">Đọc bài viết tại đây.</p>
-            </a>
-          </mj-text>
-        </mj-column>
-        <mj-column width="89.58%" css-class="sub-hr">
-          <mj-divider
-            border-width="1px"
-            border-color="rgba(227, 227, 227, 1)"
-          />
-        </mj-column>
-        <!-- end article -->
-
-        <!-- article card -->
-        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
-          <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/guiltygearxx">
-              <div class="content user-container author-container">
-                <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/580f27502ab711e8aff0b37519421f8c.jpg" alt="" />
-                </div>
-                <div class="sub-author-container">
-                  <p class="author-name">
-                    <span style="font-weight: 700">roadrash</span>
-                  </p>
-                  <p class="author-id"> 3 tháng 9 </p>
-                </div>
-              </div>
-            </a>
-          </mj-raw>
-          <!-- author card -->
-        </mj-column>
-
-        <!-- article image -->
-        <mj-column width="100%" css-class="article">
-          <mj-image
-            css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/3c6c93200cc211ec8dcf01f8a3041de3.png"
-            alt=""
-            href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF"
-          />
-          <mj-text css-class="text-article">
-            <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
-                > Khoa học - Công nghệ <span class="info"> </span
-              ></a>
-            </p>
-            <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF">
-              <p class="title-article">Một số insight về từ vựng sách Cambridge English IELTS</p>
-
-              <!-- description article -->
-              <p class="description-article">Insight về từ vựng sách Cambridge English IELTS</p>
+              <p class="description-article">${article6['description']}</p>
 
               <p class="link-article link-article-bot">Đọc bài viết tại đây.</p>
             </a>

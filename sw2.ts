@@ -1,4 +1,91 @@
-<mjml>
+import axios from "axios";
+import cheerio from "cheerio";
+import * as fs from "fs";
+import * as readline from "readline";
+
+const writeStream = fs.createWriteStream("DONE.mjml");
+const url: Array<string> = ["0"];
+
+let url1: string;
+let url2: string;
+let url3: string;
+let url4: string;
+let url5: string;
+let url6: string;
+let url7: string;
+let url8: string;
+let url9: string;
+
+const readF = async () => {
+  const file = fs.createReadStream("URL.txt");
+  const rl = readline.createInterface({
+    input: file,
+    crlfDelay: Infinity,
+  });
+  for await (const line of rl) {
+    url.push(line);
+  }
+};
+
+const getS = async (url) => {
+  const res = await axios.get(url);
+  const $ = await cheerio.load(res.data);
+
+  let title: string = $("title").text();
+  let author = $(".author-info > a").text();
+  let authorLink = $(".author-info > a").attr("href");
+  let category = $(".category > a").text();
+  let categoryLink = $(".category > a").attr("href");
+  let description = $('meta[name="description"]').attr("content");
+  let createdDay = $(".created-day").text();
+  let img = $("meta[property='og:image']").attr("content");
+
+  const avatar = $("avatar> a > img").attr("src");
+  const b = {
+    title: title,
+    author: author,
+    authorLink: `https://spiderum.com${authorLink}`,
+    category: category,
+    categoryLink: `https://spiderum.com${categoryLink}`,
+    description: description,
+    createdDay: createdDay,
+    img: img,
+    avatar: avatar,
+  };
+  console.log(b);
+  return b;
+};
+
+const crawl = async () => {
+  const article1 = await getS(url1).then((s) => {
+    return s;
+  });
+  const article2 = await getS(url2).then((s) => {
+    return s;
+  });
+  const article3 = await getS(url3).then((s) => {
+    return s;
+  });
+  const article4 = await getS(url4).then((s) => {
+    return s;
+  });
+  const article5 = await getS(url5).then((s) => {
+    return s;
+  });
+  const article6 = await getS(url6).then((s) => {
+    return s;
+  });
+  const article7 = await getS(url7).then((s) => {
+    return s;
+  });
+  const article8 = await getS(url8).then((s) => {
+    return s;
+  });
+  const article9 = await getS(url9).then((s) => {
+    return s;
+  });
+
+  let vltn = `<mjml>
   <mj-head>
     <mj-breakpoint width="384px" />
     <mj-style>
@@ -177,16 +264,16 @@
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/a_dreamer">
+            <a href="${article1["authorLink"]}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b54a6e406f3311e9b89da1d556449df3.jpg" alt="" />
+                  <img src="${article1["avatar"]}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">Andy Luong</span>
+                    <span style="font-weight: 700">${article1["author"]}</span>
                   </p>
-                  <p class="author-id"> 6 giờ trước </p>
+                  <p class="author-id">${article1["createdDay"]}</p>
                 </div>
               </div>
             </a>
@@ -198,25 +285,23 @@
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/6585fdc00e2d11ec8a2eaf1bb36cc01d.png"
+            src="${article1["img"]}"
             alt=""
-            href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP"
+            href="${url1}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
-                > Khoa học - Công nghệ <span class="info"> </span
+              <a href="${article1["categoryLink"]}"
+                >${article1["category"]}<span class="info"> </span
               ></a>
             </p>
 
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP">
-              <p class="title-article">[Stoicism] - Dịch Seneca (124): Đừng bao giờ tin mình đã hạnh phúc cho đến khi mọi hạnh phúc của bạn đều xuất phát từ bên trong</p>
+            <a href="${url1}">
+              <p class="title-article">${article1["title"]}</p>
 
               <!-- description article -->
-              <p class="description-article">Lời tựa  :
-                      
-Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứng Stoicism của mình. Đọc Seneca không...</p>
+              <p class="description-article">${article1["description"]}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -233,16 +318,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/loveless2001">
+            <a href="${article2["authorLink"]}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg" alt="" />
+                  <img src="${article2["avatar"]}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">loveless</span>
+                    <span style="font-weight: 700">${article2["author"]}</span>
                   </p>
-                  <p class="author-id"> 31 tháng 7 </p>
+                  <p class="author-id">${article2["createdDay"]}</p>
                 </div>
               </div>
             </a>
@@ -254,22 +339,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/a0611d60f1f611ebb8688f96b862c9a9.png"
+            src="${article2["img"]}"
             alt=""
-            href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05"
+            href="${url2}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                > Quan điểm - Tranh luận <span class="info"> </span
+              <a href="${article2["categoryLink"]}"
+                >${article2["category"]}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05">
-              <p class="title-article">[WTDTY] Một xã hội chà đạp lên tất cả những tiến bộ của nền văn minh</p>
+            <a href="${url2}">
+              <p class="title-article">${article2["title"]}</p>
 
               <!-- description article -->
-              <p class="description-article">Nhân tính, nhân quyền và khoa học là những gì mà xã hội Việt Nam đang vứt bỏ vì một mục tiêu không tưởng “0 ca nhiễm covid”</p>
+              <p class="description-article">${article2["description"]}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -286,16 +371,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/duytang099">
+            <a href="${article3["authorLink"]}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c412a610e96411eba7d6b3a25432202e.jpg" alt="" />
+                  <img src="${article3["avatar"]}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">D2THEWORLD</span>
+                    <span style="font-weight: 700">${article3["author"]}</span>
                   </p>
-                  <p class="author-id"> 30 tháng 8 </p>
+                  <p class="author-id">${article3["createdDay"]}</p>
                 </div>
               </div>
             </a>
@@ -307,22 +392,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/e8e497f00e3a11ecbfa285ca4b16aa04.png"
+            src="${article3["img"]}"
             alt=""
-            href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF"
+            href="${url3}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/ky-nang"
-                > Kỹ năng <span class="info"> </span
+              <a href="${article3["categoryLink"]}"
+                >${article3["category"]}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF">
-              <p class="title-article">Thuyết trình dễ ẹt - áp dụng công thức là ra</p>
+            <a href="${url3}">
+              <p class="title-article">${article3["title"]}</p>
 
               <!-- description article -->
-              <p class="description-article">Công thức giúp bạn thuyết trình thành công</p>
+              <p class="description-article">${article3["description"]}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -339,16 +424,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/fat_tuna">
+            <a href="${article4["authorLink"]}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/535ca3d0eb8511eb9e5d0ff3814d80b3.jpg" alt="" />
+                  <img src="${article4["avatar"]}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">fat_tuna</span>
+                    <span style="font-weight: 700">${article4["author"]}</span>
                   </p>
-                  <p class="author-id"> 2 tháng 9 </p>
+                  <p class="author-id">${article4["createdDay"]}</p>
                 </div>
               </div>
             </a>
@@ -360,22 +445,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/1996a7500be611ec929d4505f162a47e.jpg"
+            src="${article4["img"]}"
             alt=""
-            href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s"
+            href="${url4}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                > Quan điểm - Tranh luận <span class="info"> </span
+              <a href="${article4["categoryLink"]}"
+                >${article4["category"]}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s">
-              <p class="title-article">Non-fungible Token và Crypto: Sự xâm lược của nghệ thuật hậu hiện đại</p>
+            <a href="${url4}">
+              <p class="title-article">${article4["title"]}</p>
 
               <!-- description article -->
-              <p class="description-article">9,900 chữ cho sự hoài nghi về logic, niềm tin vào logic tối cao và sự unlearn.</p>
+              <p class="description-article">${article4["description"]}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -392,16 +477,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/Mytwingo">
+            <a href="${article5["authorLink"]}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg" alt="" />
+                  <img src="${article5["avatar"]}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">Absolutely</span>
+                    <span style="font-weight: 700">${article5["author"]}</span>
                   </p>
-                  <p class="author-id"> 31 tháng 8 </p>
+                  <p class="author-id">${article5["createdDay"]}</p>
                 </div>
               </div>
             </a>
@@ -413,22 +498,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/cbf75a800c5d11ec979b61211f5f618d.jpg"
+            src="${article5["img"]}"
             alt=""
-            href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB"
+            href="${url5}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/science2vn"
-                > Science2vn <span class="info"> </span
+              <a href="${article5["categoryLink"]}"
+                >${article5["category"]}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB">
-              <p class="title-article">[P5] Cần sa - Bao giờ được hợp pháp hóa?</p>
+            <a href="${url5}">
+              <p class="title-article">${article5["title"]}</p>
 
               <!-- description article -->
-              <p class="description-article">So với người anh em thuốc phiện thì cần sa đa năng và lành tính hơn. Nhưng rất tiếc thế là không đủ.</p>
+              <p class="description-article">${article5["description"]}</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -445,16 +530,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/guiltygearxx">
+            <a href="${article6["authorLink"]}">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/580f27502ab711e8aff0b37519421f8c.jpg" alt="" />
+                  <img src="${article6["avatar"]}" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">roadrash</span>
+                    <span style="font-weight: 700">${article6["author"]}</span>
                   </p>
-                  <p class="author-id"> 3 tháng 9 </p>
+                  <p class="author-id">${article6["createdDay"]}</p>
                 </div>
               </div>
             </a>
@@ -466,22 +551,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/3c6c93200cc211ec8dcf01f8a3041de3.png"
+            src="${article6["img"]}"
             alt=""
-            href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF"
+            href="${url6}"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
-                > Khoa học - Công nghệ <span class="info"> </span
+              <a href="${article6["categoryLink"]}"
+                >${article6["category"]}<span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF">
-              <p class="title-article">Một số insight về từ vựng sách Cambridge English IELTS</p>
+            <a href="${url6}">
+              <p class="title-article">${article6["title"]}</p>
 
               <!-- description article -->
-              <p class="description-article">Insight về từ vựng sách Cambridge English IELTS</p>
+              <p class="description-article">${article6["description"]}</p>
 
               <p class="link-article link-article-bot">Đọc bài viết tại đây.</p>
             </a>
@@ -594,3 +679,25 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
     </mj-wrapper>
   </mj-body>
 </mjml>
+`;
+
+  writeStream.write(vltn);
+
+  //value value
+};
+
+readF()
+  .then(() => {
+    url1 = url[1];
+    url2 = url[2];
+    url3 = url[3];
+    url4 = url[4];
+    url5 = url[5];
+    url6 = url[6];
+    url7 = url[7];
+    url8 = url[8];
+    url9 = url[9];
+  })
+  .then(() => {
+    crawl().then(() => console.log("DONE"));
+  });

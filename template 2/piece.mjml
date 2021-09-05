@@ -1,0 +1,52 @@
+
+      <!-- article card -->
+      <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+        <mj-raw>
+        <a href="${article7['authorLink']}">
+          <div class="content user-container author-container">
+            <div class="img-card">
+              <img
+                src="${article7['avatar']}"
+                alt=""
+              />
+            </div>
+            <div class="sub-author-container">
+              <p class="author-name">
+                <span style="font-weight: 700">${article7['author']}</span>
+              </p>
+              <p class="author-id">${article7['createdDay']}</p>
+            </div>
+          </div>
+         </a> 
+        </mj-raw>
+        <!-- author card -->
+      </mj-column>
+
+      <!-- article image -->
+      <mj-column width="100%" css-class="article">
+        <mj-image
+          css-class="article-img "
+          src="${article7['img']}"
+          alt=""
+          href="${url7}"
+        />
+        <mj-text css-class="text-article">
+          <p class="category"><a href="${article7['categoryLink']}">${article7['category']}<span class="info"> </span><a/></p>
+          <!-- title article -->
+          <a href="${url7}">
+          <p class="title-article">
+            ${article7['title']}
+          </p>
+
+          <!-- description article -->
+          <p class="description-article">${article7['description']}</p>
+
+          <p class="link-article">Đọc bài viết tại đây.</p>
+          </a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="89.58%" css-class="sub-hr">
+        <mj-divider border-width="1px" border-color="rgba(227, 227, 227, 1)" />
+      </mj-column>
+      <!-- end article -->
+  
