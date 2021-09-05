@@ -52,7 +52,7 @@ const getS = async (url) => {
     img: img,
     avatar: avatar,
   };
-
+  console.log(b)
   return b;
 };
 
