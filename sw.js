@@ -1,199 +1,1239 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
+Object.defineProperty(exports, "__esModule", { value: true });
+const axios_1 = require("axios");
+const cheerio_1 = require("cheerio");
+const fs = require("fs");
+const readline = require("readline");
+const writeStream = fs.createWriteStream("DONE.mjml");
+const url = ["0"];
+let url1;
+let url2;
+let url3;
+let url4;
+let url5;
+let url6;
+let url7;
+let url8;
+let url9;
+const readF = async () => {
+    const file = fs.createReadStream("URL.txt");
+    const rl = readline.createInterface({
+        input: file,
+        crlfDelay: Infinity,
     });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    for await (const line of rl) {
+        url.push(line);
     }
 };
-var __asyncValues = (this && this.__asyncValues) || function (o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+const getS = async (url) => {
+    const res = await axios_1.default.get(url);
+    const $ = await cheerio_1.default.load(res.data);
+    let title = $("title").text();
+    let author = $(".author-info > a").text();
+    let authorLink = $(".author-info > a").attr("href");
+    let category = $(".category > a").text();
+    let categoryLink = $(".category > a").attr("href");
+    let description = $('meta[name="description"]').attr("content");
+    let createdDay = $(".created-day").text();
+    let img = $("meta[property='og:image']").attr("content");
+    const avatar = $("avatar> a > img").attr("src");
+    const b = {
+        title: title,
+        author: author,
+        authorLink: `https://spiderum.com${authorLink}`,
+        category: category,
+        categoryLink: `https://spiderum.com${categoryLink}`,
+        description: description,
+        createdDay: createdDay,
+        img: img,
+        avatar: avatar,
+    };
+    console.log(b);
+    return b;
 };
-exports.__esModule = true;
-var axios_1 = require("axios");
-var cheerio_1 = require("cheerio");
-var fs = require("fs");
-var readline = require("readline");
-var writeStream = fs.createWriteStream("DONE.mjml");
-var url = ["0"];
-var url1;
-var url2;
-var url3;
-var url4;
-var url5;
-var url6;
-var url7;
-var url8;
-var url9;
-var readF = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var file, rl, rl_1, rl_1_1, line, e_1_1;
-    var e_1, _a;
-    return __generator(this, function (_b) {
-        switch (_b.label) {
-            case 0:
-                file = fs.createReadStream("URL.txt");
-                rl = readline.createInterface({
-                    input: file,
-                    crlfDelay: Infinity
-                });
-                _b.label = 1;
-            case 1:
-                _b.trys.push([1, 6, 7, 12]);
-                rl_1 = __asyncValues(rl);
-                _b.label = 2;
-            case 2: return [4 /*yield*/, rl_1.next()];
-            case 3:
-                if (!(rl_1_1 = _b.sent(), !rl_1_1.done)) return [3 /*break*/, 5];
-                line = rl_1_1.value;
-                url.push(line);
-                _b.label = 4;
-            case 4: return [3 /*break*/, 2];
-            case 5: return [3 /*break*/, 12];
-            case 6:
-                e_1_1 = _b.sent();
-                e_1 = { error: e_1_1 };
-                return [3 /*break*/, 12];
-            case 7:
-                _b.trys.push([7, , 10, 11]);
-                if (!(rl_1_1 && !rl_1_1.done && (_a = rl_1["return"]))) return [3 /*break*/, 9];
-                return [4 /*yield*/, _a.call(rl_1)];
-            case 8:
-                _b.sent();
-                _b.label = 9;
-            case 9: return [3 /*break*/, 11];
-            case 10:
-                if (e_1) throw e_1.error;
-                return [7 /*endfinally*/];
-            case 11: return [7 /*endfinally*/];
-            case 12: return [2 /*return*/];
-        }
+const crawl = async () => {
+    const article1 = await getS(url1).then((s) => {
+        return s;
     });
-}); };
-var getS = function (url) { return __awaiter(void 0, void 0, void 0, function () {
-    var res, $, title, author, authorLink, category, categoryLink, description, createdDay, img, avatar, b;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, axios_1["default"].get(url)];
-            case 1:
-                res = _a.sent();
-                return [4 /*yield*/, cheerio_1["default"].load(res.data)];
-            case 2:
-                $ = _a.sent();
-                title = $("title").text();
-                author = $(".author-info > a").text();
-                authorLink = $(".author-info > a").attr("href");
-                category = $(".category > a").text();
-                categoryLink = $(".category > a").attr("href");
-                description = $('meta[name="description"]').attr("content");
-                createdDay = $(".created-day").text();
-                img = $("meta[property='og:image']").attr("content");
-                avatar = $("avatar> a > img").attr("src");
-                b = {
-                    title: title,
-                    author: author,
-                    authorLink: "https://spiderum.com" + authorLink,
-                    category: category,
-                    categoryLink: "https://spiderum.com" + categoryLink,
-                    description: description,
-                    createdDay: createdDay,
-                    img: img,
-                    avatar: avatar
-                };
-                console.log(b);
-                return [2 /*return*/, b];
-        }
+    const article2 = await getS(url2).then((s) => {
+        return s;
     });
-}); };
-var crawl = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var article1, article2, article3, article4, article5, article6, article7, article8, article9, vltn;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, getS(url1).then(function (s) {
-                    return s;
-                })];
-            case 1:
-                article1 = _a.sent();
-                return [4 /*yield*/, getS(url2).then(function (s) {
-                        return s;
-                    })];
-            case 2:
-                article2 = _a.sent();
-                return [4 /*yield*/, getS(url3).then(function (s) {
-                        return s;
-                    })];
-            case 3:
-                article3 = _a.sent();
-                return [4 /*yield*/, getS(url4).then(function (s) {
-                        return s;
-                    })];
-            case 4:
-                article4 = _a.sent();
-                return [4 /*yield*/, getS(url5).then(function (s) {
-                        return s;
-                    })];
-            case 5:
-                article5 = _a.sent();
-                return [4 /*yield*/, getS(url6).then(function (s) {
-                        return s;
-                    })];
-            case 6:
-                article6 = _a.sent();
-                return [4 /*yield*/, getS(url7).then(function (s) {
-                        return s;
-                    })];
-            case 7:
-                article7 = _a.sent();
-                return [4 /*yield*/, getS(url8).then(function (s) {
-                        return s;
-                    })];
-            case 8:
-                article8 = _a.sent();
-                return [4 /*yield*/, getS(url9).then(function (s) {
-                        return s;
-                    })];
-            case 9:
-                article9 = _a.sent();
-                vltn = "<mjml>\n  <mj-head>\n    <mj-breakpoint width=\"60px\" />\n\n    <mj-style>\n      * { box-sizing: border-box; margin: 0; padding: 0; } body { min-width:\n      300px !important; } .main-cate p{ text-transform: uppercase!important; }\n      .created-day { font-size: 12px !important; margin: 0 !important;\n      padding:2px 0 0 0 !important; color: #b5b5b5 !important; font-family:\n      \"Noto Sans\", sans-serif !important; line-height: 10px !important;\n      vertical-align: top !important; font-weight: 40!important; } .img-author\n      img { bottom: 8px !important; } .sub-cate { margin: 4px 0 4px 0\n      !important; font-weight: 400!important; text-transform: uppercase\n      !important; font-size: 14px!important; line-height: 16px!important;\n      font-family: \"Noto Sans\", sans-serif; color: #616161 !important; }\n      .author-name { line-height: 1 !important; margin: 0 0 0 0 !important;\n      padding: 0 !important; font-size: 14px !important; color: #161616\n      !important; font-family: \"Noto Sans\", sans-serif !important; line-height:\n      20px !important; } .sub-author-container p { min-width: 115px; margin: 5px\n      0 0 0; } a { color: #161616; text-decoration: none; text-underline-offset:\n      none; } .sub-title { font-family: \"Raleway\", sans-serif!important; margin:\n      0 0 0 0 !important; } .sub-title-cont { min-height: 40px !important; }\n      .sub-img { height: 120px !important; width: 120px !important; } .sub-img\n      img { width: 100% !important; object-fit: cover !important; height: 100%;\n      } @media (min-width: 385px) { .author-name { font-size: 14px !important; }\n      .sub-cate { margin: 4px 0 0px 0!important; font-size: 14px !important; }\n      .big-title p { font-size: 42px !important; line-height: 57.2px !important;\n      } .big-title td { width: 300px !important; } .main-image img { padding:\n      16px 0 6px 0 !important; } .author-card { padding: 18px 0 0 0 !important;\n      } .sub-hr { padding: 11px 0 26px 0 !important; } .sub-har { padding: 40px\n      0 18px 0 !important; } .img-author { padding: 5px 27px 0 0 !important; }\n      .img-author img { width: 32px !important; height: 32px !important; bottom:\n      0 !important; } .sub-img { height: 128px !important; width: 128px\n      !important; } .sub-img img { width: 100% !important; object-fit: cover\n      !important; height: 100%; } .sub-content { margin: 0 0 0 4% !important;\n      width: calc(93.5% - 128px) !important; } .sub-2 { padding: 0 0 0 0\n      !important; } .big-title { width: 55% !important; } .sub-title {\n      font-size: 20px !important; line-height: 25.08px !important; padding: 8px\n      0 14px 0 !important; } .sub-title-cont { min-height: 50px !important; } }\n      @media (min-width: 520px) { .big-title p { font-size: 38px !important;\n      line-height: 50px !important; } .big-title { width: 70% !important; } }\n      a:hover, img:hover { color: #161616; opacity: 0.7; } .container {\n      -webkit-box-align: center; -ms-flex-align: center; align-items: center; }\n      .sub-img { float: left; padding: 0 0 0 0; width: 120px; } .sub-img img {\n      border-radius: 3px; } .sub-content { float: left; width: calc(100% -\n      148px); margin: 0; padding: 0; } .sub-content p { font-size: 16px;\n      line-height: 21.79px; font-weight: 700; } .sub-author-container {\n      text-align: left; max-width: 420px; line-height: 0px; float: left; height:\n      36px; } /*# sourceMappingURL=final.css.map */\n    </mj-style>\n    <mj-font\n      name=\"Noto Serif\"\n      href=\"https://fonts.googleapis.com/css2?family=Noto+Serif:wght@0,400;0,700;1,400;1,700&display=swap\"\n    />\n    <mj-font\n      name=\"Noto Sans\"\n      href=\"https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap\"\n    />\n    <mj-font\n      name=\"Raleway\"\n      href=\"https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap\"\n    />\n\n    <mj-attributes>\n      <mj-all padding=\"0px\" align=\"center\" />\n      <mj-section background-color=\"#f9f9f9\"> </mj-section>\n      <<mj-text color=\"#161616\" text-decoration=\"none\"> </mj-text>\n    </mj-attributes>\n  </mj-head>\n  <mj-body width=\"680px\">\n    <!-- Headder -->\n\n    <mj-wrapper>\n      <mj-section css-class=\"\">\n        <mj-column width=\"100%\" padding=\"27px 0 0 0\">\n          <mj-image\n            src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/fcc1d6600d9611ec989ecdbb5e35c5a8.png\"\n            alt=\"Spiderum log\"\n            width=\"166px\"\n            height=\"166px\"\n          />\n        </mj-column>\n        <mj-column css-class=\"big-title\" width=\"80%\" padding=\"22px 0 0 0\">\n          <mj-text\n            font-family=\"Noto Serif, serif\"\n            font-size=\"32px\"\n            align=\"center\"\n            line-height=\"43.58px\"\n            font-weight=\"500\"\n          >\n            <p>Nh\u1EEFng b\u00E0i vi\u1EBFt th\u00FA v\u1ECB t\u1EEB Spiderum.</p>\n          </mj-text>\n        </mj-column>\n        <!-- user-card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <div\n              style=\"\n                display: flex;\n                align-item: center;\n                justify-content: center;\n                height: 36px;\n              \"\n            >\n              <div style=\"padding: 5px 12px 0 0; height: 36px\">\n                <img\n                  src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-avatar/953eeaa0096811ec9ec5131d8341f662.jpeg\"\n                  alt=\"\"\n                  style=\"width: 32px; height: 32px; border-radius: 50%\"\n                />\n              </div>\n              <div\n                style=\"\n                  text-align: left;\n                  max-width: 420px;\n                  line-height: 0px;\n\n                  height: 36px;\n                \"\n              >\n                <div>\n                  <p\n                    style=\"\n                      width: auto;\n                      font-size: 14px;\n                      color: #161616;\n                      font-family: 'Noto Sans', sans-serif;\n                    \"\n                  >\n                    Danh cho <span style=\"font-weight: 700\">Thcccccccc</span>\n                  </p>\n                  <p\n                    style=\"\n                      font-size: 12px;\n                      color: #616161;\n                      font-family: 'Noto Sans', sans-serif;\n                      line-height: 5px;\n                    \"\n                  >\n                    @nguudau\n                  </p>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n      </mj-section>\n    </mj-wrapper>\n\n    <!-- Content card -->\n    <mj-wrapper background-color=\"#f9f9f9\">\n      <mj-section\n        background-color=\"rgba(227, 235, 246, 0.25)\n\"\n        padding=\"12px 0 0 0\"\n      >\n        <!-- card header -->\n        <mj-column width=\"100%\">\n          <mj-text\n            font-family=\"Raleway, sans-serif\"\n            font-size=\"20px\"\n            line-height=\"25.08px\"\n            font-weight=\"700\"\n          >\n            <p>\u0110\u01B0\u1EE3c xem nhi\u1EC1u nh\u1EA5t</p>\n          </mj-text>\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"#c4c4c4\"\n            padding=\"16px 0 0 0\"\n            width=\"91%\"\n          />\n        </mj-column>\n        <!-- Main content -->\n        <mj-column css-class=\"main-image\" width=\"89.58%\" padding=\"10px 0 0 0\">\n          <mj-image\n            href=\"" + url1 + "\"\n            border-radius=\"3px\"\n            src=\"" + article1["img"] + "\"\n            alt='" + article1["description"] + "'\n          />\n          <!-- Category class=\"sub-cate\" Time -->\n          <mj-text\n            css-class=\"main-cate\"\n            font-size=\"13px\"\n            line-height=\"0px\"\n            padding=\"11px 0 0 0\"\n            align=\"left\"\n            font-family=\"Noto Sans, sans-serif\"\n          >\n            <p>\n              <a href=\"" + article1["categoryLink"] + "\">\n                " + article1["category"] + "\n                <span style=\"font-size: 12px; color: #616161\"> </span\n              ></a>\n            </p>\n          </mj-text>\n          <!-- Title -->\n          <mj-text\n            font-size=\"20px\"\n            font-weight=\"700\"\n            line-height=\"25.08px\"\n            padding=\"10px 0 0 0\"\n            align=\"left\"\n            font-family=\"Raleway, sans-serif\"\n          >\n            <a href=\"" + url1 + "\"> " + article1["title"] + "</a>\n          </mj-text>\n          <!-- Description -->\n          <mj-text\n            css-class=\"main-des\"\n            font-size=\"16px\"\n            line-height=\"21.79px\"\n            font-weight=\"400\"\n            padding=\"16px 0 0 0\"\n            align=\"left\"\n            font-family=\"Nota Sans, sans-serif\"\n            color=\"#616161\"\n          >\n            <a style=\"color: #616161\" href=\"" + url1 + "\">\n              " + article1["description"] + "\n            </a>\n          </mj-text>\n        </mj-column>\n\n        <!-- author -->\n        <mj-column css-class=\"author-card\" width=\"89.58%\" padding=\"13px 0 0 0\">\n          <mj-raw>\n            <div style=\"display: flex; align-items: center; height: 36px\">\n              <div style=\"padding: 5px 12px 0 0; height: 36px\">\n                <a href=\"" + article1["authorLink"] + "\">\n                  <img\n                    src=\"" + article1["avatar"] + "\"\n                    alt=\"\"\n                    style=\"width: 32px; height: 32px; border-radius: 50%\"\n                /></a>\n              </div>\n              <div\n                style=\"\n                  text-align: left;\n                  max-width: 420px;\n                  line-height: 0px;\n\n                  height: 36px;\n                \"\n              >\n                <div>\n                  <a href=\"" + article1["authorLink"] + "\">\n                    <p\n                      style=\"\n                        width: auto;\n                        font-size: 14px;\n                        color: #161616;\n                        font-family: 'Noto Sans', sans-serif;\n                      \"\n                    >\n                      <span style=\"font-weight: 700\"\n                        >" + article1["author"] + "</span\n                      >\n                    </p>\n                    <p\n                      style=\"\n                        font-size: 12px;\n                        color: #616161;\n                        font-family: 'Noto Sans', sans-serif;\n                        line-height: 5px;\n                      \"\n                    >\n                      " + article1["createdDay"] + "\n                    </p>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n\n        <!-- hr subcontent 1 -->\n        <mj-column css-class=\"sub-hr\" width=\"91%\" padding=\"11px 0 10px 0\">\n          <mj-divider border-width=\"1px\" border-color=\"#e3e3e3\" />\n        </mj-column>\n        <!-- sub-content 1 -->\n        <mj-column width=\"89.58%\" padding=\"0 0 0 0\">\n          <mj-raw>\n            <div class=\"container\">\n              <!-- sub-img 1 -->\n              <div class=\"sub-img\" style=\"margin: 5px 0 0 0\">\n                <a href=\"" + url2 + "\">\n                  <img\n                    src=\"" + article2["img"] + "\"\n                    alt=\"" + article2["description"] + "\"\n                  />\n                </a>\n              </div>\n              <!-- sub category -->\n              <div class=\"sub-content\" style=\"margin: 0 0 0 18px\">\n                <p class=\"sub-cate\">\n                  <a href=\"" + article2["categoryLink"] + "\"\n                    >" + article2["category"] + "</a\n                  >\n\n                  <span style=\"color: #616161\"> </span>\n                </p>\n                <!-- sub title -->\n                <div class=\"sub-title-cont\">\n                  <p class=\"sub-title\">\n                    <a href=\"" + url2 + "\">" + article2["title"] + " </a>\n                  </p>\n                </div>\n                <div\n                  style=\"\n                    display: flex;\n                    align-items: center;\n                    position: relative;\n                    height: 36px;\n                  \"\n                >\n                  <div\n                    class=\"img-author\"\n                    style=\"\n                      padding: 5px 12px 0 0;\n                      height: 36px;\n\n                      height: 20px;\n                    \"\n                  >\n                    <img\n                      src=\"" + article2["avatar"] + "\"\n                      alt=\"\"\n                      style=\"\n                        width: 18px;\n                        height: 18px;\n                        border-radius: 50%;\n                        align-items: center;\n                        position: absolute;\n                        bottom: 5px;\n                      \"\n                    />\n                  </div>\n                  <div class=\"sub-author-container\" style=\"padding-left: 12px\">\n                    <a href=\"" + article2["authorLink"] + "\">\n                      <p\n                        class=\"author-name\"\n                        style=\"\n                          font-size: 12px;\n                          color: #161616;\n                          font-family: 'Noto Sans', sans-serif;\n                          line-height: 0px;\n                        \"\n                      >\n                        <span style=\"font-weight: 700\"\n                          >" + article2["author"] + "</span\n                        >\n                      </p>\n                      <p class=\"created-day\">" + article2["createdDay"] + "</p></a\n                    >\n                  </div>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n\n        <!-- hr subcontent 2 -->\n        <mj-column css-class=\"sub-har\" width=\"91%\" padding=\"11px 0 10px 0\">\n          <mj-divider border-width=\"1px\" border-color=\"#e3e3e3\" />\n        </mj-column>\n\n        <mj-column css-class=\"sub-2\" width=\"89.58%\" padding=\"0 0 36px 0\">\n          <mj-raw>\n            <div class=\"container\">\n              <!-- sub-img 1 -->\n              <div class=\"sub-img\" style=\"margin: 5px 0 0 0\">\n                <a href=\"" + url3 + "\">\n                  <img\n                    src=\"" + article3["img"] + "\"\n                    alt=\"" + article3["description"] + "\"\n                /></a>\n              </div>\n              <!-- sub category -->\n              <div class=\"sub-content\" style=\"margin: 0 0 0 18px\">\n                <p class=\"sub-cate\">\n                  <a href=\"" + article3["categoryLink"] + "\"\n                    >" + article3["category"] + "</a\n                  >\n                  <span style=\"color: #616161\"> </span>\n                </p>\n                <!-- sub title -->\n                <div class=\"sub-title-cont\">\n                  <p class=\"sub-title\">\n                    <a href=\"" + url3 + "\">" + article3["title"] + " </a>\n                  </p>\n                </div>\n                <div\n                  style=\"\n                    display: flex;\n                    align-items: center;\n                    position: relative;\n                    height: 36px;\n                  \"\n                >\n                  <div\n                    class=\"img-author\"\n                    style=\"\n                      padding: 5px 12px 0 0;\n                      height: 36px;\n\n                      height: 20px;\n                    \"\n                  >\n                    <img\n                      src=\"" + article3["avatar"] + "\"\n                      alt=\"\"\n                      style=\"\n                        width: 18px;\n                        height: 18px;\n                        border-radius: 50%;\n                        align-items: center;\n                        position: absolute;\n                        bottom: 5px;\n                      \"\n                    />\n                  </div>\n\n                  <div class=\"sub-author-container\" style=\"padding-left: 12px\">\n                    <a href=\"" + article3["authorLink"] + "\">\n                      <p\n                        class=\"author-name\"\n                        style=\"\n                          font-size: 12px;\n                          color: #161616;\n                          font-family: 'Noto Sans', sans-serif;\n                          line-height: 0px;\n                        \"\n                      >\n                        <span style=\"font-weight: 700\"\n                          >" + article3["author"] + "</span\n                        >\n                      </p>\n                      <p class=\"created-day\">" + article3["createdDay"] + "</p></a\n                    >\n                  </div>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n      </mj-section>\n    </mj-wrapper>\n    <!-- Content card 2 -->\n    <mj-wrapper background-color=\"#f9f9f9\">\n      <mj-section\n        background-color=\"rgba(227, 235, 246, 0.25)\n\"\n        padding=\"12px 0 0 0\"\n      >\n        <!-- card header -->\n        <mj-column width=\"100%\">\n          <mj-text\n            font-family=\"Raleway, sans-serif\"\n            font-size=\"20px\"\n            line-height=\"25.08px\"\n            font-weight=\"700\"\n          >\n            <p>Ho\u1EA1t \u0111\u1ED9ng s\u00F4i n\u1ED5i</p>\n          </mj-text>\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"#c4c4c4\"\n            padding=\"16px 0 0 0\"\n            width=\"91%\"\n          />\n        </mj-column>\n        <!-- Main content -->\n        <!-- Main content -->\n        <mj-column css-class=\"main-image\" width=\"89.58%\" padding=\"10px 0 0 0\">\n          <mj-image\n            href=\"" + url4 + "\"\n            border-radius=\"3px\"\n            src=\"" + article4["img"] + "\"\n            alt=\"" + article4["description"] + "\"\n          />\n          <!-- Category class=\"sub-cate\" Time -->\n          <mj-text\n            css-class=\"main-cate\"\n            font-size=\"13px\"\n            line-height=\"0px\"\n            padding=\"11px 0 0 0\"\n            align=\"left\"\n            font-family=\"Noto Sans, sans-serif\"\n          >\n            <p>\n              <a href=\"" + article4["categoryLink"] + "\">\n                " + article4["category"] + "\n                <span style=\"font-size: 12px; color: #616161\"> </span\n              ></a>\n            </p>\n          </mj-text>\n          <!-- Title -->\n          <mj-text\n            font-size=\"20px\"\n            font-weight=\"700\"\n            line-height=\"25.08px\"\n            padding=\"10px 0 0 0\"\n            align=\"left\"\n            font-family=\"Raleway, sans-serif\"\n          >\n            <a href=\"" + url4 + "\"> " + article4["title"] + "</a>\n          </mj-text>\n          <!-- Description -->\n          <mj-text\n            css-class=\"main-des\"\n            font-size=\"16px\"\n            line-height=\"21.79px\"\n            font-weight=\"400\"\n            padding=\"16px 0 0 0\"\n            align=\"left\"\n            font-family=\"Nota Sans, sans-serif\"\n            color=\"#616161\"\n          >\n            <a style=\"color: #616161\" href=\"" + url4 + "\">\n              " + article4["description"] + "\n            </a>\n          </mj-text>\n        </mj-column>\n\n        <!-- author -->\n        <mj-column css-class=\"author-card\" width=\"89.58%\" padding=\"13px 0 0 0\">\n          <mj-raw>\n            <div style=\"display: flex; align-items: center; height: 36px\">\n              <div style=\"padding: 5px 12px 0 0; height: 36px\">\n                <a href=\"" + article4["authorLink"] + "\">\n                  <img\n                    src=\"" + article4["avatar"] + "\"\n                    alt=\"\"\n                    style=\"width: 32px; height: 32px; border-radius: 50%\"\n                /></a>\n              </div>\n              <div\n                style=\"\n                  text-align: left;\n                  max-width: 420px;\n                  line-height: 0px;\n\n                  height: 36px;\n                \"\n              >\n                <div>\n                  <a href=\"" + article4["authorLink"] + "\">\n                    <p\n                      style=\"\n                        width: auto;\n                        font-size: 14px;\n                        color: #161616;\n                        font-family: 'Noto Sans', sans-serif;\n                      \"\n                    >\n                      <span style=\"font-weight: 700\"\n                        >" + article4["author"] + "</span\n                      >\n                    </p>\n                    <p\n                      style=\"\n                        font-size: 12px;\n                        color: #616161;\n                        font-family: 'Noto Sans', sans-serif;\n                        line-height: 5px;\n                      \"\n                    >\n                      " + article4["createdDay"] + "\n                    </p>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n\n        <!-- hr subcontent 1 -->\n        <mj-column css-class=\"sub-hr\" width=\"91%\" padding=\"11px 0 10px 0\">\n          <mj-divider border-width=\"1px\" border-color=\"#e3e3e3\" />\n        </mj-column>\n        <!-- sub-content 1 -->\n        <mj-column width=\"89.58%\" padding=\"0 0 0 0\">\n          <mj-raw>\n            <div class=\"container\">\n              <!-- sub-img 1 -->\n              <div class=\"sub-img\" style=\"margin: 5px 0 0 0\">\n                <a href=\"" + url5 + "\">\n                  <img\n                    src=\"" + article5["img"] + "\"\n                    alt=\"" + article5["description"] + "\"\n                  />\n                </a>\n              </div>\n              <!-- sub category -->\n              <div class=\"sub-content\" style=\"margin: 0 0 0 18px\">\n                <p class=\"sub-cate\">\n                  <a href=\"" + article5["categoryLink"] + "\"\n                    >" + article5["category"] + "</a\n                  >\n\n                  <span style=\"color: #616161\"> </span>\n                </p>\n                <!-- sub title -->\n                <div class=\"sub-title-cont\">\n                  <p class=\"sub-title\">\n                    <a href=\"" + url5 + "\">" + article5["title"] + " </a>\n                  </p>\n                </div>\n                <div\n                  style=\"\n                    display: flex;\n                    align-items: center;\n                    position: relative;\n                    height: 36px;\n                  \"\n                >\n                  <div\n                    class=\"img-author\"\n                    style=\"\n                      padding: 5px 12px 0 0;\n                      height: 36px;\n\n                      height: 20px;\n                    \"\n                  >\n                    <img\n                      src=\"" + article5["avatar"] + "\"\n                      alt=\"\"\n                      style=\"\n                        width: 18px;\n                        height: 18px;\n                        border-radius: 50%;\n                        align-items: center;\n                        position: absolute;\n                        bottom: 5px;\n                      \"\n                    />\n                  </div>\n                  <div class=\"sub-author-container\" style=\"padding-left: 12px\">\n                    <a href=\"" + article5["authorLink"] + "\">\n                      <p\n                        class=\"author-name\"\n                        style=\"\n                          font-size: 12px;\n                          color: #161616;\n                          font-family: 'Noto Sans', sans-serif;\n                          line-height: 0px;\n                        \"\n                      >\n                        <span style=\"font-weight: 700\"\n                          >" + article5["author"] + "</span\n                        >\n                      </p>\n                      <p class=\"created-day\">" + article5["createdDay"] + "</p></a\n                    >\n                  </div>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n\n        <!-- hr subcontent 2 -->\n        <mj-column css-class=\"sub-har\" width=\"91%\" padding=\"11px 0 10px 0\">\n          <mj-divider border-width=\"1px\" border-color=\"#e3e3e3\" />\n        </mj-column>\n\n        <mj-column css-class=\"sub-2\" width=\"89.58%\" padding=\"0 0 36px 0\">\n          <mj-raw>\n            <div class=\"container\">\n              <!-- sub-img 1 -->\n              <div class=\"sub-img\" style=\"margin: 5px 0 0 0\">\n                <a href=\"" + url6 + "\">\n                  <img\n                    src=\"" + article6["img"] + "\"\n                    alt=\"" + article6["description"] + "\"\n                /></a>\n              </div>\n              <!-- sub category -->\n              <div class=\"sub-content\" style=\"margin: 0 0 0 18px\">\n                <p class=\"sub-cate\">\n                  <a href=\"" + article6["categoryLink"] + "\"\n                    >" + article6["category"] + "</a\n                  >\n\n                  <span style=\"color: #616161\"> </span>\n                </p>\n                <!-- sub title -->\n                <div class=\"sub-title-cont\">\n                  <p class=\"sub-title\">\n                    <a href=\"" + url6 + "\">" + article6["title"] + " </a>\n                  </p>\n                </div>\n                <div\n                  style=\"\n                    display: flex;\n                    align-items: center;\n                    position: relative;\n                    height: 36px;\n                  \"\n                >\n                  <div\n                    class=\"img-author\"\n                    style=\"\n                      padding: 5px 12px 0 0;\n                      height: 36px;\n\n                      height: 20px;\n                    \"\n                  >\n                    <img\n                      src=\"" + article6["avatar"] + "\"\n                      alt=\"\"\n                      style=\"\n                        width: 18px;\n                        height: 18px;\n                        border-radius: 50%;\n                        align-items: center;\n                        position: absolute;\n                        bottom: 5px;\n                      \"\n                    />\n                  </div>\n                  <div class=\"sub-author-container\" style=\"padding-left: 12px\">\n                    <a href=\"" + article6["authorLink"] + "\">\n                      <p\n                        class=\"author-name\"\n                        style=\"\n                          font-size: 12px;\n                          color: #161616;\n                          font-family: 'Noto Sans', sans-serif;\n                          line-height: 0px;\n                        \"\n                      >\n                        <span style=\"font-weight: 700\"\n                          >" + article6["author"] + "</span\n                        >\n                      </p>\n                      <p class=\"created-day\">" + article6["createdDay"] + "</p></a\n                    >\n                  </div>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n      </mj-section>\n    </mj-wrapper>\n    <!-- Content card 3 -->\n    <mj-wrapper background-color=\"#f9f9f9\">\n      <mj-section\n        background-color=\" rgba(227, 235, 246, 0.25)\n\"\n        padding=\"12px 0 0 0\"\n      >\n        <!-- card header -->\n        <mj-column width=\"100%\">\n          <mj-text\n            font-family=\"Raleway, sans-serif\"\n            font-size=\"20px\"\n            line-height=\"25.08px\"\n            font-weight=\"700\"\n          >\n            <p>C\u00E2y vi\u1EBFt n\u1ED5i b\u1EADt</p>\n          </mj-text>\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"#c4c4c4\"\n            padding=\"16px 0 0 0\"\n            width=\"91%\"\n          />\n        </mj-column>\n        <!-- Main content -->\n        <!-- Main content -->\n        <mj-column css-class=\"main-image\" width=\"89.58%\" padding=\"10px 0 0 0\">\n          <mj-image\n            href=\"" + url7 + "\"\n            border-radius=\"3px\"\n            src=\"" + article7["img"] + "\"\n            alt='" + article7["description"] + "'\n          />\n          <!-- Category class=\"sub-cate\" Time -->\n          <mj-text\n            css-class=\"main-cate\"\n            font-size=\"13px\"\n            line-height=\"0px\"\n            padding=\"11px 0 0 0\"\n            align=\"left\"\n            font-family=\"Noto Sans, sans-serif\"\n          >\n            <p>\n              <a href=\"" + article7["categoryLink"] + "\">\n                " + article7["category"] + "\n                <span style=\"font-size: 12px; color: #616161\"> </span\n              ></a>\n            </p>\n          </mj-text>\n          <!-- Title -->\n          <mj-text\n            font-size=\"20px\"\n            font-weight=\"700\"\n            line-height=\"25.08px\"\n            padding=\"10px 0 0 0\"\n            align=\"left\"\n            font-family=\"Raleway, sans-serif\"\n          >\n            <a href=\"" + url7 + "\"> " + article7["title"] + "</a>\n          </mj-text>\n          <!-- Description -->\n          <mj-text\n            css-class=\"main-des\"\n            font-size=\"16px\"\n            line-height=\"21.79px\"\n            font-weight=\"400\"\n            padding=\"16px 0 0 0\"\n            align=\"left\"\n            font-family=\"Nota Sans, sans-serif\"\n            color=\"#616161\"\n          >\n            <a style=\"color: #616161\" href=\"" + url7 + "\">\n              " + article7["description"] + "\n            </a>\n          </mj-text>\n        </mj-column>\n\n        <!-- author -->\n        <mj-column css-class=\"author-card\" width=\"89.58%\" padding=\"13px 0 0 0\">\n          <mj-raw>\n            <div style=\"display: flex; align-items: center; height: 36px\">\n              <div style=\"padding: 5px 12px 0 0; height: 36px\">\n                <a href=\"" + article7["authorLink"] + "\">\n                  <img\n                    src=\"" + article7["avatar"] + "\"\n                    alt=\"\"\n                    style=\"width: 32px; height: 32px; border-radius: 50%\"\n                /></a>\n              </div>\n              <div\n                style=\"\n                  text-align: left;\n                  max-width: 420px;\n                  line-height: 0px;\n\n                  height: 36px;\n                \"\n              >\n                <div>\n                  <a href=\"" + article7["authorLink"] + "\">\n                    <p\n                      style=\"\n                        width: auto;\n                        font-size: 14px;\n                        color: #161616;\n                        font-family: 'Noto Sans', sans-serif;\n                      \"\n                    >\n                      <span style=\"font-weight: 700\"\n                        >" + article7["author"] + "</span\n                      >\n                    </p>\n                    <p\n                      style=\"\n                        font-size: 12px;\n                        color: #616161;\n                        font-family: 'Noto Sans', sans-serif;\n                        line-height: 5px;\n                      \"\n                    >\n                      " + article7["createdDay"] + "\n                    </p>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n\n        <!-- hr subcontent 1 -->\n        <mj-column css-class=\"sub-hr\" width=\"91%\" padding=\"11px 0 10px 0\">\n          <mj-divider border-width=\"1px\" border-color=\"#e3e3e3\" />\n        </mj-column>\n        <!-- sub-content 1 -->\n        <mj-column width=\"89.58%\" padding=\"0 0 0 0\">\n          <mj-raw>\n            <div class=\"container\">\n              <!-- sub-img 1 -->\n              <div class=\"sub-img\" style=\"margin: 5px 0 0 0\">\n                <a href=\"" + url8 + "\">\n                  <img\n                    src=\"" + article8["img"] + "\"\n                    alt=\"" + article8["description"] + "\"\n                  />\n                </a>\n              </div>\n              <!-- sub category -->\n              <div class=\"sub-content\" style=\"margin: 0 0 0 18px\">\n                <p class=\"sub-cate\">\n                  <a href=\"" + article8["categoryLink"] + "\"\n                    >" + article8["category"] + "</a\n                  >\n\n                  <span style=\"color: #616161\"> </span>\n                </p>\n                <!-- sub title -->\n                <div class=\"sub-title-cont\">\n                  <p class=\"sub-title\">\n                    <a href=\"" + url8 + "\">" + article8["title"] + " </a>\n                  </p>\n                </div>\n                <div\n                  style=\"\n                    display: flex;\n                    align-items: center;\n                    position: relative;\n                    height: 36px;\n                  \"\n                >\n                  <div\n                    class=\"img-author\"\n                    style=\"\n                      padding: 5px 12px 0 0;\n                      height: 36px;\n\n                      height: 20px;\n                    \"\n                  >\n                    <img\n                      src=\"" + article8["avatar"] + "\"\n                      alt=\"\"\n                      style=\"\n                        width: 18px;\n                        height: 18px;\n                        border-radius: 50%;\n                        align-items: center;\n                        position: absolute;\n                        bottom: 5px;\n                      \"\n                    />\n                  </div>\n                  <div class=\"sub-author-container\" style=\"padding-left: 12px\">\n                    <a href=\"" + article8["authorLink"] + "\">\n                      <p\n                        class=\"author-name\"\n                        style=\"\n                          font-size: 12px;\n                          color: #161616;\n                          font-family: 'Noto Sans', sans-serif;\n                          line-height: 0px;\n                        \"\n                      >\n                        <span style=\"font-weight: 700\"\n                          >" + article8["author"] + "</span\n                        >\n                      </p>\n                      <p class=\"created-day\">" + article8["createdDay"] + "</p></a\n                    >\n                  </div>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n\n        <!-- hr subcontent 2 -->\n        <mj-column css-class=\"sub-har\" width=\"91%\" padding=\"11px 0 10px 0\">\n          <mj-divider border-width=\"1px\" border-color=\"#e3e3e3\" />\n        </mj-column>\n\n        <mj-column css-class=\"sub-2\" width=\"89.58%\" padding=\"0 0 36px 0\">\n          <mj-raw>\n            <div class=\"container\">\n              <!-- sub-img 1 -->\n              <div class=\"sub-img\" style=\"margin: 5px 0 0 0\">\n                <a href=\"" + url9 + "\">\n                  <img\n                    src=\"" + article9["img"] + "\"\n                    alt=\"" + article9["description"] + "\"\n                /></a>\n              </div>\n              <!-- sub category -->\n              <div class=\"sub-content\" style=\"margin: 0 0 0 18px\">\n                <p class=\"sub-cate\">\n                  <a href=\"" + article9["categoryLink"] + "\"\n                    >" + article9["category"] + "</a\n                  >\n\n                  <span style=\"color: #616161\"> </span>\n                </p>\n                <!-- sub title -->\n                <div class=\"sub-title-cont\">\n                  <p class=\"sub-title\">\n                    <a href=\"" + url9 + "\">" + article9["title"] + " </a>\n                  </p>\n                </div>\n                <div\n                  style=\"\n                    display: flex;\n                    align-items: center;\n                    position: relative;\n                    height: 36px;\n                  \"\n                >\n                  <div\n                    class=\"img-author\"\n                    style=\"\n                      padding: 5px 12px 0 0;\n                      height: 36px;\n\n                      height: 20px;\n                    \"\n                  >\n                    <img\n                      src=\"" + article9["avatar"] + "\"\n                      alt=\"\"\n                      style=\"\n                        width: 18px;\n                        height: 18px;\n                        border-radius: 50%;\n                        align-items: center;\n                        position: absolute;\n                        bottom: 5px;\n                      \"\n                    />\n                  </div>\n                  <div class=\"sub-author-container\" style=\"padding-left: 12px\">\n                    <a href=\"" + article9["authorLink"] + "\">\n                      <p\n                        class=\"author-name\"\n                        style=\"\n                          font-size: 12px;\n                          color: #161616;\n                          font-family: 'Noto Sans', sans-serif;\n                          line-height: 0px;\n                        \"\n                      >\n                        <span style=\"font-weight: 700\"\n                          >" + article9["author"] + "</span\n                        >\n                      </p>\n                      <p class=\"created-day\">" + article9["createdDay"] + "</p></a\n                    >\n                  </div>\n                </div>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n      </mj-section>\n    </mj-wrapper>\n    <!-- Social -->\n    <mj-section background-color=\"#3398D4\">\n      <mj-column width=\"77.86%\" padding=\"16px 0 0 0\">\n        <mj-text\n          align=\"center\"\n          font-family=\"Noto Sans, sans-serif\"\n          line-height=\"21.9px\"\n          color=\"#FFFFFF\"\n          font-size=\"16px\"\n          font-weight=\"700\"\n          font-family=\"Noto, sand\"\n        >\n          Follow ngay Spiderum \u0111\u1EC3 \u0111\u1ECDc th\u00EAm nhi\u1EC1u th\u00F4ng tim th\u00FA v\u1ECB!\n        </mj-text>\n      </mj-column>\n      <mj-column width=\"100%\"> </mj-column>\n      <mj-column width=\"40px\" padding=\"10px 10px 16px 0px\">\n        <mj-image\n          css-class=\"social-icon\"\n          src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/d1d52b500d3c11ec9971cbd2e720387a.png\"\n          alt=\"spiderum\"\n          href=\"https://spiderum.com\"\n          width=\"40px\"\n          border-radius=\"50%\"\n        />\n        <\n      </mj-column>\n      <mj-column width=\"40px\" padding=\"10px 10px 16px 0px\">\n        <mj-image\n          css-class=\"social-icon\"\n          src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/716da5200d3d11ec9971cbd2e720387a.png\"\n          alt=\"spiderum\"\n          href=\"https://youtube.com/spiderum\"\n          width=\"40px\"\n          border-radius=\"50%\"\n        />\n      </mj-column>\n      <mj-column width=\"40px\" padding=\"10px 10px 16px 0px\">\n        <mj-image\n          css-class=\"social-icon\"\n          src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/77c443c00d3d11ec9971cbd2e720387a.png\"\n          alt=\"spiderum\"\n          href=\"https://open.spotify.com/show/73NBSJpoAxNyHLYGrraSXd\"\n          width=\"40px\"\n          border-radius=\"50%\"\n        />\n      </mj-column>\n    </mj-section>\n    <!-- Footer -->\n    <mj-section>\n      <mj-column width=\"87.5%\">\n        <mj-text\n          align=\"center\"\n          font-size=\"12px\"\n          line-height=\"20px\"\n          font-family=\"Noto Sans,sans-serif\"\n        >\n          <p>\n            Theo d\u00F5i nh\u1EEFng ch\u1EE7 \u0111\u1EC1 b\u1EA1n quan t\u00E2m ho\u1EB7c b\u1ECF theo d\u00F5i ch\u00FAng\n            <a\n              class=\"link-blue\"\n              href=\"/\"\n              style=\"font-weight: 700; color: #3398d4\"\n              >qua \u0111\u00E2y</a\n            >\n          </p>\n\n          <p>\n            <span style=\"font-weight: 700\">C\u00D4NG TY C\u1ED4 PH\u1EA6N FELIZZ<br /></span>\n            Tr\u1EF1c th\u1EF1c C\u00F4ng ty C\u1ED5 ph\u1EA7n Spiderum Vi\u1EC7t Nam (Spiderum Vietnam\n            JSC)<br />\n            Ng\u01B0\u1EDDi ch\u1ECBu tr\u00E1ch nhi\u1EC7m n\u1ED9i dung Tr\u1EA7n Vi\u1EC7t Anh<br />\n            Gi\u1EA5y ph\u00E9p MXH s\u1ED1 341/GP-TTTT do B\u1ED9 TTTT c\u1EA5p ng\u00E0y 27 th\u00E1ng 6 n\u0103m\n            2016<br />\n            <span style=\"font-weight: 700\">Li\u00EAn h\u1EC7:</span> 0946.042.093<span\n              style=\"font-weight: 700\"\n            >\n              Email:</span\n            >\n            contact@spiderum.com<br />\n            <span style=\"font-weight: 700\">\u0110\u1ECBa ch\u1EC9: </span> T\u1EA7ng 5, 1/186 \u0111\u01B0\u1EDDng\n            B\u01B0\u1EDFi, C\u1ED1ng V\u1ECB, Ba \u0110\u00ECnh, H\u00E0 N\u1ED9i\n          </p>\n\n          <p style=\"font-weight: 700\">\u00A9 2021 C\u00D4NG TY C\u1ED4 PH\u1EA6N FELIZZ</p>\n        </mj-text>\n        <mj-image\n          href=\"https://spiderum.com\"\n          src=\"https://spiderum.com/assets/icons/wideLogo.png\"\n          align=\"center\"\n          padding=\"0 0 25px 0\"\n          width=\"131.94px\"\n          alt=\"spiderumLogo\"\n        />\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>\n";
-                writeStream.write(vltn);
-                return [2 /*return*/];
-        }
+    const article3 = await getS(url3).then((s) => {
+        return s;
     });
-}); };
+    const article4 = await getS(url4).then((s) => {
+        return s;
+    });
+    const article5 = await getS(url5).then((s) => {
+        return s;
+    });
+    const article6 = await getS(url6).then((s) => {
+        return s;
+    });
+    const article7 = await getS(url7).then((s) => {
+        return s;
+    });
+    const article8 = await getS(url8).then((s) => {
+        return s;
+    });
+    const article9 = await getS(url9).then((s) => {
+        return s;
+    });
+    let vltn = `<mjml>
+  <mj-head>
+    <mj-breakpoint width="60px" />
+
+    <mj-style>
+      * { box-sizing: border-box; margin: 0; padding: 0; } body { min-width:
+      300px !important; } .main-cate p{ text-transform: uppercase!important; }
+      .created-day { font-size: 12px !important; margin: 0 !important;
+      padding:2px 0 0 0 !important; color: #b5b5b5 !important; font-family:
+      "Noto Sans", sans-serif !important; line-height: 10px !important;
+      vertical-align: top !important; font-weight: 40!important; } .img-author
+      img { bottom: 8px !important; } .sub-cate { margin: 4px 0 4px 0
+      !important; font-weight: 400!important; text-transform: uppercase
+      !important; font-size: 14px!important; line-height: 16px!important;
+      font-family: "Noto Sans", sans-serif; color: #616161 !important; }
+      .author-name { line-height: 1 !important; margin: 0 0 0 0 !important;
+      padding: 0 !important; font-size: 14px !important; color: #161616
+      !important; font-family: "Noto Sans", sans-serif !important; line-height:
+      20px !important; } .sub-author-container p { min-width: 115px; margin: 5px
+      0 0 0; } a { color: #161616; text-decoration: none; text-underline-offset:
+      none; } .sub-title { font-family: "Raleway", sans-serif!important; margin:
+      0 0 0 0 !important; } .sub-title-cont { min-height: 40px !important; }
+      .sub-img { height: 120px !important; width: 120px !important; } .sub-img
+      img { width: 100% !important; object-fit: cover !important; height: 100%;
+      } @media (min-width: 385px) { .author-name { font-size: 14px !important; }
+      .sub-cate { margin: 4px 0 0px 0!important; font-size: 14px !important; }
+      .big-title p { font-size: 42px !important; line-height: 57.2px !important;
+      } .big-title td { width: 300px !important; } .main-image img { padding:
+      16px 0 6px 0 !important; } .author-card { padding: 18px 0 0 0 !important;
+      } .sub-hr { padding: 11px 0 26px 0 !important; } .sub-har { padding: 40px
+      0 18px 0 !important; } .img-author { padding: 5px 27px 0 0 !important; }
+      .img-author img { width: 32px !important; height: 32px !important; bottom:
+      0 !important; } .sub-img { height: 128px !important; width: 128px
+      !important; } .sub-img img { width: 100% !important; object-fit: cover
+      !important; height: 100%; } .sub-content { margin: 0 0 0 4% !important;
+      width: calc(93.5% - 128px) !important; } .sub-2 { padding: 0 0 0 0
+      !important; } .big-title { width: 55% !important; } .sub-title {
+      font-size: 20px !important; line-height: 25.08px !important; padding: 8px
+      0 14px 0 !important; } .sub-title-cont { min-height: 50px !important; } }
+      @media (min-width: 520px) { .big-title p { font-size: 38px !important;
+      line-height: 50px !important; } .big-title { width: 70% !important; } }
+      a:hover, img:hover { color: #161616; opacity: 0.7; } .container {
+      -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+      .sub-img { float: left; padding: 0 0 0 0; width: 120px; } .sub-img img {
+      border-radius: 3px; } .sub-content { float: left; width: calc(100% -
+      148px); margin: 0; padding: 0; } .sub-content p { font-size: 16px;
+      line-height: 21.79px; font-weight: 700; } .sub-author-container {
+      text-align: left; max-width: 420px; line-height: 0px; float: left; height:
+      36px; } /*# sourceMappingURL=final.css.map */
+    </mj-style>
+    <mj-font
+      name="Noto Serif"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+    <mj-font
+      name="Noto Sans"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+    />
+    <mj-font
+      name="Raleway"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+    />
+
+    <mj-attributes>
+      <mj-all padding="0px" align="center" />
+      <mj-section background-color="#f9f9f9"> </mj-section>
+      <<mj-text color="#161616" text-decoration="none"> </mj-text>
+    </mj-attributes>
+  </mj-head>
+  <mj-body width="680px">
+    <!-- Headder -->
+
+    <mj-wrapper>
+      <mj-section css-class="">
+        <mj-column width="100%" padding="27px 0 0 0">
+          <mj-image
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/fcc1d6600d9611ec989ecdbb5e35c5a8.png"
+            alt="Spiderum log"
+            width="166px"
+            height="166px"
+          />
+        </mj-column>
+        <mj-column css-class="big-title" width="80%" padding="22px 0 0 0">
+          <mj-text
+            font-family="Noto Serif, serif"
+            font-size="32px"
+            align="center"
+            line-height="43.58px"
+            font-weight="500"
+          >
+            <p>Những bài viết thú vị từ Spiderum.</p>
+          </mj-text>
+        </mj-column>
+        <!-- user-card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <div
+              style="
+                display: flex;
+                align-item: center;
+                justify-content: center;
+                height: 36px;
+              "
+            >
+              <div style="padding: 5px 12px 0 0; height: 36px">
+                <img
+                  src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-avatar/953eeaa0096811ec9ec5131d8341f662.jpeg"
+                  alt=""
+                  style="width: 32px; height: 32px; border-radius: 50%"
+                />
+              </div>
+              <div
+                style="
+                  text-align: left;
+                  max-width: 420px;
+                  line-height: 0px;
+
+                  height: 36px;
+                "
+              >
+                <div>
+                  <p
+                    style="
+                      width: auto;
+                      font-size: 14px;
+                      color: #161616;
+                      font-family: 'Noto Sans', sans-serif;
+                    "
+                  >
+                    Danh cho <span style="font-weight: 700">Thcccccccc</span>
+                  </p>
+                  <p
+                    style="
+                      font-size: 12px;
+                      color: #616161;
+                      font-family: 'Noto Sans', sans-serif;
+                      line-height: 5px;
+                    "
+                  >
+                    @nguudau
+                  </p>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- Content card -->
+    <mj-wrapper background-color="#f9f9f9">
+      <mj-section
+        background-color="rgba(227, 235, 246, 0.25)
+"
+        padding="12px 0 0 0"
+      >
+        <!-- card header -->
+        <mj-column width="100%">
+          <mj-text
+            font-family="Raleway, sans-serif"
+            font-size="20px"
+            line-height="25.08px"
+            font-weight="700"
+          >
+            <p>Được xem nhiều nhất</p>
+          </mj-text>
+          <mj-divider
+            border-width="1px"
+            border-color="#c4c4c4"
+            padding="16px 0 0 0"
+            width="91%"
+          />
+        </mj-column>
+        <!-- Main content -->
+        <mj-column css-class="main-image" width="89.58%" padding="10px 0 0 0">
+          <mj-image
+            href="${url1}"
+            border-radius="3px"
+            src="${article1["img"]}"
+            alt='${article1["description"]}'
+          />
+          <!-- Category class="sub-cate" Time -->
+          <mj-text
+            css-class="main-cate"
+            font-size="13px"
+            line-height="0px"
+            padding="11px 0 0 0"
+            align="left"
+            font-family="Noto Sans, sans-serif"
+          >
+            <p>
+              <a href="${article1["categoryLink"]}">
+                ${article1["category"]}
+                <span style="font-size: 12px; color: #616161"> </span
+              ></a>
+            </p>
+          </mj-text>
+          <!-- Title -->
+          <mj-text
+            font-size="20px"
+            font-weight="700"
+            line-height="25.08px"
+            padding="10px 0 0 0"
+            align="left"
+            font-family="Raleway, sans-serif"
+          >
+            <a href="${url1}"> ${article1["title"]}</a>
+          </mj-text>
+          <!-- Description -->
+          <mj-text
+            css-class="main-des"
+            font-size="16px"
+            line-height="21.79px"
+            font-weight="400"
+            padding="16px 0 0 0"
+            align="left"
+            font-family="Nota Sans, sans-serif"
+            color="#616161"
+          >
+            <a style="color: #616161" href="${url1}">
+              ${article1["description"]}
+            </a>
+          </mj-text>
+        </mj-column>
+
+        <!-- author -->
+        <mj-column css-class="author-card" width="89.58%" padding="13px 0 0 0">
+          <mj-raw>
+            <div style="display: flex; align-items: center; height: 36px">
+              <div style="padding: 5px 12px 0 0; height: 36px">
+                <a href="${article1["authorLink"]}">
+                  <img
+                    src="${article1["avatar"]}"
+                    alt=""
+                    style="width: 32px; height: 32px; border-radius: 50%"
+                /></a>
+              </div>
+              <div
+                style="
+                  text-align: left;
+                  max-width: 420px;
+                  line-height: 0px;
+
+                  height: 36px;
+                "
+              >
+                <div>
+                  <a href="${article1["authorLink"]}">
+                    <p
+                      style="
+                        width: auto;
+                        font-size: 14px;
+                        color: #161616;
+                        font-family: 'Noto Sans', sans-serif;
+                      "
+                    >
+                      <span style="font-weight: 700"
+                        >${article1["author"]}</span
+                      >
+                    </p>
+                    <p
+                      style="
+                        font-size: 12px;
+                        color: #616161;
+                        font-family: 'Noto Sans', sans-serif;
+                        line-height: 5px;
+                      "
+                    >
+                      ${article1["createdDay"]}
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+
+        <!-- hr subcontent 1 -->
+        <mj-column css-class="sub-hr" width="91%" padding="11px 0 10px 0">
+          <mj-divider border-width="1px" border-color="#e3e3e3" />
+        </mj-column>
+        <!-- sub-content 1 -->
+        <mj-column width="89.58%" padding="0 0 0 0">
+          <mj-raw>
+            <div class="container">
+              <!-- sub-img 1 -->
+              <div class="sub-img" style="margin: 5px 0 0 0">
+                <a href="${url2}">
+                  <img
+                    src="${article2["img"]}"
+                    alt="${article2["description"]}"
+                  />
+                </a>
+              </div>
+              <!-- sub category -->
+              <div class="sub-content" style="margin: 0 0 0 18px">
+                <p class="sub-cate">
+                  <a href="${article2["categoryLink"]}"
+                    >${article2["category"]}</a
+                  >
+
+                  <span style="color: #616161"> </span>
+                </p>
+                <!-- sub title -->
+                <div class="sub-title-cont">
+                  <p class="sub-title">
+                    <a href="${url2}">${article2["title"]} </a>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 36px;
+                  "
+                >
+                  <div
+                    class="img-author"
+                    style="
+                      padding: 5px 12px 0 0;
+                      height: 36px;
+
+                      height: 20px;
+                    "
+                  >
+                    <img
+                      src="${article2["avatar"]}"
+                      alt=""
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 5px;
+                      "
+                    />
+                  </div>
+                  <div class="sub-author-container" style="padding-left: 12px">
+                    <a href="${article2["authorLink"]}">
+                      <p
+                        class="author-name"
+                        style="
+                          font-size: 12px;
+                          color: #161616;
+                          font-family: 'Noto Sans', sans-serif;
+                          line-height: 0px;
+                        "
+                      >
+                        <span style="font-weight: 700"
+                          >${article2["author"]}</span
+                        >
+                      </p>
+                      <p class="created-day">${article2["createdDay"]}</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+
+        <!-- hr subcontent 2 -->
+        <mj-column css-class="sub-har" width="91%" padding="11px 0 10px 0">
+          <mj-divider border-width="1px" border-color="#e3e3e3" />
+        </mj-column>
+
+        <mj-column css-class="sub-2" width="89.58%" padding="0 0 36px 0">
+          <mj-raw>
+            <div class="container">
+              <!-- sub-img 1 -->
+              <div class="sub-img" style="margin: 5px 0 0 0">
+                <a href="${url3}">
+                  <img
+                    src="${article3["img"]}"
+                    alt="${article3["description"]}"
+                /></a>
+              </div>
+              <!-- sub category -->
+              <div class="sub-content" style="margin: 0 0 0 18px">
+                <p class="sub-cate">
+                  <a href="${article3["categoryLink"]}"
+                    >${article3["category"]}</a
+                  >
+                  <span style="color: #616161"> </span>
+                </p>
+                <!-- sub title -->
+                <div class="sub-title-cont">
+                  <p class="sub-title">
+                    <a href="${url3}">${article3["title"]} </a>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 36px;
+                  "
+                >
+                  <div
+                    class="img-author"
+                    style="
+                      padding: 5px 12px 0 0;
+                      height: 36px;
+
+                      height: 20px;
+                    "
+                  >
+                    <img
+                      src="${article3["avatar"]}"
+                      alt=""
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 5px;
+                      "
+                    />
+                  </div>
+
+                  <div class="sub-author-container" style="padding-left: 12px">
+                    <a href="${article3["authorLink"]}">
+                      <p
+                        class="author-name"
+                        style="
+                          font-size: 12px;
+                          color: #161616;
+                          font-family: 'Noto Sans', sans-serif;
+                          line-height: 0px;
+                        "
+                      >
+                        <span style="font-weight: 700"
+                          >${article3["author"]}</span
+                        >
+                      </p>
+                      <p class="created-day">${article3["createdDay"]}</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <!-- Content card 2 -->
+    <mj-wrapper background-color="#f9f9f9">
+      <mj-section
+        background-color="rgba(227, 235, 246, 0.25)
+"
+        padding="12px 0 0 0"
+      >
+        <!-- card header -->
+        <mj-column width="100%">
+          <mj-text
+            font-family="Raleway, sans-serif"
+            font-size="20px"
+            line-height="25.08px"
+            font-weight="700"
+          >
+            <p>Hoạt động sôi nổi</p>
+          </mj-text>
+          <mj-divider
+            border-width="1px"
+            border-color="#c4c4c4"
+            padding="16px 0 0 0"
+            width="91%"
+          />
+        </mj-column>
+        <!-- Main content -->
+        <!-- Main content -->
+        <mj-column css-class="main-image" width="89.58%" padding="10px 0 0 0">
+          <mj-image
+            href="${url4}"
+            border-radius="3px"
+            src="${article4["img"]}"
+            alt="${article4["description"]}"
+          />
+          <!-- Category class="sub-cate" Time -->
+          <mj-text
+            css-class="main-cate"
+            font-size="13px"
+            line-height="0px"
+            padding="11px 0 0 0"
+            align="left"
+            font-family="Noto Sans, sans-serif"
+          >
+            <p>
+              <a href="${article4["categoryLink"]}">
+                ${article4["category"]}
+                <span style="font-size: 12px; color: #616161"> </span
+              ></a>
+            </p>
+          </mj-text>
+          <!-- Title -->
+          <mj-text
+            font-size="20px"
+            font-weight="700"
+            line-height="25.08px"
+            padding="10px 0 0 0"
+            align="left"
+            font-family="Raleway, sans-serif"
+          >
+            <a href="${url4}"> ${article4["title"]}</a>
+          </mj-text>
+          <!-- Description -->
+          <mj-text
+            css-class="main-des"
+            font-size="16px"
+            line-height="21.79px"
+            font-weight="400"
+            padding="16px 0 0 0"
+            align="left"
+            font-family="Nota Sans, sans-serif"
+            color="#616161"
+          >
+            <a style="color: #616161" href="${url4}">
+              ${article4["description"]}
+            </a>
+          </mj-text>
+        </mj-column>
+
+        <!-- author -->
+        <mj-column css-class="author-card" width="89.58%" padding="13px 0 0 0">
+          <mj-raw>
+            <div style="display: flex; align-items: center; height: 36px">
+              <div style="padding: 5px 12px 0 0; height: 36px">
+                <a href="${article4["authorLink"]}">
+                  <img
+                    src="${article4["avatar"]}"
+                    alt=""
+                    style="width: 32px; height: 32px; border-radius: 50%"
+                /></a>
+              </div>
+              <div
+                style="
+                  text-align: left;
+                  max-width: 420px;
+                  line-height: 0px;
+
+                  height: 36px;
+                "
+              >
+                <div>
+                  <a href="${article4["authorLink"]}">
+                    <p
+                      style="
+                        width: auto;
+                        font-size: 14px;
+                        color: #161616;
+                        font-family: 'Noto Sans', sans-serif;
+                      "
+                    >
+                      <span style="font-weight: 700"
+                        >${article4["author"]}</span
+                      >
+                    </p>
+                    <p
+                      style="
+                        font-size: 12px;
+                        color: #616161;
+                        font-family: 'Noto Sans', sans-serif;
+                        line-height: 5px;
+                      "
+                    >
+                      ${article4["createdDay"]}
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+
+        <!-- hr subcontent 1 -->
+        <mj-column css-class="sub-hr" width="91%" padding="11px 0 10px 0">
+          <mj-divider border-width="1px" border-color="#e3e3e3" />
+        </mj-column>
+        <!-- sub-content 1 -->
+        <mj-column width="89.58%" padding="0 0 0 0">
+          <mj-raw>
+            <div class="container">
+              <!-- sub-img 1 -->
+              <div class="sub-img" style="margin: 5px 0 0 0">
+                <a href="${url5}">
+                  <img
+                    src="${article5["img"]}"
+                    alt="${article5["description"]}"
+                  />
+                </a>
+              </div>
+              <!-- sub category -->
+              <div class="sub-content" style="margin: 0 0 0 18px">
+                <p class="sub-cate">
+                  <a href="${article5["categoryLink"]}"
+                    >${article5["category"]}</a
+                  >
+
+                  <span style="color: #616161"> </span>
+                </p>
+                <!-- sub title -->
+                <div class="sub-title-cont">
+                  <p class="sub-title">
+                    <a href="${url5}">${article5["title"]} </a>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 36px;
+                  "
+                >
+                  <div
+                    class="img-author"
+                    style="
+                      padding: 5px 12px 0 0;
+                      height: 36px;
+
+                      height: 20px;
+                    "
+                  >
+                    <img
+                      src="${article5["avatar"]}"
+                      alt=""
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 5px;
+                      "
+                    />
+                  </div>
+                  <div class="sub-author-container" style="padding-left: 12px">
+                    <a href="${article5["authorLink"]}">
+                      <p
+                        class="author-name"
+                        style="
+                          font-size: 12px;
+                          color: #161616;
+                          font-family: 'Noto Sans', sans-serif;
+                          line-height: 0px;
+                        "
+                      >
+                        <span style="font-weight: 700"
+                          >${article5["author"]}</span
+                        >
+                      </p>
+                      <p class="created-day">${article5["createdDay"]}</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+
+        <!-- hr subcontent 2 -->
+        <mj-column css-class="sub-har" width="91%" padding="11px 0 10px 0">
+          <mj-divider border-width="1px" border-color="#e3e3e3" />
+        </mj-column>
+
+        <mj-column css-class="sub-2" width="89.58%" padding="0 0 36px 0">
+          <mj-raw>
+            <div class="container">
+              <!-- sub-img 1 -->
+              <div class="sub-img" style="margin: 5px 0 0 0">
+                <a href="${url6}">
+                  <img
+                    src="${article6["img"]}"
+                    alt="${article6["description"]}"
+                /></a>
+              </div>
+              <!-- sub category -->
+              <div class="sub-content" style="margin: 0 0 0 18px">
+                <p class="sub-cate">
+                  <a href="${article6["categoryLink"]}"
+                    >${article6["category"]}</a
+                  >
+
+                  <span style="color: #616161"> </span>
+                </p>
+                <!-- sub title -->
+                <div class="sub-title-cont">
+                  <p class="sub-title">
+                    <a href="${url6}">${article6["title"]} </a>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 36px;
+                  "
+                >
+                  <div
+                    class="img-author"
+                    style="
+                      padding: 5px 12px 0 0;
+                      height: 36px;
+
+                      height: 20px;
+                    "
+                  >
+                    <img
+                      src="${article6["avatar"]}"
+                      alt=""
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 5px;
+                      "
+                    />
+                  </div>
+                  <div class="sub-author-container" style="padding-left: 12px">
+                    <a href="${article6["authorLink"]}">
+                      <p
+                        class="author-name"
+                        style="
+                          font-size: 12px;
+                          color: #161616;
+                          font-family: 'Noto Sans', sans-serif;
+                          line-height: 0px;
+                        "
+                      >
+                        <span style="font-weight: 700"
+                          >${article6["author"]}</span
+                        >
+                      </p>
+                      <p class="created-day">${article6["createdDay"]}</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <!-- Content card 3 -->
+    <mj-wrapper background-color="#f9f9f9">
+      <mj-section
+        background-color=" rgba(227, 235, 246, 0.25)
+"
+        padding="12px 0 0 0"
+      >
+        <!-- card header -->
+        <mj-column width="100%">
+          <mj-text
+            font-family="Raleway, sans-serif"
+            font-size="20px"
+            line-height="25.08px"
+            font-weight="700"
+          >
+            <p>Cây viết nổi bật</p>
+          </mj-text>
+          <mj-divider
+            border-width="1px"
+            border-color="#c4c4c4"
+            padding="16px 0 0 0"
+            width="91%"
+          />
+        </mj-column>
+        <!-- Main content -->
+        <!-- Main content -->
+        <mj-column css-class="main-image" width="89.58%" padding="10px 0 0 0">
+          <mj-image
+            href="${url7}"
+            border-radius="3px"
+            src="${article7["img"]}"
+            alt='${article7["description"]}'
+          />
+          <!-- Category class="sub-cate" Time -->
+          <mj-text
+            css-class="main-cate"
+            font-size="13px"
+            line-height="0px"
+            padding="11px 0 0 0"
+            align="left"
+            font-family="Noto Sans, sans-serif"
+          >
+            <p>
+              <a href="${article7["categoryLink"]}">
+                ${article7["category"]}
+                <span style="font-size: 12px; color: #616161"> </span
+              ></a>
+            </p>
+          </mj-text>
+          <!-- Title -->
+          <mj-text
+            font-size="20px"
+            font-weight="700"
+            line-height="25.08px"
+            padding="10px 0 0 0"
+            align="left"
+            font-family="Raleway, sans-serif"
+          >
+            <a href="${url7}"> ${article7["title"]}</a>
+          </mj-text>
+          <!-- Description -->
+          <mj-text
+            css-class="main-des"
+            font-size="16px"
+            line-height="21.79px"
+            font-weight="400"
+            padding="16px 0 0 0"
+            align="left"
+            font-family="Nota Sans, sans-serif"
+            color="#616161"
+          >
+            <a style="color: #616161" href="${url7}">
+              ${article7["description"]}
+            </a>
+          </mj-text>
+        </mj-column>
+
+        <!-- author -->
+        <mj-column css-class="author-card" width="89.58%" padding="13px 0 0 0">
+          <mj-raw>
+            <div style="display: flex; align-items: center; height: 36px">
+              <div style="padding: 5px 12px 0 0; height: 36px">
+                <a href="${article7["authorLink"]}">
+                  <img
+                    src="${article7["avatar"]}"
+                    alt=""
+                    style="width: 32px; height: 32px; border-radius: 50%"
+                /></a>
+              </div>
+              <div
+                style="
+                  text-align: left;
+                  max-width: 420px;
+                  line-height: 0px;
+
+                  height: 36px;
+                "
+              >
+                <div>
+                  <a href="${article7["authorLink"]}">
+                    <p
+                      style="
+                        width: auto;
+                        font-size: 14px;
+                        color: #161616;
+                        font-family: 'Noto Sans', sans-serif;
+                      "
+                    >
+                      <span style="font-weight: 700"
+                        >${article7["author"]}</span
+                      >
+                    </p>
+                    <p
+                      style="
+                        font-size: 12px;
+                        color: #616161;
+                        font-family: 'Noto Sans', sans-serif;
+                        line-height: 5px;
+                      "
+                    >
+                      ${article7["createdDay"]}
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+
+        <!-- hr subcontent 1 -->
+        <mj-column css-class="sub-hr" width="91%" padding="11px 0 10px 0">
+          <mj-divider border-width="1px" border-color="#e3e3e3" />
+        </mj-column>
+        <!-- sub-content 1 -->
+        <mj-column width="89.58%" padding="0 0 0 0">
+          <mj-raw>
+            <div class="container">
+              <!-- sub-img 1 -->
+              <div class="sub-img" style="margin: 5px 0 0 0">
+                <a href="${url8}">
+                  <img
+                    src="${article8["img"]}"
+                    alt="${article8["description"]}"
+                  />
+                </a>
+              </div>
+              <!-- sub category -->
+              <div class="sub-content" style="margin: 0 0 0 18px">
+                <p class="sub-cate">
+                  <a href="${article8["categoryLink"]}"
+                    >${article8["category"]}</a
+                  >
+
+                  <span style="color: #616161"> </span>
+                </p>
+                <!-- sub title -->
+                <div class="sub-title-cont">
+                  <p class="sub-title">
+                    <a href="${url8}">${article8["title"]} </a>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 36px;
+                  "
+                >
+                  <div
+                    class="img-author"
+                    style="
+                      padding: 5px 12px 0 0;
+                      height: 36px;
+
+                      height: 20px;
+                    "
+                  >
+                    <img
+                      src="${article8["avatar"]}"
+                      alt=""
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 5px;
+                      "
+                    />
+                  </div>
+                  <div class="sub-author-container" style="padding-left: 12px">
+                    <a href="${article8["authorLink"]}">
+                      <p
+                        class="author-name"
+                        style="
+                          font-size: 12px;
+                          color: #161616;
+                          font-family: 'Noto Sans', sans-serif;
+                          line-height: 0px;
+                        "
+                      >
+                        <span style="font-weight: 700"
+                          >${article8["author"]}</span
+                        >
+                      </p>
+                      <p class="created-day">${article8["createdDay"]}</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+
+        <!-- hr subcontent 2 -->
+        <mj-column css-class="sub-har" width="91%" padding="11px 0 10px 0">
+          <mj-divider border-width="1px" border-color="#e3e3e3" />
+        </mj-column>
+
+        <mj-column css-class="sub-2" width="89.58%" padding="0 0 36px 0">
+          <mj-raw>
+            <div class="container">
+              <!-- sub-img 1 -->
+              <div class="sub-img" style="margin: 5px 0 0 0">
+                <a href="${url9}">
+                  <img
+                    src="${article9["img"]}"
+                    alt="${article9["description"]}"
+                /></a>
+              </div>
+              <!-- sub category -->
+              <div class="sub-content" style="margin: 0 0 0 18px">
+                <p class="sub-cate">
+                  <a href="${article9["categoryLink"]}"
+                    >${article9["category"]}</a
+                  >
+
+                  <span style="color: #616161"> </span>
+                </p>
+                <!-- sub title -->
+                <div class="sub-title-cont">
+                  <p class="sub-title">
+                    <a href="${url9}">${article9["title"]} </a>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 36px;
+                  "
+                >
+                  <div
+                    class="img-author"
+                    style="
+                      padding: 5px 12px 0 0;
+                      height: 36px;
+
+                      height: 20px;
+                    "
+                  >
+                    <img
+                      src="${article9["avatar"]}"
+                      alt=""
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 5px;
+                      "
+                    />
+                  </div>
+                  <div class="sub-author-container" style="padding-left: 12px">
+                    <a href="${article9["authorLink"]}">
+                      <p
+                        class="author-name"
+                        style="
+                          font-size: 12px;
+                          color: #161616;
+                          font-family: 'Noto Sans', sans-serif;
+                          line-height: 0px;
+                        "
+                      >
+                        <span style="font-weight: 700"
+                          >${article9["author"]}</span
+                        >
+                      </p>
+                      <p class="created-day">${article9["createdDay"]}</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <!-- Social -->
+    <mj-section background-color="#3398D4">
+      <mj-column width="77.86%" padding="16px 0 0 0">
+        <mj-text
+          align="center"
+          font-family="Noto Sans, sans-serif"
+          line-height="21.9px"
+          color="#FFFFFF"
+          font-size="16px"
+          font-weight="700"
+          font-family="Noto, sand"
+        >
+          Follow ngay Spiderum để đọc thêm nhiều thông tim thú vị!
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%"> </mj-column>
+      <mj-column width="40px" padding="10px 10px 16px 0px">
+        <mj-image
+          css-class="social-icon"
+          src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/d1d52b500d3c11ec9971cbd2e720387a.png"
+          alt="spiderum"
+          href="https://spiderum.com"
+          width="40px"
+          border-radius="50%"
+        />
+        <
+      </mj-column>
+      <mj-column width="40px" padding="10px 10px 16px 0px">
+        <mj-image
+          css-class="social-icon"
+          src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/716da5200d3d11ec9971cbd2e720387a.png"
+          alt="spiderum"
+          href="https://youtube.com/spiderum"
+          width="40px"
+          border-radius="50%"
+        />
+      </mj-column>
+      <mj-column width="40px" padding="10px 10px 16px 0px">
+        <mj-image
+          css-class="social-icon"
+          src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/77c443c00d3d11ec9971cbd2e720387a.png"
+          alt="spiderum"
+          href="https://open.spotify.com/show/73NBSJpoAxNyHLYGrraSXd"
+          width="40px"
+          border-radius="50%"
+        />
+      </mj-column>
+    </mj-section>
+    <!-- Footer -->
+    <mj-section>
+      <mj-column width="87.5%">
+        <mj-text
+          align="center"
+          font-size="12px"
+          line-height="20px"
+          font-family="Noto Sans,sans-serif"
+        >
+          <p>
+            Theo dõi những chủ đề bạn quan tâm hoặc bỏ theo dõi chúng
+            <a
+              class="link-blue"
+              href="/"
+              style="font-weight: 700; color: #3398d4"
+              >qua đây</a
+            >
+          </p>
+
+          <p>
+            <span style="font-weight: 700">CÔNG TY CỔ PHẦN FELIZZ<br /></span>
+            Trực thực Công ty Cổ phần Spiderum Việt Nam (Spiderum Vietnam
+            JSC)<br />
+            Người chịu trách nhiệm nội dung Trần Việt Anh<br />
+            Giấy phép MXH số 341/GP-TTTT do Bộ TTTT cấp ngày 27 tháng 6 năm
+            2016<br />
+            <span style="font-weight: 700">Liên hệ:</span> 0946.042.093<span
+              style="font-weight: 700"
+            >
+              Email:</span
+            >
+            contact@spiderum.com<br />
+            <span style="font-weight: 700">Địa chỉ: </span> Tầng 5, 1/186 đường
+            Bưởi, Cống Vị, Ba Đình, Hà Nội
+          </p>
+
+          <p style="font-weight: 700">© 2021 CÔNG TY CỔ PHẦN FELIZZ</p>
+        </mj-text>
+        <mj-image
+          href="https://spiderum.com"
+          src="https://spiderum.com/assets/icons/wideLogo.png"
+          align="center"
+          padding="0 0 25px 0"
+          width="131.94px"
+          alt="spiderumLogo"
+        />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+`;
+    writeStream.write(vltn);
+    //value value
+};
 readF()
-    .then(function () {
+    .then(() => {
     url1 = url[1];
     url2 = url[2];
     url3 = url[3];
@@ -204,6 +1244,7 @@ readF()
     url8 = url[8];
     url9 = url[9];
 })
-    .then(function () {
-    crawl().then(function () { return console.log("DONE"); });
+    .then(() => {
+    crawl().then(() => console.log("DONE"));
 });
+//# sourceMappingURL=sw.js.map

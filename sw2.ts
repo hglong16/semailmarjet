@@ -5,6 +5,7 @@ import * as readline from "readline";
 
 const writeStream = fs.createWriteStream("DONE.mjml");
 const url: Array<string> = ["0"];
+const thungo: Array<string> = ["0"];
 
 let url1: string;
 let url2: string;
@@ -25,7 +26,26 @@ const readF = async () => {
   for await (const line of rl) {
     url.push(line);
   }
+  const file1 = fs.createReadStream("thungo.txt");
+  const rl1 = readline.createInterface({
+    input: file1,
+    crlfDelay: Infinity,
+  });
+  for await (const line of rl1) {
+    thungo.push(line);
+  }
 };
+
+// const readthungo = async () => {
+//   const file1 = fs.createReadStream("thungo.txt");
+//   const rl1 = readline.createInterface({
+//     input: file1,
+//     crlfDelay: Infinity,
+//   });
+//   for await (const line of rl1) {
+//     thungo.push(line);
+//   }
+// };
 
 const getS = async (url) => {
   const res = await axios.get(url);
@@ -88,7 +108,8 @@ const crawl = async () => {
   let vltn = `<mjml>
   <mj-head>
     <mj-breakpoint width="384px" />
-    <mj-style>
+    <mj-style>@import
+      url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
       * { -webkit-box-sizing: border-box !important; box-sizing: border-box
       !important; } .confuse { background-color: #f9f9f9 !important; } .confuse
       * { margin: 0 !important; padding: 0 !important; } .icon-container table {
@@ -241,20 +262,13 @@ const crawl = async () => {
         <mj-column width="100%" css-class="content">
           <mj-text>
             <p class="title-top">
-              Molestie diam sagittis, tempor pulvinar vestibulum in egestas id
-              viverra. Dolor adipiscing dignissim
+              ${thungo[1]}
             </p>
             <p class="category">
               EDITOR’S NOTE <span class="info"> | Granny Tan</span>
             </p>
             <p class="main-content">
-              Luctus at tristique et orci pulvinar egestas fringilla. Egestas
-              nunc integer venenatis ut tellus sit nibh consectetur. Sit diam
-              tempor ac sed sollicitudin hendrerit tristique. Amet elit eget
-              imperdiet fermentum varius. Amet vestibulum massa euismod mauris
-              in amet vitae cursus nibh. Bibendum amet non volutpat urna, amet.
-              Vulputate elit posuere volutpat dictum eget orci amet venenatis.
-              Dapibus amet cursus semper in scelerisque.
+              ${thungo[2]}
             </p>
           </mj-text>
         </mj-column>
@@ -680,7 +694,6 @@ const crawl = async () => {
   </mj-body>
 </mjml>
 `;
-
   writeStream.write(vltn);
 
   //value value

@@ -1,199 +1,697 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
+Object.defineProperty(exports, "__esModule", { value: true });
+const axios_1 = require("axios");
+const cheerio_1 = require("cheerio");
+const fs = require("fs");
+const readline = require("readline");
+const writeStream = fs.createWriteStream("DONE.mjml");
+const url = ["0"];
+const thungo = ["0"];
+let url1;
+let url2;
+let url3;
+let url4;
+let url5;
+let url6;
+let url7;
+let url8;
+let url9;
+const readF = async () => {
+    const file = fs.createReadStream("URL.txt");
+    const rl = readline.createInterface({
+        input: file,
+        crlfDelay: Infinity,
     });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    for await (const line of rl) {
+        url.push(line);
+    }
+    const file1 = fs.createReadStream("thungo.txt");
+    const rl1 = readline.createInterface({
+        input: file1,
+        crlfDelay: Infinity,
+    });
+    for await (const line of rl1) {
+        thungo.push(line);
     }
 };
-var __asyncValues = (this && this.__asyncValues) || function (o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+// const readthungo = async () => {
+//   const file1 = fs.createReadStream("thungo.txt");
+//   const rl1 = readline.createInterface({
+//     input: file1,
+//     crlfDelay: Infinity,
+//   });
+//   for await (const line of rl1) {
+//     thungo.push(line);
+//   }
+// };
+const getS = async (url) => {
+    const res = await axios_1.default.get(url);
+    const $ = await cheerio_1.default.load(res.data);
+    let title = $("title").text();
+    let author = $(".author-info > a").text();
+    let authorLink = $(".author-info > a").attr("href");
+    let category = $(".category > a").text();
+    let categoryLink = $(".category > a").attr("href");
+    let description = $('meta[name="description"]').attr("content");
+    let createdDay = $(".created-day").text();
+    let img = $("meta[property='og:image']").attr("content");
+    const avatar = $("avatar> a > img").attr("src");
+    const b = {
+        title: title,
+        author: author,
+        authorLink: `https://spiderum.com${authorLink}`,
+        category: category,
+        categoryLink: `https://spiderum.com${categoryLink}`,
+        description: description,
+        createdDay: createdDay,
+        img: img,
+        avatar: avatar,
+    };
+    console.log(b);
+    return b;
 };
-exports.__esModule = true;
-var axios_1 = require("axios");
-var cheerio_1 = require("cheerio");
-var fs = require("fs");
-var readline = require("readline");
-var writeStream = fs.createWriteStream("DONE.mjml");
-var url = ["0"];
-var url1;
-var url2;
-var url3;
-var url4;
-var url5;
-var url6;
-var url7;
-var url8;
-var url9;
-var readF = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var file, rl, rl_1, rl_1_1, line, e_1_1;
-    var e_1, _a;
-    return __generator(this, function (_b) {
-        switch (_b.label) {
-            case 0:
-                file = fs.createReadStream("URL.txt");
-                rl = readline.createInterface({
-                    input: file,
-                    crlfDelay: Infinity
-                });
-                _b.label = 1;
-            case 1:
-                _b.trys.push([1, 6, 7, 12]);
-                rl_1 = __asyncValues(rl);
-                _b.label = 2;
-            case 2: return [4 /*yield*/, rl_1.next()];
-            case 3:
-                if (!(rl_1_1 = _b.sent(), !rl_1_1.done)) return [3 /*break*/, 5];
-                line = rl_1_1.value;
-                url.push(line);
-                _b.label = 4;
-            case 4: return [3 /*break*/, 2];
-            case 5: return [3 /*break*/, 12];
-            case 6:
-                e_1_1 = _b.sent();
-                e_1 = { error: e_1_1 };
-                return [3 /*break*/, 12];
-            case 7:
-                _b.trys.push([7, , 10, 11]);
-                if (!(rl_1_1 && !rl_1_1.done && (_a = rl_1["return"]))) return [3 /*break*/, 9];
-                return [4 /*yield*/, _a.call(rl_1)];
-            case 8:
-                _b.sent();
-                _b.label = 9;
-            case 9: return [3 /*break*/, 11];
-            case 10:
-                if (e_1) throw e_1.error;
-                return [7 /*endfinally*/];
-            case 11: return [7 /*endfinally*/];
-            case 12: return [2 /*return*/];
-        }
+const crawl = async () => {
+    const article1 = await getS(url1).then((s) => {
+        return s;
     });
-}); };
-var getS = function (url) { return __awaiter(void 0, void 0, void 0, function () {
-    var res, $, title, author, authorLink, category, categoryLink, description, createdDay, img, avatar, b;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, axios_1["default"].get(url)];
-            case 1:
-                res = _a.sent();
-                return [4 /*yield*/, cheerio_1["default"].load(res.data)];
-            case 2:
-                $ = _a.sent();
-                title = $("title").text();
-                author = $(".author-info > a").text();
-                authorLink = $(".author-info > a").attr("href");
-                category = $(".category > a").text();
-                categoryLink = $(".category > a").attr("href");
-                description = $('meta[name="description"]').attr("content");
-                createdDay = $(".created-day").text();
-                img = $("meta[property='og:image']").attr("content");
-                avatar = $("avatar> a > img").attr("src");
-                b = {
-                    title: title,
-                    author: author,
-                    authorLink: "https://spiderum.com" + authorLink,
-                    category: category,
-                    categoryLink: "https://spiderum.com" + categoryLink,
-                    description: description,
-                    createdDay: createdDay,
-                    img: img,
-                    avatar: avatar
-                };
-                console.log(b);
-                return [2 /*return*/, b];
-        }
+    const article2 = await getS(url2).then((s) => {
+        return s;
     });
-}); };
-var crawl = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var article1, article2, article3, article4, article5, article6, article7, article8, article9, vltn;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, getS(url1).then(function (s) {
-                    return s;
-                })];
-            case 1:
-                article1 = _a.sent();
-                return [4 /*yield*/, getS(url2).then(function (s) {
-                        return s;
-                    })];
-            case 2:
-                article2 = _a.sent();
-                return [4 /*yield*/, getS(url3).then(function (s) {
-                        return s;
-                    })];
-            case 3:
-                article3 = _a.sent();
-                return [4 /*yield*/, getS(url4).then(function (s) {
-                        return s;
-                    })];
-            case 4:
-                article4 = _a.sent();
-                return [4 /*yield*/, getS(url5).then(function (s) {
-                        return s;
-                    })];
-            case 5:
-                article5 = _a.sent();
-                return [4 /*yield*/, getS(url6).then(function (s) {
-                        return s;
-                    })];
-            case 6:
-                article6 = _a.sent();
-                return [4 /*yield*/, getS(url7).then(function (s) {
-                        return s;
-                    })];
-            case 7:
-                article7 = _a.sent();
-                return [4 /*yield*/, getS(url8).then(function (s) {
-                        return s;
-                    })];
-            case 8:
-                article8 = _a.sent();
-                return [4 /*yield*/, getS(url9).then(function (s) {
-                        return s;
-                    })];
-            case 9:
-                article9 = _a.sent();
-                vltn = "<mjml>\n  <mj-head>\n    <mj-breakpoint width=\"384px\" />\n    <mj-style>\n      * { -webkit-box-sizing: border-box !important; box-sizing: border-box\n      !important; } .confuse { background-color: #f9f9f9 !important; } .confuse\n      * { margin: 0 !important; padding: 0 !important; } .icon-container table {\n      text-align: center !important; } a { text-decoration: none !important; }\n      a:hover p, img:hover, a:hover { opacity: 0.7 !important; } .logo-spiderum\n      { margin: 27px 0 22px 0 !important; } @media (min-width: 385px) {\n      .logo-spiderum { margin-bottom: 8px !important; } } .heading-top {\n      font-family: Noto Serif; font-size: 32px; font-style: normal; font-weight:\n      400; line-height: 44px; letter-spacing: 0em; text-align: center; margin:\n      0px 30px 24px 30px !important; } @media (min-width: 385px) { .heading-top\n      { font-family: Noto Serif; font-size: 42px; font-style: normal;\n      font-weight: 500; line-height: 57px; letter-spacing: 0em; text-align:\n      center; margin: 0 10% 30px 10% !important; } } .user-container { display:\n      -webkit-box !important; display: -ms-flexbox !important; display: flex\n      !important; -webkit-box-align: center !important; -ms-flex-align: center\n      !important; align-items: center !important; -webkit-box-pack: center\n      !important; -ms-flex-pack: center !important; justify-content: center\n      !important; height: 36px !important; margin: 0 0 62px 0 !important; }\n      .user-container img { width: 32px !important; height: 32px; border-radius:\n      50% !important; } @media (min-width: 385px) { .user-container { margin: 0\n      0 32px 0 !important; } } .sub-author-container { text-align: left\n      !important; line-height: 16px !important; height: 36px !important; margin:\n      3px 0 0 12px !important; } .sub-author-container p { width: auto\n      !important; font-size: 14px !important; color: #161616 !important;\n      font-family: \"Noto Sans\", sans-serif !important; } .sub-author-container\n      .author-id { font-size: 12px !important; color: #616161 !important;\n      font-family: \"Noto Sans\", sans-serif !important; line-height: 14px\n      !important; } .main-hr { padding: 12px 20px 25px 20px !important; } @media\n      (min-width: 385px) { .main-hr { padding: 12px 27px 25px 27px !important; }\n      } .content { padding: 0 20.5px 0 20.5px !important; } @media (min-width:\n      385px) { .content { padding: 0 6.3% 0 6.3% !important; } } .title-top {\n      font-family: Raleway; font-size: 32px; font-style: normal; font-weight:\n      700; line-height: 38px; letter-spacing: 0em; text-align: left; color:\n      #3398d4; } .category { font-family: Noto Sans; font-size: 12px;\n      font-style: normal; font-weight: 700; line-height: 16px; letter-spacing:\n      0em; text-align: left; color: #3398d4; padding: 12px 0 12px 0 !important;\n      } .category .info { color: #b5b5b5; font-weight: 700; } .main-content {\n      font-family: Noto Sans; font-size: 16px; font-style: normal; font-weight:\n      400; line-height: 22px; letter-spacing: 0em; text-align: left; padding: 0\n      0 48px 0 !important; } @media (min-width: 385px) { .main-content {\n      padding: 0 0 56px 0 !important; } } .article { padding: 0 20px 0 20px\n      !important; } @media (min-width: 385px) { .article { padding: 0 5.1% 0\n      5.1% !important; } } .author-container { -webkit-box-align: center\n      !important; -ms-flex-align: center !important; align-items: center\n      !important; -webkit-box-pack: left !important; -ms-flex-pack: left\n      !important; justify-content: left !important; padding: 0 20px 0 20px\n      !important; margin: 0 !important; } @media (min-width: 385px) {\n      .author-container { margin: 0px !important; padding: 0 5.1% 0 5.1%\n      !important; } } .author-container .author-id { color: #b5b5b5 !important;\n      } .author-container .sub-author-container { margin: 3px 0 0 12px\n      !important; } .article-img { padding: 11px 0 11px 0 !important; } @media\n      (min-width: 385px) { .article-img { padding: 10px 0 17px 0 !important; } }\n      .text-article .category a { font-family: Noto Sans; font-size: 12px;\n      font-style: normal; font-weight: 400; line-height: 16px; letter-spacing:\n      0em; text-align: left; color: #616161 !important; padding: 0px !important;\n      } .title-article { font-family: Raleway; font-size: 20px; font-style:\n      normal; font-weight: 700; line-height: 25px; letter-spacing: 0em;\n      text-align: left; color: #161616 !important; margin: 10px 0 16px 0\n      !important; } @media (min-width: 385px) { .title-article { margin-top:\n      12px !important; } } .description-article { font-family: Noto Sans;\n      font-size: 16px; font-style: normal; font-weight: 400; line-height: 22px;\n      letter-spacing: 0em; text-align: left; color: #616161 !important; } @media\n      (min-width: 385px) { .description-article { color: #161616 !important; } }\n      .link-article { font-family: Noto Sans; font-size: 16px; font-style:\n      normal; font-weight: 700; line-height: 22px; letter-spacing: 0em;\n      text-align: left; color: #3398d4 !important; padding-top: 16px !important;\n      } .sub-hr { width: 89.54% !important; padding: 11px 0 10px 0 !important; }\n      @media (min-width: 385px) { .sub-hr { width: 92.7% !important; padding:\n      17px 0 26px 0 !important; } } .link-article-bot { margin-bottom: 19px\n      !important; } @media (min-width: 385px) { .link-article-bot {\n      margin-bottom: 23px !important; } } .column-80 { width: 80% !important; }\n      .column-80 p { margin: 16px 0 0 0 !important; } .column-90 { width: 90%\n      !important; } .column-90 p { margin: 5px !important; } .icon-container {\n      text-align: center !important; margin: 10px 0 16px 0 !important; }\n      .icon-container tr { text-align: center !important; display: inline\n      !important; margin: 2px !important; } .company { padding: 17px 0 0 0\n      !important; } .logo-company { padding: 8px 0 25px 0 !important; } /*#\n      sourceMappingURL=final2.css.map */\n    </mj-style>\n    <mj-font\n      name=\"Noto Serif\"\n      href=\"https://fonts.googleapis.com/css2?family=Noto+Serif:wght@0,400;0,700;1,400;1,700&display=swap\"\n    />\n    <mj-font\n      name=\"Noto Sans\"\n      href=\"https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap\"\n    />\n    <mj-font\n      name=\"Raleway\"\n      href=\"https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap\"\n    />\n    <mj-attributes>\n      <mj-all padding=\"0px\" align=\"center\" />\n      <mj-section background-color=\"#f9f9f9\"> </mj-section>\n      <mj-text color=\"#161616\" text-decoration=\"none\"> </mj-text>\n    </mj-attributes>\n  </mj-head>\n  <mj-body width=\"680px\">\n    <!-- Heading -->\n    <mj-wrapper css-class=\"confuse\">\n      <mj-section css-class=\"\">\n        <mj-column css-class=\"logo-spiderum\" width=\"100%\" padding=\"27px 0 0 0\">\n          <mj-image\n            src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/fcc1d6600d9611ec989ecdbb5e35c5a8.png\"\n            alt=\"Spiderum log\"\n            width=\"166px\"\n            height=\"166px\"\n          />\n        </mj-column>\n        <mj-column css-class=\"big-title\" width=\"80%\" padding=\"22px 0 0 0\">\n          <mj-text>\n            <p class=\"heading heading-top\">\n              Nh\u1EEFng b\u00E0i vi\u1EBFt th\u00FA v\u1ECB t\u1EEB Spiderum.\n            </p>\n          </mj-text>\n        </mj-column>\n        <!-- user-card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <div class=\"user-container\">\n              <div class=\"img-card\">\n                <img\n                  src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-avatar/953eeaa0096811ec9ec5131d8341f662.jpeg\"\n                  alt=\"\"\n                />\n              </div>\n              <div class=\"sub-author-container\">\n                <p class=\"author-name\">\n                  Danh cho\n                  <span style=\"font-weight: 700\">Thcccc sad acccc</span>\n                </p>\n                <p class=\"author-id\">@nguudau</p>\n              </div>\n            </div>\n          </mj-raw>\n        </mj-column>\n      </mj-section>\n    </mj-wrapper>\n    <!-- * card content -->\n    <mj-wrapper css-class=\"confuse\">\n      <!-- main hr -->\n      <mj-section\n        background-color=\"rgba(227, 235, 246, 0.25)\"\n        css-class=\"blue-25\"\n      >\n        <mj-column width=\"100%\" css-class=\"main-hr\">\n          <mj-divider border-width=\"1px\" border-color=\"#616161\" />\n        </mj-column>\n        <!-- Thu ngo -->\n        <mj-column width=\"100%\" css-class=\"content\">\n          <mj-text>\n            <p class=\"title-top\">\n              Molestie diam sagittis, tempor pulvinar vestibulum in egestas id\n              viverra. Dolor adipiscing dignissim\n            </p>\n            <p class=\"category\">\n              EDITOR\u2019S NOTE <span class=\"info\"> | Granny Tan</span>\n            </p>\n            <p class=\"main-content\">\n              Luctus at tristique et orci pulvinar egestas fringilla. Egestas\n              nunc integer venenatis ut tellus sit nibh consectetur. Sit diam\n              tempor ac sed sollicitudin hendrerit tristique. Amet elit eget\n              imperdiet fermentum varius. Amet vestibulum massa euismod mauris\n              in amet vitae cursus nibh. Bibendum amet non volutpat urna, amet.\n              Vulputate elit posuere volutpat dictum eget orci amet venenatis.\n              Dapibus amet cursus semper in scelerisque.\n            </p>\n          </mj-text>\n        </mj-column>\n\n        <!-- article card -->\n\n        <!-- article card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <a href=\"" + article1["authorLink"] + "\">\n              <div class=\"content user-container author-container\">\n                <div class=\"img-card\">\n                  <img src=\"" + article1["avatar"] + "\" alt=\"\" />\n                </div>\n                <div class=\"sub-author-container\">\n                  <p class=\"author-name\">\n                    <span style=\"font-weight: 700\">" + article1["author"] + "</span>\n                  </p>\n                  <p class=\"author-id\">" + article1["createdDay"] + "</p>\n                </div>\n              </div>\n            </a>\n          </mj-raw>\n          <!-- author card -->\n        </mj-column>\n\n        <!-- article image -->\n        <mj-column width=\"100%\" css-class=\"article\">\n          <mj-image\n            css-class=\"article-img \"\n            src=\"" + article1["img"] + "\"\n            alt=\"\"\n            href=\"" + url1 + "\"\n          />\n          <mj-text css-class=\"text-article\">\n            <p class=\"category\">\n              <a href=\"" + article1["categoryLink"] + "\"\n                >" + article1["category"] + "<span class=\"info\"> </span\n              ></a>\n            </p>\n\n            <!-- title article -->\n            <a href=\"" + url1 + "\">\n              <p class=\"title-article\">" + article1["title"] + "</p>\n\n              <!-- description article -->\n              <p class=\"description-article\">" + article1["description"] + "</p>\n\n              <p class=\"link-article\">\u0110\u1ECDc b\u00E0i vi\u1EBFt t\u1EA1i \u0111\u00E2y.</p>\n            </a>\n          </mj-text>\n        </mj-column>\n        <mj-column width=\"89.58%\" css-class=\"sub-hr\">\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"rgba(227, 227, 227, 1)\"\n          />\n        </mj-column>\n        <!-- end article -->\n\n        <!-- article card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <a href=\"" + article2["authorLink"] + "\">\n              <div class=\"content user-container author-container\">\n                <div class=\"img-card\">\n                  <img src=\"" + article2["avatar"] + "\" alt=\"\" />\n                </div>\n                <div class=\"sub-author-container\">\n                  <p class=\"author-name\">\n                    <span style=\"font-weight: 700\">" + article2["author"] + "</span>\n                  </p>\n                  <p class=\"author-id\">" + article2["createdDay"] + "</p>\n                </div>\n              </div>\n            </a>\n          </mj-raw>\n          <!-- author card -->\n        </mj-column>\n\n        <!-- article image -->\n        <mj-column width=\"100%\" css-class=\"article\">\n          <mj-image\n            css-class=\"article-img \"\n            src=\"" + article2["img"] + "\"\n            alt=\"\"\n            href=\"" + url2 + "\"\n          />\n          <mj-text css-class=\"text-article\">\n            <p class=\"category\">\n              <a href=\"" + article2["categoryLink"] + "\"\n                >" + article2["category"] + "<span class=\"info\"> </span\n              ></a>\n            </p>\n            <!-- title article -->\n            <a href=\"" + url2 + "\">\n              <p class=\"title-article\">" + article2["title"] + "</p>\n\n              <!-- description article -->\n              <p class=\"description-article\">" + article2["description"] + "</p>\n\n              <p class=\"link-article\">\u0110\u1ECDc b\u00E0i vi\u1EBFt t\u1EA1i \u0111\u00E2y.</p>\n            </a>\n          </mj-text>\n        </mj-column>\n        <mj-column width=\"89.58%\" css-class=\"sub-hr\">\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"rgba(227, 227, 227, 1)\"\n          />\n        </mj-column>\n        <!-- end article -->\n\n        <!-- article card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <a href=\"" + article3["authorLink"] + "\">\n              <div class=\"content user-container author-container\">\n                <div class=\"img-card\">\n                  <img src=\"" + article3["avatar"] + "\" alt=\"\" />\n                </div>\n                <div class=\"sub-author-container\">\n                  <p class=\"author-name\">\n                    <span style=\"font-weight: 700\">" + article3["author"] + "</span>\n                  </p>\n                  <p class=\"author-id\">" + article3["createdDay"] + "</p>\n                </div>\n              </div>\n            </a>\n          </mj-raw>\n          <!-- author card -->\n        </mj-column>\n\n        <!-- article image -->\n        <mj-column width=\"100%\" css-class=\"article\">\n          <mj-image\n            css-class=\"article-img \"\n            src=\"" + article3["img"] + "\"\n            alt=\"\"\n            href=\"" + url3 + "\"\n          />\n          <mj-text css-class=\"text-article\">\n            <p class=\"category\">\n              <a href=\"" + article3["categoryLink"] + "\"\n                >" + article3["category"] + "<span class=\"info\"> </span\n              ></a>\n            </p>\n            <!-- title article -->\n            <a href=\"" + url3 + "\">\n              <p class=\"title-article\">" + article3["title"] + "</p>\n\n              <!-- description article -->\n              <p class=\"description-article\">" + article3["description"] + "</p>\n\n              <p class=\"link-article\">\u0110\u1ECDc b\u00E0i vi\u1EBFt t\u1EA1i \u0111\u00E2y.</p>\n            </a>\n          </mj-text>\n        </mj-column>\n        <mj-column width=\"89.58%\" css-class=\"sub-hr\">\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"rgba(227, 227, 227, 1)\"\n          />\n        </mj-column>\n        <!-- end article -->\n\n        <!-- article card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <a href=\"" + article4["authorLink"] + "\">\n              <div class=\"content user-container author-container\">\n                <div class=\"img-card\">\n                  <img src=\"" + article4["avatar"] + "\" alt=\"\" />\n                </div>\n                <div class=\"sub-author-container\">\n                  <p class=\"author-name\">\n                    <span style=\"font-weight: 700\">" + article4["author"] + "</span>\n                  </p>\n                  <p class=\"author-id\">" + article4["createdDay"] + "</p>\n                </div>\n              </div>\n            </a>\n          </mj-raw>\n          <!-- author card -->\n        </mj-column>\n\n        <!-- article image -->\n        <mj-column width=\"100%\" css-class=\"article\">\n          <mj-image\n            css-class=\"article-img \"\n            src=\"" + article4["img"] + "\"\n            alt=\"\"\n            href=\"" + url4 + "\"\n          />\n          <mj-text css-class=\"text-article\">\n            <p class=\"category\">\n              <a href=\"" + article4["categoryLink"] + "\"\n                >" + article4["category"] + "<span class=\"info\"> </span\n              ></a>\n            </p>\n            <!-- title article -->\n            <a href=\"" + url4 + "\">\n              <p class=\"title-article\">" + article4["title"] + "</p>\n\n              <!-- description article -->\n              <p class=\"description-article\">" + article4["description"] + "</p>\n\n              <p class=\"link-article\">\u0110\u1ECDc b\u00E0i vi\u1EBFt t\u1EA1i \u0111\u00E2y.</p>\n            </a>\n          </mj-text>\n        </mj-column>\n        <mj-column width=\"89.58%\" css-class=\"sub-hr\">\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"rgba(227, 227, 227, 1)\"\n          />\n        </mj-column>\n        <!-- end article -->\n\n        <!-- article card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <a href=\"" + article5["authorLink"] + "\">\n              <div class=\"content user-container author-container\">\n                <div class=\"img-card\">\n                  <img src=\"" + article5["avatar"] + "\" alt=\"\" />\n                </div>\n                <div class=\"sub-author-container\">\n                  <p class=\"author-name\">\n                    <span style=\"font-weight: 700\">" + article5["author"] + "</span>\n                  </p>\n                  <p class=\"author-id\">" + article5["createdDay"] + "</p>\n                </div>\n              </div>\n            </a>\n          </mj-raw>\n          <!-- author card -->\n        </mj-column>\n\n        <!-- article image -->\n        <mj-column width=\"100%\" css-class=\"article\">\n          <mj-image\n            css-class=\"article-img \"\n            src=\"" + article5["img"] + "\"\n            alt=\"\"\n            href=\"" + url5 + "\"\n          />\n          <mj-text css-class=\"text-article\">\n            <p class=\"category\">\n              <a href=\"" + article5["categoryLink"] + "\"\n                >" + article5["category"] + "<span class=\"info\"> </span\n              ></a>\n            </p>\n            <!-- title article -->\n            <a href=\"" + url5 + "\">\n              <p class=\"title-article\">" + article5["title"] + "</p>\n\n              <!-- description article -->\n              <p class=\"description-article\">" + article5["description"] + "</p>\n\n              <p class=\"link-article\">\u0110\u1ECDc b\u00E0i vi\u1EBFt t\u1EA1i \u0111\u00E2y.</p>\n            </a>\n          </mj-text>\n        </mj-column>\n        <mj-column width=\"89.58%\" css-class=\"sub-hr\">\n          <mj-divider\n            border-width=\"1px\"\n            border-color=\"rgba(227, 227, 227, 1)\"\n          />\n        </mj-column>\n        <!-- end article -->\n\n        <!-- article card -->\n        <mj-column css-class=\"user-card\" width=\"100%\" padding=\"22px 0 50px 0\">\n          <mj-raw>\n            <a href=\"" + article6["authorLink"] + "\">\n              <div class=\"content user-container author-container\">\n                <div class=\"img-card\">\n                  <img src=\"" + article6["avatar"] + "\" alt=\"\" />\n                </div>\n                <div class=\"sub-author-container\">\n                  <p class=\"author-name\">\n                    <span style=\"font-weight: 700\">" + article6["author"] + "</span>\n                  </p>\n                  <p class=\"author-id\">" + article6["createdDay"] + "</p>\n                </div>\n              </div>\n            </a>\n          </mj-raw>\n          <!-- author card -->\n        </mj-column>\n\n        <!-- article image -->\n        <mj-column width=\"100%\" css-class=\"article\">\n          <mj-image\n            css-class=\"article-img \"\n            src=\"" + article6["img"] + "\"\n            alt=\"\"\n            href=\"" + url6 + "\"\n          />\n          <mj-text css-class=\"text-article\">\n            <p class=\"category\">\n              <a href=\"" + article6["categoryLink"] + "\"\n                >" + article6["category"] + "<span class=\"info\"> </span\n              ></a>\n            </p>\n            <!-- title article -->\n            <a href=\"" + url6 + "\">\n              <p class=\"title-article\">" + article6["title"] + "</p>\n\n              <!-- description article -->\n              <p class=\"description-article\">" + article6["description"] + "</p>\n\n              <p class=\"link-article link-article-bot\">\u0110\u1ECDc b\u00E0i vi\u1EBFt t\u1EA1i \u0111\u00E2y.</p>\n            </a>\n          </mj-text>\n        </mj-column>\n\n        <!-- end article -->\n      </mj-section>\n    </mj-wrapper>\n\n    <!-- Social and Footer -->\n    <mj-wrapper css-class=\"confuse\">\n      <!-- Social -->\n      <mj-section background-color=\"#3398D4\">\n        <mj-column css-class=\"column-80\" width=\"77.86%\" padding=\"16px 0 0 0\">\n          <mj-text\n            align=\"center\"\n            font-family=\"Noto Sans, sans-serif\"\n            line-height=\"21.9px\"\n            color=\"#FFFFFF\"\n            font-size=\"16px\"\n            font-weight=\"700\"\n            font-family=\"Noto, sand\"\n            ><p class=\"text\">\n              Follow ngay Spiderum \u0111\u1EC3 \u0111\u1ECDc th\u00EAm nhi\u1EC1u th\u00F4ng tim th\u00FA v\u1ECB!\n            </p></mj-text\n          >\n        </mj-column>\n        <mj-column width=\"100%\"> </mj-column>\n        <mj-column\n          css-class=\"icon-container\"\n          width=\"100%\"\n          padding=\"10px 10px 16px 0px\"\n        >\n          <mj-image\n            css-class=\"social-icon\"\n            src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/d1d52b500d3c11ec9971cbd2e720387a.png\"\n            alt=\"spiderum\"\n            href=\"https://spiderum.com\"\n            width=\"40px\"\n            border-radius=\"50%\"\n          />\n          <mj-image\n            css-class=\"social-icon\"\n            src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/716da5200d3d11ec9971cbd2e720387a.png\"\n            alt=\"spiderum\"\n            href=\"https://youtube.com/spiderum\"\n            width=\"40px\"\n            border-radius=\"50%\"\n          />\n          <mj-image\n            css-class=\"social-icon\"\n            src=\"https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/77c443c00d3d11ec9971cbd2e720387a.png\"\n            alt=\"spiderum\"\n            href=\"https://open.spotify.com/show/73NBSJpoAxNyHLYGrraSXd\"\n            width=\"40px\"\n            border-radius=\"50%\"\n          />\n        </mj-column>\n      </mj-section>\n      <!-- Footer -->\n      <mj-section>\n        <mj-column css-class=\"column-90\" width=\"87.5%\">\n          <mj-text\n            align=\"center\"\n            font-size=\"12px\"\n            line-height=\"20px\"\n            font-family=\"Noto Sans,sans-serif\"\n          >\n            <p class=\"text\">\n              Theo d\u00F5i nh\u1EEFng ch\u1EE7 \u0111\u1EC1 b\u1EA1n quan t\u00E2m ho\u1EB7c b\u1ECF theo d\u00F5i ch\u00FAng\n              <a\n                class=\"link-blue\"\n                href=\"/\"\n                style=\"font-weight: 700; color: #3398d4\"\n                >qua \u0111\u00E2y</a\n              >\n            </p>\n            <p class=\"text company\">\n              <span style=\"font-weight: 700\">C\u00D4NG TY C\u1ED4 PH\u1EA6N FELIZZ<br /></span>\n              Tr\u1EF1c th\u1EF1c C\u00F4ng ty C\u1ED5 ph\u1EA7n Spiderum Vi\u1EC7t Nam (Spiderum Vietnam\n              JSC)<br />\n              Ng\u01B0\u1EDDi ch\u1ECBu tr\u00E1ch nhi\u1EC7m n\u1ED9i dung Tr\u1EA7n Vi\u1EC7t Anh<br />\n              Gi\u1EA5y ph\u00E9p MXH s\u1ED1 341/GP-TTTT do B\u1ED9 TTTT c\u1EA5p ng\u00E0y 27 th\u00E1ng 6 n\u0103m\n              2016<br />\n              <span style=\"font-weight: 700\">Li\u00EAn h\u1EC7:</span> 0946.042.093<span\n                style=\"font-weight: 700\"\n              >\n                Email:</span\n              >\n              contact@spiderum.com<br />\n              <span style=\"font-weight: 700\">\u0110\u1ECBa ch\u1EC9: </span> T\u1EA7ng 5, 1/186\n              \u0111\u01B0\u1EDDng B\u01B0\u1EDFi, C\u1ED1ng V\u1ECB, Ba \u0110\u00ECnh, H\u00E0 N\u1ED9i\n            </p>\n            <p class=\"text company\" style=\"font-weight: 700\">\n              \u00A9 2021 C\u00D4NG TY C\u1ED4 PH\u1EA6N FELIZZ\n            </p>\n          </mj-text>\n          <mj-image\n            css-class=\"logo-company\"\n            href=\"https://spiderum.com\"\n            src=\"https://spiderum.com/assets/icons/wideLogo.png\"\n            align=\"center\"\n            padding=\"0 0 25px 0\"\n            width=\"131.94px\"\n            alt=\"spiderumLogo\"\n          />\n        </mj-column>\n      </mj-section>\n    </mj-wrapper>\n  </mj-body>\n</mjml>\n";
-                writeStream.write(vltn);
-                return [2 /*return*/];
-        }
+    const article3 = await getS(url3).then((s) => {
+        return s;
     });
-}); };
+    const article4 = await getS(url4).then((s) => {
+        return s;
+    });
+    const article5 = await getS(url5).then((s) => {
+        return s;
+    });
+    const article6 = await getS(url6).then((s) => {
+        return s;
+    });
+    const article7 = await getS(url7).then((s) => {
+        return s;
+    });
+    const article8 = await getS(url8).then((s) => {
+        return s;
+    });
+    const article9 = await getS(url9).then((s) => {
+        return s;
+    });
+    let vltn = `<mjml>
+  <mj-head>
+    <mj-breakpoint width="384px" />
+    <mj-style>@import
+      url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+      * { -webkit-box-sizing: border-box !important; box-sizing: border-box
+      !important; } .confuse { background-color: #f9f9f9 !important; } .confuse
+      * { margin: 0 !important; padding: 0 !important; } .icon-container table {
+      text-align: center !important; } a { text-decoration: none !important; }
+      a:hover p, img:hover, a:hover { opacity: 0.7 !important; } .logo-spiderum
+      { margin: 27px 0 22px 0 !important; } @media (min-width: 385px) {
+      .logo-spiderum { margin-bottom: 8px !important; } } .heading-top {
+      font-family: Noto Serif; font-size: 32px; font-style: normal; font-weight:
+      400; line-height: 44px; letter-spacing: 0em; text-align: center; margin:
+      0px 30px 24px 30px !important; } @media (min-width: 385px) { .heading-top
+      { font-family: Noto Serif; font-size: 42px; font-style: normal;
+      font-weight: 500; line-height: 57px; letter-spacing: 0em; text-align:
+      center; margin: 0 10% 30px 10% !important; } } .user-container { display:
+      -webkit-box !important; display: -ms-flexbox !important; display: flex
+      !important; -webkit-box-align: center !important; -ms-flex-align: center
+      !important; align-items: center !important; -webkit-box-pack: center
+      !important; -ms-flex-pack: center !important; justify-content: center
+      !important; height: 36px !important; margin: 0 0 62px 0 !important; }
+      .user-container img { width: 32px !important; height: 32px; border-radius:
+      50% !important; } @media (min-width: 385px) { .user-container { margin: 0
+      0 32px 0 !important; } } .sub-author-container { text-align: left
+      !important; line-height: 16px !important; height: 36px !important; margin:
+      3px 0 0 12px !important; } .sub-author-container p { width: auto
+      !important; font-size: 14px !important; color: #161616 !important;
+      font-family: "Noto Sans", sans-serif !important; } .sub-author-container
+      .author-id { font-size: 12px !important; color: #616161 !important;
+      font-family: "Noto Sans", sans-serif !important; line-height: 14px
+      !important; } .main-hr { padding: 12px 20px 25px 20px !important; } @media
+      (min-width: 385px) { .main-hr { padding: 12px 27px 25px 27px !important; }
+      } .content { padding: 0 20.5px 0 20.5px !important; } @media (min-width:
+      385px) { .content { padding: 0 6.3% 0 6.3% !important; } } .title-top {
+      font-family: Raleway; font-size: 32px; font-style: normal; font-weight:
+      700; line-height: 38px; letter-spacing: 0em; text-align: left; color:
+      #3398d4; } .category { font-family: Noto Sans; font-size: 12px;
+      font-style: normal; font-weight: 700; line-height: 16px; letter-spacing:
+      0em; text-align: left; color: #3398d4; padding: 12px 0 12px 0 !important;
+      } .category .info { color: #b5b5b5; font-weight: 700; } .main-content {
+      font-family: Noto Sans; font-size: 16px; font-style: normal; font-weight:
+      400; line-height: 22px; letter-spacing: 0em; text-align: left; padding: 0
+      0 48px 0 !important; } @media (min-width: 385px) { .main-content {
+      padding: 0 0 56px 0 !important; } } .article { padding: 0 20px 0 20px
+      !important; } @media (min-width: 385px) { .article { padding: 0 5.1% 0
+      5.1% !important; } } .author-container { -webkit-box-align: center
+      !important; -ms-flex-align: center !important; align-items: center
+      !important; -webkit-box-pack: left !important; -ms-flex-pack: left
+      !important; justify-content: left !important; padding: 0 20px 0 20px
+      !important; margin: 0 !important; } @media (min-width: 385px) {
+      .author-container { margin: 0px !important; padding: 0 5.1% 0 5.1%
+      !important; } } .author-container .author-id { color: #b5b5b5 !important;
+      } .author-container .sub-author-container { margin: 3px 0 0 12px
+      !important; } .article-img { padding: 11px 0 11px 0 !important; } @media
+      (min-width: 385px) { .article-img { padding: 10px 0 17px 0 !important; } }
+      .text-article .category a { font-family: Noto Sans; font-size: 12px;
+      font-style: normal; font-weight: 400; line-height: 16px; letter-spacing:
+      0em; text-align: left; color: #616161 !important; padding: 0px !important;
+      } .title-article { font-family: Raleway; font-size: 20px; font-style:
+      normal; font-weight: 700; line-height: 25px; letter-spacing: 0em;
+      text-align: left; color: #161616 !important; margin: 10px 0 16px 0
+      !important; } @media (min-width: 385px) { .title-article { margin-top:
+      12px !important; } } .description-article { font-family: Noto Sans;
+      font-size: 16px; font-style: normal; font-weight: 400; line-height: 22px;
+      letter-spacing: 0em; text-align: left; color: #616161 !important; } @media
+      (min-width: 385px) { .description-article { color: #161616 !important; } }
+      .link-article { font-family: Noto Sans; font-size: 16px; font-style:
+      normal; font-weight: 700; line-height: 22px; letter-spacing: 0em;
+      text-align: left; color: #3398d4 !important; padding-top: 16px !important;
+      } .sub-hr { width: 89.54% !important; padding: 11px 0 10px 0 !important; }
+      @media (min-width: 385px) { .sub-hr { width: 92.7% !important; padding:
+      17px 0 26px 0 !important; } } .link-article-bot { margin-bottom: 19px
+      !important; } @media (min-width: 385px) { .link-article-bot {
+      margin-bottom: 23px !important; } } .column-80 { width: 80% !important; }
+      .column-80 p { margin: 16px 0 0 0 !important; } .column-90 { width: 90%
+      !important; } .column-90 p { margin: 5px !important; } .icon-container {
+      text-align: center !important; margin: 10px 0 16px 0 !important; }
+      .icon-container tr { text-align: center !important; display: inline
+      !important; margin: 2px !important; } .company { padding: 17px 0 0 0
+      !important; } .logo-company { padding: 8px 0 25px 0 !important; } /*#
+      sourceMappingURL=final2.css.map */
+    </mj-style>
+    <mj-font
+      name="Noto Serif"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+    <mj-font
+      name="Noto Sans"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+    />
+    <mj-font
+      name="Raleway"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+    />
+    <mj-attributes>
+      <mj-all padding="0px" align="center" />
+      <mj-section background-color="#f9f9f9"> </mj-section>
+      <mj-text color="#161616" text-decoration="none"> </mj-text>
+    </mj-attributes>
+  </mj-head>
+  <mj-body width="680px">
+    <!-- Heading -->
+    <mj-wrapper css-class="confuse">
+      <mj-section css-class="">
+        <mj-column css-class="logo-spiderum" width="100%" padding="27px 0 0 0">
+          <mj-image
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/fcc1d6600d9611ec989ecdbb5e35c5a8.png"
+            alt="Spiderum log"
+            width="166px"
+            height="166px"
+          />
+        </mj-column>
+        <mj-column css-class="big-title" width="80%" padding="22px 0 0 0">
+          <mj-text>
+            <p class="heading heading-top">
+              Những bài viết thú vị từ Spiderum.
+            </p>
+          </mj-text>
+        </mj-column>
+        <!-- user-card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <div class="user-container">
+              <div class="img-card">
+                <img
+                  src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-avatar/953eeaa0096811ec9ec5131d8341f662.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="sub-author-container">
+                <p class="author-name">
+                  Danh cho
+                  <span style="font-weight: 700">Thcccc sad acccc</span>
+                </p>
+                <p class="author-id">@nguudau</p>
+              </div>
+            </div>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <!-- * card content -->
+    <mj-wrapper css-class="confuse">
+      <!-- main hr -->
+      <mj-section
+        background-color="rgba(227, 235, 246, 0.25)"
+        css-class="blue-25"
+      >
+        <mj-column width="100%" css-class="main-hr">
+          <mj-divider border-width="1px" border-color="#616161" />
+        </mj-column>
+        <!-- Thu ngo -->
+        <mj-column width="100%" css-class="content">
+          <mj-text>
+            <p class="title-top">
+              ${thungo[1]}
+            </p>
+            <p class="category">
+              EDITOR’S NOTE <span class="info"> | Granny Tan</span>
+            </p>
+            <p class="main-content">
+              ${thungo[2]}
+            </p>
+          </mj-text>
+        </mj-column>
+
+        <!-- article card -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article1["authorLink"]}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article1["avatar"]}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article1["author"]}</span>
+                  </p>
+                  <p class="author-id">${article1["createdDay"]}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article1["img"]}"
+            alt=""
+            href="${url1}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article1["categoryLink"]}"
+                >${article1["category"]}<span class="info"> </span
+              ></a>
+            </p>
+
+            <!-- title article -->
+            <a href="${url1}">
+              <p class="title-article">${article1["title"]}</p>
+
+              <!-- description article -->
+              <p class="description-article">${article1["description"]}</p>
+
+              <p class="link-article">Đọc bài viết tại đây.</p>
+            </a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="89.58%" css-class="sub-hr">
+          <mj-divider
+            border-width="1px"
+            border-color="rgba(227, 227, 227, 1)"
+          />
+        </mj-column>
+        <!-- end article -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article2["authorLink"]}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article2["avatar"]}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article2["author"]}</span>
+                  </p>
+                  <p class="author-id">${article2["createdDay"]}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article2["img"]}"
+            alt=""
+            href="${url2}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article2["categoryLink"]}"
+                >${article2["category"]}<span class="info"> </span
+              ></a>
+            </p>
+            <!-- title article -->
+            <a href="${url2}">
+              <p class="title-article">${article2["title"]}</p>
+
+              <!-- description article -->
+              <p class="description-article">${article2["description"]}</p>
+
+              <p class="link-article">Đọc bài viết tại đây.</p>
+            </a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="89.58%" css-class="sub-hr">
+          <mj-divider
+            border-width="1px"
+            border-color="rgba(227, 227, 227, 1)"
+          />
+        </mj-column>
+        <!-- end article -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article3["authorLink"]}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article3["avatar"]}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article3["author"]}</span>
+                  </p>
+                  <p class="author-id">${article3["createdDay"]}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article3["img"]}"
+            alt=""
+            href="${url3}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article3["categoryLink"]}"
+                >${article3["category"]}<span class="info"> </span
+              ></a>
+            </p>
+            <!-- title article -->
+            <a href="${url3}">
+              <p class="title-article">${article3["title"]}</p>
+
+              <!-- description article -->
+              <p class="description-article">${article3["description"]}</p>
+
+              <p class="link-article">Đọc bài viết tại đây.</p>
+            </a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="89.58%" css-class="sub-hr">
+          <mj-divider
+            border-width="1px"
+            border-color="rgba(227, 227, 227, 1)"
+          />
+        </mj-column>
+        <!-- end article -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article4["authorLink"]}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article4["avatar"]}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article4["author"]}</span>
+                  </p>
+                  <p class="author-id">${article4["createdDay"]}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article4["img"]}"
+            alt=""
+            href="${url4}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article4["categoryLink"]}"
+                >${article4["category"]}<span class="info"> </span
+              ></a>
+            </p>
+            <!-- title article -->
+            <a href="${url4}">
+              <p class="title-article">${article4["title"]}</p>
+
+              <!-- description article -->
+              <p class="description-article">${article4["description"]}</p>
+
+              <p class="link-article">Đọc bài viết tại đây.</p>
+            </a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="89.58%" css-class="sub-hr">
+          <mj-divider
+            border-width="1px"
+            border-color="rgba(227, 227, 227, 1)"
+          />
+        </mj-column>
+        <!-- end article -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article5["authorLink"]}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article5["avatar"]}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article5["author"]}</span>
+                  </p>
+                  <p class="author-id">${article5["createdDay"]}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article5["img"]}"
+            alt=""
+            href="${url5}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article5["categoryLink"]}"
+                >${article5["category"]}<span class="info"> </span
+              ></a>
+            </p>
+            <!-- title article -->
+            <a href="${url5}">
+              <p class="title-article">${article5["title"]}</p>
+
+              <!-- description article -->
+              <p class="description-article">${article5["description"]}</p>
+
+              <p class="link-article">Đọc bài viết tại đây.</p>
+            </a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="89.58%" css-class="sub-hr">
+          <mj-divider
+            border-width="1px"
+            border-color="rgba(227, 227, 227, 1)"
+          />
+        </mj-column>
+        <!-- end article -->
+
+        <!-- article card -->
+        <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
+          <mj-raw>
+            <a href="${article6["authorLink"]}">
+              <div class="content user-container author-container">
+                <div class="img-card">
+                  <img src="${article6["avatar"]}" alt="" />
+                </div>
+                <div class="sub-author-container">
+                  <p class="author-name">
+                    <span style="font-weight: 700">${article6["author"]}</span>
+                  </p>
+                  <p class="author-id">${article6["createdDay"]}</p>
+                </div>
+              </div>
+            </a>
+          </mj-raw>
+          <!-- author card -->
+        </mj-column>
+
+        <!-- article image -->
+        <mj-column width="100%" css-class="article">
+          <mj-image
+            css-class="article-img "
+            src="${article6["img"]}"
+            alt=""
+            href="${url6}"
+          />
+          <mj-text css-class="text-article">
+            <p class="category">
+              <a href="${article6["categoryLink"]}"
+                >${article6["category"]}<span class="info"> </span
+              ></a>
+            </p>
+            <!-- title article -->
+            <a href="${url6}">
+              <p class="title-article">${article6["title"]}</p>
+
+              <!-- description article -->
+              <p class="description-article">${article6["description"]}</p>
+
+              <p class="link-article link-article-bot">Đọc bài viết tại đây.</p>
+            </a>
+          </mj-text>
+        </mj-column>
+
+        <!-- end article -->
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- Social and Footer -->
+    <mj-wrapper css-class="confuse">
+      <!-- Social -->
+      <mj-section background-color="#3398D4">
+        <mj-column css-class="column-80" width="77.86%" padding="16px 0 0 0">
+          <mj-text
+            align="center"
+            font-family="Noto Sans, sans-serif"
+            line-height="21.9px"
+            color="#FFFFFF"
+            font-size="16px"
+            font-weight="700"
+            font-family="Noto, sand"
+            ><p class="text">
+              Follow ngay Spiderum để đọc thêm nhiều thông tim thú vị!
+            </p></mj-text
+          >
+        </mj-column>
+        <mj-column width="100%"> </mj-column>
+        <mj-column
+          css-class="icon-container"
+          width="100%"
+          padding="10px 10px 16px 0px"
+        >
+          <mj-image
+            css-class="social-icon"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/d1d52b500d3c11ec9971cbd2e720387a.png"
+            alt="spiderum"
+            href="https://spiderum.com"
+            width="40px"
+            border-radius="50%"
+          />
+          <mj-image
+            css-class="social-icon"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/716da5200d3d11ec9971cbd2e720387a.png"
+            alt="spiderum"
+            href="https://youtube.com/spiderum"
+            width="40px"
+            border-radius="50%"
+          />
+          <mj-image
+            css-class="social-icon"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/77c443c00d3d11ec9971cbd2e720387a.png"
+            alt="spiderum"
+            href="https://open.spotify.com/show/73NBSJpoAxNyHLYGrraSXd"
+            width="40px"
+            border-radius="50%"
+          />
+        </mj-column>
+      </mj-section>
+      <!-- Footer -->
+      <mj-section>
+        <mj-column css-class="column-90" width="87.5%">
+          <mj-text
+            align="center"
+            font-size="12px"
+            line-height="20px"
+            font-family="Noto Sans,sans-serif"
+          >
+            <p class="text">
+              Theo dõi những chủ đề bạn quan tâm hoặc bỏ theo dõi chúng
+              <a
+                class="link-blue"
+                href="/"
+                style="font-weight: 700; color: #3398d4"
+                >qua đây</a
+              >
+            </p>
+            <p class="text company">
+              <span style="font-weight: 700">CÔNG TY CỔ PHẦN FELIZZ<br /></span>
+              Trực thực Công ty Cổ phần Spiderum Việt Nam (Spiderum Vietnam
+              JSC)<br />
+              Người chịu trách nhiệm nội dung Trần Việt Anh<br />
+              Giấy phép MXH số 341/GP-TTTT do Bộ TTTT cấp ngày 27 tháng 6 năm
+              2016<br />
+              <span style="font-weight: 700">Liên hệ:</span> 0946.042.093<span
+                style="font-weight: 700"
+              >
+                Email:</span
+              >
+              contact@spiderum.com<br />
+              <span style="font-weight: 700">Địa chỉ: </span> Tầng 5, 1/186
+              đường Bưởi, Cống Vị, Ba Đình, Hà Nội
+            </p>
+            <p class="text company" style="font-weight: 700">
+              © 2021 CÔNG TY CỔ PHẦN FELIZZ
+            </p>
+          </mj-text>
+          <mj-image
+            css-class="logo-company"
+            href="https://spiderum.com"
+            src="https://spiderum.com/assets/icons/wideLogo.png"
+            align="center"
+            padding="0 0 25px 0"
+            width="131.94px"
+            alt="spiderumLogo"
+          />
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
+`;
+    writeStream.write(vltn);
+    //value value
+};
 readF()
-    .then(function () {
+    .then(() => {
     url1 = url[1];
     url2 = url[2];
     url3 = url[3];
@@ -204,6 +702,7 @@ readF()
     url8 = url[8];
     url9 = url[9];
 })
-    .then(function () {
-    crawl().then(function () { return console.log("DONE"); });
+    .then(() => {
+    crawl().then(() => console.log("DONE"));
 });
+//# sourceMappingURL=sw2.js.map

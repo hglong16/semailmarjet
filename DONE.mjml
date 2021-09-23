@@ -1,7 +1,8 @@
 <mjml>
   <mj-head>
     <mj-breakpoint width="384px" />
-    <mj-style>
+    <mj-style>@import
+      url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
       * { -webkit-box-sizing: border-box !important; box-sizing: border-box
       !important; } .confuse { background-color: #f9f9f9 !important; } .confuse
       * { margin: 0 !important; padding: 0 !important; } .icon-container table {
@@ -154,20 +155,13 @@
         <mj-column width="100%" css-class="content">
           <mj-text>
             <p class="title-top">
-              Molestie diam sagittis, tempor pulvinar vestibulum in egestas id
-              viverra. Dolor adipiscing dignissim
+              Doi dieu muon noi
             </p>
             <p class="category">
               EDITOR’S NOTE <span class="info"> | Granny Tan</span>
             </p>
             <p class="main-content">
-              Luctus at tristique et orci pulvinar egestas fringilla. Egestas
-              nunc integer venenatis ut tellus sit nibh consectetur. Sit diam
-              tempor ac sed sollicitudin hendrerit tristique. Amet elit eget
-              imperdiet fermentum varius. Amet vestibulum massa euismod mauris
-              in amet vitae cursus nibh. Bibendum amet non volutpat urna, amet.
-              Vulputate elit posuere volutpat dictum eget orci amet venenatis.
-              Dapibus amet cursus semper in scelerisque.
+              Day la mot dieu tuyet voi nam o tren vu tru nay ma ban co the lam gi do de hoan thien tat ca  
             </p>
           </mj-text>
         </mj-column>
@@ -180,16 +174,13 @@
             <a href="https://spiderum.com/nguoi-dung/a_dreamer">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b54a6e406f3311e9b89da1d556449df3.jpg"
-                    alt=""
-                  />
+                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b54a6e406f3311e9b89da1d556449df3.jpg" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">Andy Luong</span>
                   </p>
-                  <p class="author-id">5 tháng 9</p>
+                  <p class="author-id"> 5 tháng 9 </p>
                 </div>
               </div>
             </a>
@@ -207,26 +198,19 @@
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe">
-                Khoa học - Công nghệ <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
+                > Khoa học - Công nghệ <span class="info"> </span
               ></a>
             </p>
 
             <!-- title article -->
-            <a
-              href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP"
-            >
-              <p class="title-article">
-                [Stoicism] - Dịch Seneca (124): Đừng bao giờ tin mình đã hạnh
-                phúc cho đến khi mọi hạnh phúc của bạn đều xuất phát từ bên
-                trong
-              </p>
+            <a href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP">
+              <p class="title-article">[Stoicism] - Dịch Seneca (124): Đừng bao giờ tin mình đã hạnh phúc cho đến khi mọi hạnh phúc của bạn đều xuất phát từ bên trong</p>
 
               <!-- description article -->
-              <p class="description-article">
-                Lời tựa : Như đã giới thiệu trong series, Seneca thực sự là
-                nguồn cảm hứng Stoicism của mình. Đọc Seneca không...
-              </p>
+              <p class="description-article">Lời tựa  :
+                      
+Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứng Stoicism của mình. Đọc Seneca không...</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -246,16 +230,13 @@
             <a href="https://spiderum.com/nguoi-dung/loveless2001">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg"
-                    alt=""
-                  />
+                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">loveless</span>
                   </p>
-                  <p class="author-id">31 tháng 7</p>
+                  <p class="author-id"> 31 tháng 7 </p>
                 </div>
               </div>
             </a>
@@ -273,24 +254,16 @@
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan">
-                Quan điểm - Tranh luận <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
+                > Quan điểm - Tranh luận <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a
-              href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05"
-            >
-              <p class="title-article">
-                [WTDTY] Một xã hội chà đạp lên tất cả những tiến bộ của nền văn
-                minh
-              </p>
+            <a href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05">
+              <p class="title-article">[WTDTY] Một xã hội chà đạp lên tất cả những tiến bộ của nền văn minh</p>
 
               <!-- description article -->
-              <p class="description-article">
-                Nhân tính, nhân quyền và khoa học là những gì mà xã hội Việt Nam
-                đang vứt bỏ vì một mục tiêu không tưởng “0 ca nhiễm covid”
-              </p>
+              <p class="description-article">Nhân tính, nhân quyền và khoa học là những gì mà xã hội Việt Nam đang vứt bỏ vì một mục tiêu không tưởng “0 ca nhiễm covid”</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -310,16 +283,13 @@
             <a href="https://spiderum.com/nguoi-dung/duytang099">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c412a610e96411eba7d6b3a25432202e.jpg"
-                    alt=""
-                  />
+                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c412a610e96411eba7d6b3a25432202e.jpg" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">D2THEWORLD</span>
                   </p>
-                  <p class="author-id">30 tháng 8</p>
+                  <p class="author-id"> 30 tháng 8 </p>
                 </div>
               </div>
             </a>
@@ -337,22 +307,16 @@
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/ky-nang">
-                Kỹ năng <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/ky-nang"
+                > Kỹ năng <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a
-              href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF"
-            >
-              <p class="title-article">
-                Thuyết trình dễ ẹt - áp dụng công thức là ra
-              </p>
+            <a href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF">
+              <p class="title-article">Thuyết trình dễ ẹt - áp dụng công thức là ra</p>
 
               <!-- description article -->
-              <p class="description-article">
-                Công thức giúp bạn thuyết trình thành công
-              </p>
+              <p class="description-article">Công thức giúp bạn thuyết trình thành công</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -369,16 +333,16 @@
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.comundefined">
+            <a href="https://spiderum.com/nguoi-dung/GenZInvest">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="undefined" alt="" />
+                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/980b294019eb11ec890f937b617f784e.png" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700"></span>
+                    <span style="font-weight: 700">GenZInvest</span>
                   </p>
-                  <p class="author-id"></p>
+                  <p class="author-id"> 20 tháng 9 </p>
                 </div>
               </div>
             </a>
@@ -390,28 +354,23 @@
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="undefined"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/51441cb019eb11ec890f937b617f784e.jpg"
             alt=""
-            href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s"
+            href="https://spiderum.com/bai-dang/Evergrande-la-gi-Cuoc-khung-hoang-cua-ga-khong-lo-bat-dong-san-Trung-Quoc-C9NyMN67ngTD"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.comundefined"
-                ><span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
+                > Quan điểm - Tranh luận <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a
-              href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s"
-            >
-              <p class="title-article">Trang chủ - Spiderum</p>
+            <a href="https://spiderum.com/bai-dang/Evergrande-la-gi-Cuoc-khung-hoang-cua-ga-khong-lo-bat-dong-san-Trung-Quoc-C9NyMN67ngTD">
+              <p class="title-article">Evergrande là gì? Cuộc khủng hoảng của gã khổng lồ bất động sản Trung Quốc</p>
 
               <!-- description article -->
-              <p class="description-article">
-                Nền tảng chia sẻ - thảo luận dành cho người Việt. Nơi tập trung
-                những nội dung thú vị và hữu ích nhất do người dùng đóng góp và
-                bình chọn.
-              </p>
+              <p class="description-article">Cuộc khủng hoảng của gã khổng lồ Evergrande có khoản nợ lớn hơn cả GDP của Việt Nam đến từ đâu? Và bài học của nó đem đến cho chúng ta là gì? Hãy cùng tìm hiểu về cuộc khủng hoảng của Evergrande.
+</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -431,16 +390,13 @@
             <a href="https://spiderum.com/nguoi-dung/Mytwingo">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg"
-                    alt=""
-                  />
+                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">Absolutely</span>
                   </p>
-                  <p class="author-id">31 tháng 8</p>
+                  <p class="author-id"> 31 tháng 8 </p>
                 </div>
               </div>
             </a>
@@ -458,23 +414,16 @@
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/science2vn">
-                Science2vn <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/science2vn"
+                > Science2vn <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a
-              href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB"
-            >
-              <p class="title-article">
-                [P5] Cần sa - Bao giờ được hợp pháp hóa?
-              </p>
+            <a href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB">
+              <p class="title-article">[P5] Cần sa - Bao giờ được hợp pháp hóa?</p>
 
               <!-- description article -->
-              <p class="description-article">
-                So với người anh em thuốc phiện thì cần sa đa năng và lành tính
-                hơn. Nhưng rất tiếc thế là không đủ.
-              </p>
+              <p class="description-article">So với người anh em thuốc phiện thì cần sa đa năng và lành tính hơn. Nhưng rất tiếc thế là không đủ.</p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -494,16 +443,13 @@
             <a href="https://spiderum.com/nguoi-dung/guiltygearxx">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/580f27502ab711e8aff0b37519421f8c.jpg"
-                    alt=""
-                  />
+                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/580f27502ab711e8aff0b37519421f8c.jpg" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">roadrash</span>
                   </p>
-                  <p class="author-id">3 tháng 9</p>
+                  <p class="author-id"> 3 tháng 9 </p>
                 </div>
               </div>
             </a>
@@ -521,22 +467,16 @@
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe">
-                Khoa học - Công nghệ <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
+                > Khoa học - Công nghệ <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a
-              href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF"
-            >
-              <p class="title-article">
-                Một số insight về từ vựng sách Cambridge English IELTS
-              </p>
+            <a href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF">
+              <p class="title-article">Một số insight về từ vựng sách Cambridge English IELTS</p>
 
               <!-- description article -->
-              <p class="description-article">
-                Insight về từ vựng sách Cambridge English IELTS
-              </p>
+              <p class="description-article">Insight về từ vựng sách Cambridge English IELTS</p>
 
               <p class="link-article link-article-bot">Đọc bài viết tại đây.</p>
             </a>
