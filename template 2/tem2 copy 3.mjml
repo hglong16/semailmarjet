@@ -1,7 +1,8 @@
 <mjml>
   <mj-head>
     <mj-breakpoint width="384px" />
-    <mj-style>@import
+    <mj-style
+      >@import
       url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
       * { -webkit-box-sizing: border-box !important; box-sizing: border-box
       !important; } .confuse { background-color: #f9f9f9 !important; } .confuse
@@ -131,10 +132,12 @@
               </div>
               <div class="sub-author-container">
                 <p class="author-name">
-                  Danh cho
-                  <span style="font-weight: 700">Thcccc sad acccc</span>
+                  Dành cho
+                  <span style="font-weight: 700">
+                    [[data:firstname:"FRIEND"]]
+                  </span>
                 </p>
-                <p class="author-id">@nguudau</p>
+                <p class="author-id">@[[data:username:"FRIEND"]]</p>
               </div>
             </div>
           </mj-raw>
@@ -154,15 +157,11 @@
         <!-- Thu ngo -->
         <mj-column width="100%" css-class="content">
           <mj-text>
-            <p class="title-top">
-              ${thungo[1]}
-            </p>
+            <p class="title-top">${thungo[1]}</p>
             <p class="category">
               EDITOR’S NOTE <span class="info"> | Granny Tan</span>
             </p>
-            <p class="main-content">
-              ${thungo[2]}
-            </p>
+            <p class="main-content">${thungo[2]}</p>
           </mj-text>
         </mj-column>
 
