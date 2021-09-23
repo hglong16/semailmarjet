@@ -2,3 +2,5 @@ node_modules
 css
 test.*
 package-lock.json
+DONE.mjml
+.prettierrc

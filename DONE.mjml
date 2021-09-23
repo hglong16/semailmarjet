@@ -180,13 +180,16 @@
             <a href="https://spiderum.com/nguoi-dung/a_dreamer">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b54a6e406f3311e9b89da1d556449df3.jpg" alt="" />
+                  <img
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b54a6e406f3311e9b89da1d556449df3.jpg"
+                    alt=""
+                  />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">Andy Luong</span>
                   </p>
-                  <p class="author-id"> 6 giờ trước </p>
+                  <p class="author-id">5 tháng 9</p>
                 </div>
               </div>
             </a>
@@ -204,19 +207,26 @@
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
-                > Khoa học - Công nghệ <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe">
+                Khoa học - Công nghệ <span class="info"> </span
               ></a>
             </p>
 
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP">
-              <p class="title-article">[Stoicism] - Dịch Seneca (124): Đừng bao giờ tin mình đã hạnh phúc cho đến khi mọi hạnh phúc của bạn đều xuất phát từ bên trong</p>
+            <a
+              href="https://spiderum.com/bai-dang/Stoicism-Dich-Seneca-124-Dung-bao-gio-tin-minh-da-hanh-phuc-cho-den-khi-moi-hanh-phuc-cua-ban-deu-xuat-phat-tu-ben-trong-Q2aHzseo72IP"
+            >
+              <p class="title-article">
+                [Stoicism] - Dịch Seneca (124): Đừng bao giờ tin mình đã hạnh
+                phúc cho đến khi mọi hạnh phúc của bạn đều xuất phát từ bên
+                trong
+              </p>
 
               <!-- description article -->
-              <p class="description-article">Lời tựa  :
-                      
-Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứng Stoicism của mình. Đọc Seneca không...</p>
+              <p class="description-article">
+                Lời tựa : Như đã giới thiệu trong series, Seneca thực sự là
+                nguồn cảm hứng Stoicism của mình. Đọc Seneca không...
+              </p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -236,13 +246,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
             <a href="https://spiderum.com/nguoi-dung/loveless2001">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg" alt="" />
+                  <img
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg"
+                    alt=""
+                  />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">loveless</span>
                   </p>
-                  <p class="author-id"> 31 tháng 7 </p>
+                  <p class="author-id">31 tháng 7</p>
                 </div>
               </div>
             </a>
@@ -260,16 +273,24 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                > Quan điểm - Tranh luận <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan">
+                Quan điểm - Tranh luận <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05">
-              <p class="title-article">[WTDTY] Một xã hội chà đạp lên tất cả những tiến bộ của nền văn minh</p>
+            <a
+              href="https://spiderum.com/bai-dang/WTDTY-Mot-xa-hoi-cha-dap-len-tat-ca-nhung-tien-bo-cua-nen-van-minh-o2KdLXv9yY05"
+            >
+              <p class="title-article">
+                [WTDTY] Một xã hội chà đạp lên tất cả những tiến bộ của nền văn
+                minh
+              </p>
 
               <!-- description article -->
-              <p class="description-article">Nhân tính, nhân quyền và khoa học là những gì mà xã hội Việt Nam đang vứt bỏ vì một mục tiêu không tưởng “0 ca nhiễm covid”</p>
+              <p class="description-article">
+                Nhân tính, nhân quyền và khoa học là những gì mà xã hội Việt Nam
+                đang vứt bỏ vì một mục tiêu không tưởng “0 ca nhiễm covid”
+              </p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -289,13 +310,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
             <a href="https://spiderum.com/nguoi-dung/duytang099">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c412a610e96411eba7d6b3a25432202e.jpg" alt="" />
+                  <img
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c412a610e96411eba7d6b3a25432202e.jpg"
+                    alt=""
+                  />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">D2THEWORLD</span>
                   </p>
-                  <p class="author-id"> 30 tháng 8 </p>
+                  <p class="author-id">30 tháng 8</p>
                 </div>
               </div>
             </a>
@@ -313,16 +337,22 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/ky-nang"
-                > Kỹ năng <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/ky-nang">
+                Kỹ năng <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF">
-              <p class="title-article">Thuyết trình dễ ẹt - áp dụng công thức là ra</p>
+            <a
+              href="https://spiderum.com/bai-dang/Thuyet-trinh-de-et-ap-dung-cong-thuc-la-ra-UqhkC1N2ivUF"
+            >
+              <p class="title-article">
+                Thuyết trình dễ ẹt - áp dụng công thức là ra
+              </p>
 
               <!-- description article -->
-              <p class="description-article">Công thức giúp bạn thuyết trình thành công</p>
+              <p class="description-article">
+                Công thức giúp bạn thuyết trình thành công
+              </p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -339,16 +369,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <!-- article card -->
         <mj-column css-class="user-card" width="100%" padding="22px 0 50px 0">
           <mj-raw>
-            <a href="https://spiderum.com/nguoi-dung/fat_tuna">
+            <a href="https://spiderum.comundefined">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/535ca3d0eb8511eb9e5d0ff3814d80b3.jpg" alt="" />
+                  <img src="undefined" alt="" />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
-                    <span style="font-weight: 700">fat_tuna</span>
+                    <span style="font-weight: 700"></span>
                   </p>
-                  <p class="author-id"> 2 tháng 9 </p>
+                  <p class="author-id"></p>
                 </div>
               </div>
             </a>
@@ -360,22 +390,28 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/1996a7500be611ec929d4505f162a47e.jpg"
+            src="undefined"
             alt=""
             href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                > Quan điểm - Tranh luận <span class="info"> </span
+              <a href="https://spiderum.comundefined"
+                ><span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s">
-              <p class="title-article">Non-fungible Token và Crypto: Sự xâm lược của nghệ thuật hậu hiện đại</p>
+            <a
+              href="https://spiderum.com/bai-dang/Non-fungible-Token-va-Crypto-Su-xam-luoc-cua-nghe-thuat-hau-hien-dai-U2ZzHyfHYt5s"
+            >
+              <p class="title-article">Trang chủ - Spiderum</p>
 
               <!-- description article -->
-              <p class="description-article">9,900 chữ cho sự hoài nghi về logic, niềm tin vào logic tối cao và sự unlearn.</p>
+              <p class="description-article">
+                Nền tảng chia sẻ - thảo luận dành cho người Việt. Nơi tập trung
+                những nội dung thú vị và hữu ích nhất do người dùng đóng góp và
+                bình chọn.
+              </p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -395,13 +431,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
             <a href="https://spiderum.com/nguoi-dung/Mytwingo">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg" alt="" />
+                  <img
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg"
+                    alt=""
+                  />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">Absolutely</span>
                   </p>
-                  <p class="author-id"> 31 tháng 8 </p>
+                  <p class="author-id">31 tháng 8</p>
                 </div>
               </div>
             </a>
@@ -419,16 +458,23 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/science2vn"
-                > Science2vn <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/science2vn">
+                Science2vn <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB">
-              <p class="title-article">[P5] Cần sa - Bao giờ được hợp pháp hóa?</p>
+            <a
+              href="https://spiderum.com/bai-dang/P5-Can-sa-Bao-gio-duoc-hop-phap-hoa-12m2tJ3Zx0BB"
+            >
+              <p class="title-article">
+                [P5] Cần sa - Bao giờ được hợp pháp hóa?
+              </p>
 
               <!-- description article -->
-              <p class="description-article">So với người anh em thuốc phiện thì cần sa đa năng và lành tính hơn. Nhưng rất tiếc thế là không đủ.</p>
+              <p class="description-article">
+                So với người anh em thuốc phiện thì cần sa đa năng và lành tính
+                hơn. Nhưng rất tiếc thế là không đủ.
+              </p>
 
               <p class="link-article">Đọc bài viết tại đây.</p>
             </a>
@@ -448,13 +494,16 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
             <a href="https://spiderum.com/nguoi-dung/guiltygearxx">
               <div class="content user-container author-container">
                 <div class="img-card">
-                  <img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/580f27502ab711e8aff0b37519421f8c.jpg" alt="" />
+                  <img
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/580f27502ab711e8aff0b37519421f8c.jpg"
+                    alt=""
+                  />
                 </div>
                 <div class="sub-author-container">
                   <p class="author-name">
                     <span style="font-weight: 700">roadrash</span>
                   </p>
-                  <p class="author-id"> 3 tháng 9 </p>
+                  <p class="author-id">3 tháng 9</p>
                 </div>
               </div>
             </a>
@@ -466,22 +515,28 @@ Như đã giới thiệu trong series, Seneca thực sự là nguồn cảm hứ
         <mj-column width="100%" css-class="article">
           <mj-image
             css-class="article-img "
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/3c6c93200cc211ec8dcf01f8a3041de3.png"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/32f93cf012dd11ecac609f14fc7aac26.png"
             alt=""
             href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF"
           />
           <mj-text css-class="text-article">
             <p class="category">
-              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe"
-                > Khoa học - Công nghệ <span class="info"> </span
+              <a href="https://spiderum.com/danh-muc/khoa-hoc-cong-nghe">
+                Khoa học - Công nghệ <span class="info"> </span
               ></a>
             </p>
             <!-- title article -->
-            <a href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF">
-              <p class="title-article">Một số insight về từ vựng sách Cambridge English IELTS</p>
+            <a
+              href="https://spiderum.com/bai-dang/Mot-so-insight-ve-tu-vung-sach-Cambridge-English-IELTS-0vhMLrL0dSBF"
+            >
+              <p class="title-article">
+                Một số insight về từ vựng sách Cambridge English IELTS
+              </p>
 
               <!-- description article -->
-              <p class="description-article">Insight về từ vựng sách Cambridge English IELTS</p>
+              <p class="description-article">
+                Insight về từ vựng sách Cambridge English IELTS
+              </p>
 
               <p class="link-article link-article-bot">Đọc bài viết tại đây.</p>
             </a>
