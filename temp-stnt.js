@@ -1,4 +1,104 @@
-<mjml owa="desktop" version="4.10.1">
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const axios_1 = require("axios");
+const cheerio_1 = require("cheerio");
+const fs = require("fs");
+const readline = require("readline");
+const writeStream = fs.createWriteStream("DONE.mjml");
+const url = ["0"];
+const thungo = ["0"];
+let url1;
+let url2;
+let url3;
+let url4;
+let url5;
+let url6;
+let url7;
+let url8;
+let url9;
+const readF = async () => {
+    const file = fs.createReadStream("URL.txt");
+    const rl = readline.createInterface({
+        input: file,
+        crlfDelay: Infinity,
+    });
+    for await (const line of rl) {
+        url.push(line);
+    }
+    const file1 = fs.createReadStream("thungo.txt");
+    const rl1 = readline.createInterface({
+        input: file1,
+        crlfDelay: Infinity,
+    });
+    for await (const line of rl1) {
+        thungo.push(line);
+    }
+};
+// const readthungo = async () => {
+//   const file1 = fs.createReadStream("thungo.txt");
+//   const rl1 = readline.createInterface({
+//     input: file1,
+//     crlfDelay: Infinity,
+//   });
+//   for await (const line of rl1) {
+//     thungo.push(line);
+//   }
+// };
+const getS = async (url) => {
+    const res = await axios_1.default.get(url);
+    const $ = await cheerio_1.default.load(res.data);
+    let title = $("title").text();
+    let author = $(".author-info > a").text();
+    let authorLink = $(".author-info > a").attr("href");
+    let category = $(".category > a").text();
+    let categoryLink = $(".category > a").attr("href");
+    let description = $('meta[name="description"]').attr("content");
+    let createdDay = $(".created-day").text();
+    let img = $("meta[property='og:image']").attr("content");
+    const avatar = $("avatar> a > img").attr("src");
+    const b = {
+        title: title,
+        author: author,
+        authorLink: `https://spiderum.com${authorLink}`,
+        category: category,
+        categoryLink: `https://spiderum.com${categoryLink}`,
+        description: description,
+        createdDay: createdDay,
+        img: img,
+        avatar: avatar,
+    };
+    console.log(b);
+    return b;
+};
+const crawl = async () => {
+    const article1 = await getS(url1).then((s) => {
+        return s;
+    });
+    const article2 = await getS(url2).then((s) => {
+        return s;
+    });
+    const article3 = await getS(url3).then((s) => {
+        return s;
+    });
+    const article4 = await getS(url4).then((s) => {
+        return s;
+    });
+    const article5 = await getS(url5).then((s) => {
+        return s;
+    });
+    const article6 = await getS(url6).then((s) => {
+        return s;
+    });
+    const article7 = await getS(url7).then((s) => {
+        return s;
+    });
+    const article8 = await getS(url8).then((s) => {
+        return s;
+    });
+    const article9 = await getS(url9).then((s) => {
+        return s;
+    });
+    let vltn = `<mjml owa="desktop" version="4.10.1">
   <mj-head>
     <mj-preview></mj-preview>
     <mj-style>
@@ -205,7 +305,7 @@
             padding-right="35px"
             padding-top="0px"
             padding="0px 35px 10px 35px"
-            src="${article1['img']}"
+            src="${article1["img"]}"
             target="_blank"
             title=""
             width="1200px"
@@ -235,11 +335,11 @@
                 "
                 ><a
                   style="color: #161616"
-                  href="${article1['categoryLink']}"
+                  href="${article1["categoryLink"]}"
                   target="_blank"
                   rel="noopener norefer"
                   style="color: #161616"
-                  >${article1['category']}</a
+                  >${article1["category"]}</a
                 ></span
               >
             </p>
@@ -275,7 +375,7 @@
                     target="_blank"
                     rel="noopener norefer"
                     style="color: #161616"
-                    >${article1['title']}</a
+                    >${article1["title"]}</a
                   ></b
                 ></span
               >
@@ -311,7 +411,7 @@
                   target="_blank"
                   rel="noopener norefer"
                 >
-                  ${article1['description']}</a
+                  ${article1["description"]}</a
                 ></span
               >
             </p>
@@ -334,11 +434,11 @@
                 <a
                   style="color: #161616"
                   style="color: #161616"
-                  href="${article1['authorLink']}"
+                  href="${article1["authorLink"]}"
                   target="_blank"
                   rel="noopener nofollow"
                   ><img
-                    src="${article1['avatar']}"
+                    src="${article1["avatar"]}"
                     style="
                       width: 32px;
                       height: 32px;
@@ -354,7 +454,7 @@
                     style="color: #161616"
                     style="color: #161616"
                     style="color: #161616"
-                    href="${article1['authorLink']}"
+                    href="${article1["authorLink"]}"
                     target="_blank"
                     rel="noopener nofollow"
                   >
@@ -365,7 +465,7 @@
                         font-weight: 700;
                         color: #161616;
                       "
-                      >${article1['author']}</span
+                      >${article1["author"]}</span
                     ><br />
                     <span
                       style="
@@ -374,7 +474,7 @@
                         font-size: 12px;
                         color: #b5b5b5;
                       "
-                      >${article1['createdDay']}</span
+                      >${article1["createdDay"]}</span
                     ></a
                   >
                 </p>
@@ -428,7 +528,7 @@
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="${article2['img']}"
+              src="${article2["img"]}"
               target="_blank"
               title=""
               width="700px"
@@ -460,10 +560,10 @@
                     style="color: #161616"
                     style="color: #161616"
                     style="color: #161616"
-                    href="${article2['categoryLink']}"
+                    href="${article2["categoryLink"]}"
                     target="_blank"
                     rel="noopener norefer"
-                    >${article2['category']}</a
+                    >${article2["category"]}</a
                   ></span
                 >
               </p>
@@ -499,7 +599,7 @@
                       href="${url2}"
                       target="_blank"
                       rel="noopener norefer"
-                      >${article2['title']}</a
+                      >${article2["title"]}</a
                     ></b
                   ></span
                 >
@@ -511,11 +611,11 @@
                 <td padding="0" width="32px">
                   <a
                     style="color: #161616"
-                    href="${article2['authorLink']}"
+                    href="${article2["authorLink"]}"
                     target="_blank"
                     rel="noopener norefer"
                     ><img
-                      src="${article2['avatar']}"
+                      src="${article2["avatar"]}"
                       style="
                         width: 32px;
                         height: 32px;
@@ -529,7 +629,7 @@
                   <p style="margin: 0 0 5px 12px; line-height: 16px">
                     <a
                       style="color: #161616"
-                      href="${article2['authorLink']}"
+                      href="${article2["authorLink"]}"
                       target="_blank"
                       rel="noopener norefer"
                     >
@@ -540,7 +640,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >${article2['author']}</span
+                        >${article2["author"]}</span
                       ><br />
                       <span
                         style="
@@ -549,7 +649,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        >${article2['createdDay']}</span
+                        >${article2["createdDay"]}</span
                       ></a
                     >
                   </p>
@@ -604,7 +704,7 @@
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="${article3['img']}"
+              src="${article3["img"]}"
               target="_blank"
               title=""
               width="700px"
@@ -641,10 +741,10 @@
                     style="color: #161616"
                     style="color: #161616"
                     style="color: #161616"
-                    href="${article3['categoryLink']}"
+                    href="${article3["categoryLink"]}"
                     target="_blank"
                     rel="noopener norefer"
-                    >${article3['category']}</a
+                    >${article3["category"]}</a
                   ></span
                 >
               </p>
@@ -680,7 +780,7 @@
                       href="${url3}"
                       target="_blank"
                       rel="noopener norefer"
-                      >${article3['title']}</a
+                      >${article3["title"]}</a
                     ></b
                   ></span
                 >
@@ -691,12 +791,12 @@
                 <td padding="0" width="32px">
                   <a
                     style="color: #161616"
-                    href="${article3['authorLink']}"
+                    href="${article3["authorLink"]}"
                     target="_blank"
                     rel="noopener norefer"
                   >
                     <img
-                      src="${article3['avatar']}"
+                      src="${article3["avatar"]}"
                       style="
                         width: 32px;
                         height: 32px;
@@ -709,7 +809,7 @@
                 <td align="left">
                   <a
                     style="color: #161616"
-                    href="${article3['authorLink']}"
+                    href="${article3["authorLink"]}"
                     target="_blank"
                     rel="noopener norefer"
                   >
@@ -721,7 +821,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >${article3['author']} </span
+                        >${article3["author"]} </span
                       ><br />
                       <span
                         style="
@@ -730,7 +830,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        >${article3['createdDay']}</span
+                        >${article3["createdDay"]}</span
                       >
                     </p></a
                   >
@@ -804,7 +904,7 @@
             padding-right="35px"
             padding-top="0px"
             padding="0px 35px 10px 35px"
-            src="${article4['img']}"
+            src="${article4["img"]}"
             target="_blank"
             title=""
             width="1200px"
@@ -834,10 +934,10 @@
                 "
                 ><a
                   style="color: #161616"
-                  href="${article4['categoryLink']}"
+                  href="${article4["categoryLink"]}"
                   target="_blank"
                   rel="noopener norefer"
-                  >${article4['category']}</a
+                  >${article4["category"]}</a
                 ></span
               >
             </p>
@@ -872,7 +972,7 @@
                     href="${url4}"
                     target="_blank"
                     rel="noopener norefer"
-                    >${article4['title']}</a
+                    >${article4["title"]}</a
                   ></b
                 ></span
               >
@@ -907,7 +1007,7 @@
                   target="_blank"
                   rel="noopener norefer"
                 >
-                  ${article4['description']}</a
+                  ${article4["description"]}</a
                 ></span
               >
             </p>
@@ -929,11 +1029,11 @@
               <td padding="0" width="32px">
                 <a
                   style="color: #161616"
-                  href="${article4['authorLink']}"
+                  href="${article4["authorLink"]}"
                   target="_blank"
                   rel="noopener nofollow"
                   ><img
-                    src="${article4['avatar']}"
+                    src="${article4["avatar"]}"
                     style="
                       width: 32px;
                       height: 32px;
@@ -947,7 +1047,7 @@
                 <p style="margin: 0 0 5px 12px; line-height: 16px">
                   <a
                     style="color: #161616"
-                    href="${article4['authorLink']}"
+                    href="${article4["authorLink"]}"
                     target="_blank"
                     rel="noopener nofollow"
                   >
@@ -958,7 +1058,7 @@
                         font-weight: 700;
                         color: #161616;
                       "
-                      >${article4['author']}</span
+                      >${article4["author"]}</span
                     ><br />
                     <span
                       style="
@@ -967,7 +1067,7 @@
                         font-size: 12px;
                         color: #b5b5b5;
                       "
-                      >${article4['createdDay']}</span
+                      >${article4["createdDay"]}</span
                     ></a
                   >
                 </p>
@@ -1021,7 +1121,7 @@
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="${article5['img']}"
+              src="${article5["img"]}"
               target="_blank"
               title=""
               width="700px"
@@ -1051,10 +1151,10 @@
                   "
                   ><a
                     style="color: #161616"
-                    href="${article5['categoryLink']}"
+                    href="${article5["categoryLink"]}"
                     target="_blank"
                     rel="noopener norefer"
-                    >${article5['category']}</a
+                    >${article5["category"]}</a
                   ></span
                 >
               </p>
@@ -1089,7 +1189,7 @@
                       href="${url5}"
                       target="_blank"
                       rel="noopener norefer"
-                      >${article5['title']}</a
+                      >${article5["title"]}</a
                     ></b
                   ></span
                 >
@@ -1101,11 +1201,11 @@
                 <td padding="0" width="32px">
                   <a
                     style="color: #161616"
-                    href="${article5['authorLink']}"
+                    href="${article5["authorLink"]}"
                     target="_blank"
                     rel="noopener norefer"
                     ><img
-                      src="${article5['avatar']}"
+                      src="${article5["avatar"]}"
                       style="
                         width: 32px;
                         height: 32px;
@@ -1119,7 +1219,7 @@
                   <p style="margin: 0 0 5px 12px; line-height: 16px">
                     <a
                       style="color: #161616"
-                      href="${article5['authorLink']}"
+                      href="${article5["authorLink"]}"
                       target="_blank"
                       rel="noopener norefer"
                     >
@@ -1130,7 +1230,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >${article5['author']}</span
+                        >${article5["author"]}</span
                       ><br />
                       <span
                         style="
@@ -1139,7 +1239,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        >${article5['createdDay']}</span
+                        >${article5["createdDay"]}</span
                       ></a
                     >
                   </p>
@@ -1194,7 +1294,7 @@
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="${article6['img']}"
+              src="${article6["img"]}"
               target="_blank"
               title=""
               width="700px"
@@ -1229,10 +1329,10 @@
                   "
                   ><a
                     style="color: #161616"
-                    href="${article6['categoryLink']}"
+                    href="${article6["categoryLink"]}"
                     target="_blank"
                     rel="noopener norefer"
-                    >${article6['category']}</a
+                    >${article6["category"]}</a
                   ></span
                 >
               </p>
@@ -1267,7 +1367,7 @@
                       href="${url6}"
                       target="_blank"
                       rel="noopener norefer"
-                      >${article6['title']}</a
+                      >${article6["title"]}</a
                     ></b
                   ></span
                 >
@@ -1278,12 +1378,12 @@
                 <td padding="0" width="32px">
                   <a
                     style="color: #161616"
-                    href="${article6['authorLink']}"
+                    href="${article6["authorLink"]}"
                     target="_blank"
                     rel="noopener norefer"
                   >
                     <img
-                      src="${article6['avatar']}"
+                      src="${article6["avatar"]}"
                       style="
                         width: 32px;
                         height: 32px;
@@ -1296,7 +1396,7 @@
                 <td align="left">
                   <a
                     style="color: #161616"
-                    href="${article6['authorLink']}"
+                    href="${article6["authorLink"]}"
                     target="_blank"
                     rel="noopener norefer"
                   >
@@ -1308,7 +1408,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >${article6['author']} </span
+                        >${article6["author"]} </span
                       ><br />
                       <span
                         style="
@@ -1317,7 +1417,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        >${article6['createdDay']}</span
+                        >${article6["createdDay"]}</span
                       >
                     </p></a
                   >
@@ -1366,7 +1466,7 @@
                   font-family: Raleway, Arial, sans-serif;
                   font-size: 20px;
                 "
-                ><b>Cây viết nổi bật</b></span
+                ><b>Sách mới ra mắt</b></span
               >
             </p>
           </mj-text>
@@ -1391,7 +1491,7 @@
             padding-right="35px"
             padding-top="0px"
             padding="0px 35px 10px 35px"
-            src="${article7['img']}"
+            src="${article7["img"]}"
             target="_blank"
             title=""
             width="1200px"
@@ -1421,10 +1521,10 @@
                 "
                 ><a
                   style="color: #161616"
-                  href="${article7['categoryLink']}"
+                  href="${article7["categoryLink"]}"
                   target="_blank"
                   rel="noopener norefer"
-                  >${article7['category']}</a
+                  >${article7["category"]}</a
                 ></span
               >
             </p>
@@ -1459,7 +1559,7 @@
                     href="${url7}"
                     target="_blank"
                     rel="noopener norefer"
-                    >${article7['title']}</a
+                    >${article7["title"]}</a
                   ></b
                 ></span
               >
@@ -1494,7 +1594,7 @@
                   target="_blank"
                   rel="noopener norefer"
                 >
-                  ${article7['description']}</a
+                  ${article7["description"]}</a
                 ></span
               >
             </p>
@@ -1516,11 +1616,11 @@
               <td padding="0" width="32px">
                 <a
                   style="color: #161616"
-                  href="${article7['authorLink']}"
+                  href="${article7["authorLink"]}"
                   target="_blank"
                   rel="noopener nofollow"
                   ><img
-                    src="${article7['avatar']}"
+                    src="${article7["avatar"]}"
                     style="
                       width: 32px;
                       height: 32px;
@@ -1534,7 +1634,7 @@
                 <p style="margin: 0 0 5px 12px; line-height: 16px">
                   <a
                     style="color: #161616"
-                    href="${article7['authorLink']}"
+                    href="${article7["authorLink"]}"
                     target="_blank"
                     rel="noopener nofollow"
                   >
@@ -1545,7 +1645,7 @@
                         font-weight: 700;
                         color: #161616;
                       "
-                      >${article7['author']}</span
+                      >${article7["author"]}</span
                     ><br />
                     <span
                       style="
@@ -1554,13 +1654,27 @@
                         font-size: 12px;
                         color: #b5b5b5;
                       "
-                      >${article7['createdDay']}</span
+                      >${article7["createdDay"]}</span
                     ></a
                   >
                 </p>
               </td>
             </tr>
           </mj-table>
+          <mj-button width="200px"
+                     height="30px"
+                     css-class="box-shadow"
+                     font-size="20px"
+                     font-weight="bold"
+                     target="_blank"
+                     border-radius="30px"
+                     color="#ffffff"
+                     background-color="#d81868"
+                     padding-top="30px"
+                     href="https://book.spiderum.vn/ntmn-sang-tao"
+                     rel="noreferrer nofollow">
+            TÌM HIỂU NGAY
+          </mj-button>
         </mj-column>
       </mj-section>
       <mj-section
@@ -1584,336 +1698,11 @@
             padding="20px 35px 16px 35px"
             width="100%"
           ></mj-divider>
+          
         </mj-column>
+        
       </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="15px"
-        padding-left="35px"
-        padding-right="35px"
-        padding-top="10px"
-        padding="10px 35px 15px 35px"
-        text-align="center"
-      >
-        <mj-group>
-          <mj-column width="33%">
-            <mj-image
-              align="center"
-              alt=""
-              border-radius="3px"
-              border="none"
-              height="auto"
-              href="${url8}"
-              padding-left="0px"
-              padding-right="0px"
-              padding-top="0px"
-              padding="0px 0px 10px 0px"
-              src="${article8['img']}"
-              target="_blank"
-              title=""
-              width="700px"
-            ></mj-image>
-          </mj-column>
-          <mj-column width="67%">
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="14px"
-              padding-bottom="0px"
-              padding-top="0px"
-              padding="10px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="nsUmNTtyU"
-                style="margin: 0px 0 4px 0"
-              >
-                <span
-                  style="
-                    text-transform: uppercase;
-                    color: #55575d;
-                    font-family: Noto Sans, Arial, sans-serif;
-                    font-size: 12px;
-                  "
-                  ><a
-                    style="color: #161616"
-                    href="${article8['categoryLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                    >${article8['category']}</a
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="16px"
-              padding-bottom="0px"
-              padding-left="25px"
-              padding-right="25px"
-              padding-top="0px"
-              padding="0px 25px 0px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="rONVzgIrML"
-                style="margin: 10px 0; margin-top: 10px; margin-bottom: 10px"
-              >
-                <span
-                  style="
-                    color: #161616;
-                    font-family: Raleway, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 22px;
-                  "
-                  ><b
-                    ><a
-                      style="color: #161616"
-                      style="color: #161616"
-                      href="${url8}"
-                      target="_blank"
-                      rel="noopener norefer"
-                      >${article8['title']}</a
-                    ></b
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <!-- author card -->
-            <mj-table padding-top="8px" align="center">
-              <tr align="center">
-                <td padding="0" width="32px">
-                  <a
-                    style="color: #161616"
-                    href="${article8['authorLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                    ><img
-                      src="${article8['avatar']}"
-                      style="
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 0;
-                      "
-                  /></a>
-                </td>
-                <td align="left">
-                  <p style="margin: 0 0 5px 12px; line-height: 16px">
-                    <a
-                      style="color: #161616"
-                      href="${article8['authorLink']}"
-                      target="_blank"
-                      rel="noopener norefer"
-                    >
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-size: 14px;
-                          font-weight: 700;
-                          color: #161616;
-                        "
-                        >${article8['author']}</span
-                      ><br />
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-weight: 400;
-                          font-size: 12px;
-                          color: #b5b5b5;
-                        "
-                        >${article8['createdDay']}</span
-                      ></a
-                    >
-                  </p>
-                </td>
-              </tr>
-            </mj-table>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="0px"
-        padding-left="0px"
-        padding-right="0px"
-        padding-top="0px"
-        padding="0px 0px 0px 0px"
-        text-align="center"
-      >
-        <mj-column>
-          <mj-divider
-            border-color="#e3e3e3"
-            border-style="solid"
-            border-width="1px"
-            padding-bottom="16px"
-            padding-left="35px"
-            padding-right="35px"
-            padding-top="10px"
-            padding="10px 35px 16px 35px"
-            width="100%"
-          ></mj-divider>
-        </mj-column>
-      </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="30px"
-        padding-left="35px"
-        padding-right="35px"
-        padding-top="16px"
-        padding="16px 35px 30px 35px"
-        text-align="center"
-      >
-        <mj-group>
-          <mj-column width="33%">
-            <mj-image
-              align="center"
-              alt=""
-              border-radius="3px"
-              border="none"
-              height="auto"
-              href="${url9}"
-              padding-left="0px"
-              padding-right="0px"
-              padding-top="0px"
-              padding="0px 0px 10px 0px"
-              src="${article9['img']}"
-              target="_blank"
-              title=""
-              width="700px"
-            ></mj-image>
-          </mj-column>
-          <mj-column width="67%">
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="14px"
-              padding-bottom="0px"
-              padding-top="0px"
-              padding="10px 25px"
-            >
-              <p
-                class="text-build-content"
-                style="
-                  line-height: 10px;
-                  margin: 10px 0;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                "
-                data-testid="nsUmNTtyU"
-              >
-                <span
-                  style="
-                    text-transform: uppercase;
-                    color: #55575d;
-                    font-family: Noto Sans, Arial, sans-serif;
-                    font-size: 12px;
-                  "
-                  ><a
-                    style="color: #161616"
-                    href="${article9['categoryLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                    >${article9['category']}</a
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="16px"
-              padding-bottom="0px"
-              padding-left="25px"
-              padding-right="25px"
-              padding-top="0px"
-              padding="0px 25px 0px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="nxYBqWr5T"
-                style="margin: 0px 0 4px 0"
-              >
-                <span
-                  style="
-                    color: #161616;
-                    font-family: Raleway, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 22px;
-                  "
-                  ><b
-                    ><a
-                      style="color: #161616"
-                      style="color: #161616"
-                      href="${url9}"
-                      target="_blank"
-                      rel="noopener norefer"
-                      >${article9['title']}</a
-                    ></b
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-table padding-top="8px" align="center">
-              <tr align="center">
-                <td padding="0" width="32px">
-                  <a
-                    style="color: #161616"
-                    href="${article9['authorLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                  >
-                    <img
-                      src="${article9['avatar']}"
-                      style="
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 0;
-                      "
-                  /></a>
-                </td>
-                <td align="left">
-                  <a
-                    style="color: #161616"
-                    href="${article9['authorLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                  >
-                    <p style="margin: 0 0 5px 12px; line-height: 16px">
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-size: 14px;
-                          font-weight: 700;
-                          color: #161616;
-                        "
-                        >${article9['author']} </span
-                      ><br />
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-weight: 400;
-                          font-size: 12px;
-                          color: #b5b5b5;
-                        "
-                        >${article9['createdDay']}</span
-                      >
-                    </p></a
-                  >
-                </td>
-              </tr>
-            </mj-table>
-          </mj-column>
-        </mj-group>
-      </mj-section>
+      
     </mj-wrapper>
     <!-- footer -->
     <mj-section background-color="#3398D4" padding="0">
@@ -2011,3 +1800,23 @@
     </mj-section>
   </mj-body>
 </mjml>
+`;
+    writeStream.write(vltn);
+    //value value
+};
+readF()
+    .then(() => {
+    url1 = url[1];
+    url2 = url[2];
+    url3 = url[3];
+    url4 = url[4];
+    url5 = url[5];
+    url6 = url[6];
+    url7 = url[7];
+    url8 = url[8];
+    url9 = url[9];
+})
+    .then(() => {
+    crawl().then(() => console.log("DONE"));
+});
+//# sourceMappingURL=temp-stnt.js.map

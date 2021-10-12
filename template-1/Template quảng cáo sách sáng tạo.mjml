@@ -1366,7 +1366,7 @@
                   font-family: Raleway, Arial, sans-serif;
                   font-size: 20px;
                 "
-                ><b>Cây viết nổi bật</b></span
+                ><b>Sách mới ra mắt</b></span
               >
             </p>
           </mj-text>
@@ -1561,6 +1561,20 @@
               </td>
             </tr>
           </mj-table>
+          <mj-button width="200px"
+                     height="30px"
+                     css-class="box-shadow"
+                     font-size="20px"
+                     font-weight="bold"
+                     target="_blank"
+                     border-radius="30px"
+                     color="#ffffff"
+                     background-color="#d81868"
+                     padding-top="30px"
+                     href="https://book.spiderum.vn/ntmn-sang-tao"
+                     rel="noreferrer nofollow">
+            TÌM HIỂU NGAY
+          </mj-button>
         </mj-column>
       </mj-section>
       <mj-section
@@ -1584,336 +1598,11 @@
             padding="20px 35px 16px 35px"
             width="100%"
           ></mj-divider>
+          
         </mj-column>
+        
       </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="15px"
-        padding-left="35px"
-        padding-right="35px"
-        padding-top="10px"
-        padding="10px 35px 15px 35px"
-        text-align="center"
-      >
-        <mj-group>
-          <mj-column width="33%">
-            <mj-image
-              align="center"
-              alt=""
-              border-radius="3px"
-              border="none"
-              height="auto"
-              href="${url8}"
-              padding-left="0px"
-              padding-right="0px"
-              padding-top="0px"
-              padding="0px 0px 10px 0px"
-              src="${article8['img']}"
-              target="_blank"
-              title=""
-              width="700px"
-            ></mj-image>
-          </mj-column>
-          <mj-column width="67%">
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="14px"
-              padding-bottom="0px"
-              padding-top="0px"
-              padding="10px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="nsUmNTtyU"
-                style="margin: 0px 0 4px 0"
-              >
-                <span
-                  style="
-                    text-transform: uppercase;
-                    color: #55575d;
-                    font-family: Noto Sans, Arial, sans-serif;
-                    font-size: 12px;
-                  "
-                  ><a
-                    style="color: #161616"
-                    href="${article8['categoryLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                    >${article8['category']}</a
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="16px"
-              padding-bottom="0px"
-              padding-left="25px"
-              padding-right="25px"
-              padding-top="0px"
-              padding="0px 25px 0px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="rONVzgIrML"
-                style="margin: 10px 0; margin-top: 10px; margin-bottom: 10px"
-              >
-                <span
-                  style="
-                    color: #161616;
-                    font-family: Raleway, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 22px;
-                  "
-                  ><b
-                    ><a
-                      style="color: #161616"
-                      style="color: #161616"
-                      href="${url8}"
-                      target="_blank"
-                      rel="noopener norefer"
-                      >${article8['title']}</a
-                    ></b
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <!-- author card -->
-            <mj-table padding-top="8px" align="center">
-              <tr align="center">
-                <td padding="0" width="32px">
-                  <a
-                    style="color: #161616"
-                    href="${article8['authorLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                    ><img
-                      src="${article8['avatar']}"
-                      style="
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 0;
-                      "
-                  /></a>
-                </td>
-                <td align="left">
-                  <p style="margin: 0 0 5px 12px; line-height: 16px">
-                    <a
-                      style="color: #161616"
-                      href="${article8['authorLink']}"
-                      target="_blank"
-                      rel="noopener norefer"
-                    >
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-size: 14px;
-                          font-weight: 700;
-                          color: #161616;
-                        "
-                        >${article8['author']}</span
-                      ><br />
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-weight: 400;
-                          font-size: 12px;
-                          color: #b5b5b5;
-                        "
-                        >${article8['createdDay']}</span
-                      ></a
-                    >
-                  </p>
-                </td>
-              </tr>
-            </mj-table>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="0px"
-        padding-left="0px"
-        padding-right="0px"
-        padding-top="0px"
-        padding="0px 0px 0px 0px"
-        text-align="center"
-      >
-        <mj-column>
-          <mj-divider
-            border-color="#e3e3e3"
-            border-style="solid"
-            border-width="1px"
-            padding-bottom="16px"
-            padding-left="35px"
-            padding-right="35px"
-            padding-top="10px"
-            padding="10px 35px 16px 35px"
-            width="100%"
-          ></mj-divider>
-        </mj-column>
-      </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="30px"
-        padding-left="35px"
-        padding-right="35px"
-        padding-top="16px"
-        padding="16px 35px 30px 35px"
-        text-align="center"
-      >
-        <mj-group>
-          <mj-column width="33%">
-            <mj-image
-              align="center"
-              alt=""
-              border-radius="3px"
-              border="none"
-              height="auto"
-              href="${url9}"
-              padding-left="0px"
-              padding-right="0px"
-              padding-top="0px"
-              padding="0px 0px 10px 0px"
-              src="${article9['img']}"
-              target="_blank"
-              title=""
-              width="700px"
-            ></mj-image>
-          </mj-column>
-          <mj-column width="67%">
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="14px"
-              padding-bottom="0px"
-              padding-top="0px"
-              padding="10px 25px"
-            >
-              <p
-                class="text-build-content"
-                style="
-                  line-height: 10px;
-                  margin: 10px 0;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                "
-                data-testid="nsUmNTtyU"
-              >
-                <span
-                  style="
-                    text-transform: uppercase;
-                    color: #55575d;
-                    font-family: Noto Sans, Arial, sans-serif;
-                    font-size: 12px;
-                  "
-                  ><a
-                    style="color: #161616"
-                    href="${article9['categoryLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                    >${article9['category']}</a
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="16px"
-              padding-bottom="0px"
-              padding-left="25px"
-              padding-right="25px"
-              padding-top="0px"
-              padding="0px 25px 0px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="nxYBqWr5T"
-                style="margin: 0px 0 4px 0"
-              >
-                <span
-                  style="
-                    color: #161616;
-                    font-family: Raleway, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 22px;
-                  "
-                  ><b
-                    ><a
-                      style="color: #161616"
-                      style="color: #161616"
-                      href="${url9}"
-                      target="_blank"
-                      rel="noopener norefer"
-                      >${article9['title']}</a
-                    ></b
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-table padding-top="8px" align="center">
-              <tr align="center">
-                <td padding="0" width="32px">
-                  <a
-                    style="color: #161616"
-                    href="${article9['authorLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                  >
-                    <img
-                      src="${article9['avatar']}"
-                      style="
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 0;
-                      "
-                  /></a>
-                </td>
-                <td align="left">
-                  <a
-                    style="color: #161616"
-                    href="${article9['authorLink']}"
-                    target="_blank"
-                    rel="noopener norefer"
-                  >
-                    <p style="margin: 0 0 5px 12px; line-height: 16px">
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-size: 14px;
-                          font-weight: 700;
-                          color: #161616;
-                        "
-                        >${article9['author']} </span
-                      ><br />
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-weight: 400;
-                          font-size: 12px;
-                          color: #b5b5b5;
-                        "
-                        >${article9['createdDay']}</span
-                      >
-                    </p></a
-                  >
-                </td>
-              </tr>
-            </mj-table>
-          </mj-column>
-        </mj-group>
-      </mj-section>
+      
     </mj-wrapper>
     <!-- footer -->
     <mj-section background-color="#3398D4" padding="0">
