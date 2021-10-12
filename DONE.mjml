@@ -7,7 +7,7 @@
       tr { text-align: center !important; display: inline !important; margin:
       2px !important; } .social-icon{
       margin:0!important;padding:0!important}a:hover, img:hover { color:
-      #161616; opacity: 0.7; } 
+      #161616; opacity: 0.7; }
     </mj-style>
     <mj-font
       href="https://fonts.googleapis.com/css?family=Noto+Serif"
@@ -30,7 +30,7 @@
       <mj-wrapper padding="0"> </mj-wrapper>
     </mj-attributes>
   </mj-head>
-  <mj-body background-color="#f9f9f9">
+  <mj-body background-color="#f4f4f4">
     <!-- header -->
     <mj-wrapper>
       <mj-section
@@ -200,12 +200,12 @@
             alt="Ảnh Spiderum"
             border="none"
             height="auto"
-            href="https://spiderum.com/bai-dang/Webinar-Kiem-Toan-101-Duong-Nao-Vao-Nghe-Tat-Ca-Nhung-Gi-Ban-Can-Biet-Ve-Nganh-Kiem-Toan-Ce8f9PAtzeIr"
+            href="https://spiderum.com/bai-dang/P1-Tai-sao-nhieu-nguoi-tre-tu-bo-cong-viec-va-dam-chim-vao-tro-choi-dien-tu-JrF8Ws46cv9B"
             padding-left="35px"
             padding-right="35px"
             padding-top="0px"
             padding="0px 35px 10px 35px"
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/46b104101ce411ec8c52bf711c336055.jpg"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/5997f610283d11ecba7d6fa6c6f64658.jpg"
             target="_blank"
             title=""
             width="1200px"
@@ -233,12 +233,13 @@
                   font-family: Noto Sans, Arial, sans-serif;
                   font-size: 14px;
                 "
-                ><a style="color:#161616"
-                  href="https://spiderum.com/danh-muc/su-kien-spiderum"
+                ><a
+                  style="color: #161616"
+                  href="https://spiderum.com/danh-muc/science2vn"
                   target="_blank"
                   rel="noopener norefer"
-                  style="color:#161616"
-                  > Sự kiện Spiderum </a
+                  style="color: #161616"
+                  > Science2vn </a
                 ></span
               >
             </p>
@@ -267,8 +268,14 @@
                   line-height: 25px;
                 "
                 ><b
-                  ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Webinar-Kiem-Toan-101-Duong-Nao-Vao-Nghe-Tat-Ca-Nhung-Gi-Ban-Can-Biet-Ve-Nganh-Kiem-Toan-Ce8f9PAtzeIr" target="_blank" rel="noopener norefer"style="color:#161616"
-                    >Webinar "Kiểm Toán 101: Đường Nào Vào Nghề" - Tất Cả Những Gì Bạn Cần Biết Về Ngành Kiểm Toán</a
+                  ><a
+                    style="color: #161616"
+                    style="color: #161616"
+                    href="https://spiderum.com/bai-dang/P1-Tai-sao-nhieu-nguoi-tre-tu-bo-cong-viec-va-dam-chim-vao-tro-choi-dien-tu-JrF8Ws46cv9B"
+                    target="_blank"
+                    rel="noopener norefer"
+                    style="color: #161616"
+                    >[P1] Tại sao nhiều người trẻ từ bỏ công việc và đắm chìm vào trò chơi điện tử</a
                   ></b
                 ></span
               >
@@ -296,8 +303,15 @@
                   font-family: Noto Sans, Arial, sans-serif;
                   font-size: 16px;
                 "
-                ><a style="color:#161616" style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Webinar-Kiem-Toan-101-Duong-Nao-Vao-Nghe-Tat-Ca-Nhung-Gi-Ban-Can-Biet-Ve-Nganh-Kiem-Toan-Ce8f9PAtzeIr" target="_blank" rel="noopener norefer">
-                  "Kiểm toán thực sự là gì? Làm gì trong những năm đầu vào nghề?"</a
+                ><a
+                  style="color: #161616"
+                  style="color: #161616"
+                  style="color: #161616"
+                  href="https://spiderum.com/bai-dang/P1-Tai-sao-nhieu-nguoi-tre-tu-bo-cong-viec-va-dam-chim-vao-tro-choi-dien-tu-JrF8Ws46cv9B"
+                  target="_blank"
+                  rel="noopener norefer"
+                >
+                  David Mullings là một người năng động. Sinh ra ở Jamaica, anh chuyển đến Florida để học. Trước khi tốt nghiệp trường đại học Miami,...</a
                 ></span
               >
             </p>
@@ -317,12 +331,14 @@
           <mj-table padding="0px" align="center">
             <tr align="center">
               <td padding="0" width="32px">
-                <a style="color:#161616" style="color:#161616" 
-                  href="https://spiderum.com/nguoi-dung/spiderum"
+                <a
+                  style="color: #161616"
+                  style="color: #161616"
+                  href="https://spiderum.com/nguoi-dung/Mytwingo"
                   target="_blank"
                   rel="noopener nofollow"
                   ><img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c3edf44040da11e88c56e97b1d97fbce.png"
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/8bc1a0e07c2c11eba5354bd4d9b560b1.jpg"
                     style="
                       width: 32px;
                       height: 32px;
@@ -334,8 +350,11 @@
               </td>
               <td align="left">
                 <p style="margin: 0 0 5px 12px; line-height: 16px">
-                  <a style="color:#161616" style="color:#161616" style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/spiderum"
+                  <a
+                    style="color: #161616"
+                    style="color: #161616"
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/Mytwingo"
                     target="_blank"
                     rel="noopener nofollow"
                   >
@@ -346,7 +365,7 @@
                         font-weight: 700;
                         color: #161616;
                       "
-                      >Spiderum Team</span
+                      >Absolutely</span
                     ><br />
                     <span
                       style="
@@ -355,7 +374,7 @@
                         font-size: 12px;
                         color: #b5b5b5;
                       "
-                      > 7 giờ trước </span
+                      > 2 tháng 10 </span
                     ></a
                   >
                 </p>
@@ -404,12 +423,12 @@
               border-radius="3px"
               border="none"
               height="auto"
-              href="https://spiderum.com/bai-dang/Vodka-da-pha-hoai-nuoc-Nga-nhu-the-nao-LTefIcljQ8q9"
+              href="https://spiderum.com/bai-dang/Nhung-van-tai-khong-co-ten-trong-sach-giao-khoa-hien-hanh-xQN0Ah3E8qcC"
               padding-left="0px"
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/a4c007d01c8111ecbc7d034cc144467c.png"
+              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/2d09d5a024e611ec9bf99facd6b80df3.jpg"
               target="_blank"
               title=""
               width="700px"
@@ -428,7 +447,7 @@
               <p
                 class="text-build-content"
                 data-testid="nsUmNTtyU"
-                style="margin: 3px 0 4px 0"
+                style="margin: 0px 0 4px 0"
               >
                 <span
                   style="
@@ -437,11 +456,14 @@
                     font-family: Noto Sans, Arial, sans-serif;
                     font-size: 12px;
                   "
-                  ><a style="color:#161616" style="color:#161616" style="color:#161616"
-                    href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
+                  ><a
+                    style="color: #161616"
+                    style="color: #161616"
+                    style="color: #161616"
+                    href="https://spiderum.com/danh-muc/sach"
                     target="_blank"
                     rel="noopener norefer"
-                    > Quan điểm - Tranh luận </a
+                    > Sách </a
                   ></span
                 >
               </p>
@@ -470,8 +492,14 @@
                     line-height: 20px;
                   "
                   ><b
-                    ><a style="color:#161616" style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Vodka-da-pha-hoai-nuoc-Nga-nhu-the-nao-LTefIcljQ8q9" target="_blank" rel="noopener norefer"
-                      >Vodka đã phá hoại nước Nga như thế nào</a
+                    ><a
+                      style="color: #161616"
+                      style="color: #161616"
+                      style="color: #161616"
+                      href="https://spiderum.com/bai-dang/Nhung-van-tai-khong-co-ten-trong-sach-giao-khoa-hien-hanh-xQN0Ah3E8qcC"
+                      target="_blank"
+                      rel="noopener norefer"
+                      >Những văn tài không có tên trong sách giáo khoa hiện hành</a
                     ></b
                   ></span
                 >
@@ -481,12 +509,13 @@
             <mj-table padding-top="8px" align="center">
               <tr align="center">
                 <td padding="0" width="32px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/viethung292905"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/trinhnnattuan"
                     target="_blank"
                     rel="noopener norefer"
                     ><img
-                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/dbb6eca0fd0e11eb815ddd4307f37617.jpeg"
+                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/822549f009c211ec97a689ec21020be2.jpeg"
                       style="
                         width: 32px;
                         height: 32px;
@@ -498,8 +527,9 @@
                 </td>
                 <td align="left">
                   <p style="margin: 0 0 5px 12px; line-height: 16px">
-                    <a style="color:#161616"
-                      href="https://spiderum.com/nguoi-dung/viethung292905"
+                    <a
+                      style="color: #161616"
+                      href="https://spiderum.com/nguoi-dung/trinhnnattuan"
                       target="_blank"
                       rel="noopener norefer"
                     >
@@ -510,7 +540,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >Navyblue Nerd</span
+                        >Tuấn Thừa Sắc</span
                       ><br />
                       <span
                         style="
@@ -519,7 +549,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        > 14 tháng 9 </span
+                        > 4 tháng 10 </span
                       ></a
                     >
                   </p>
@@ -569,12 +599,12 @@
               border-radius="3px"
               border="none"
               height="auto"
-              href="https://spiderum.com/bai-dang/Vi-sao-nen-truyen-thong-Viet-nen-loai-bo-muc-tieu-trieu-view-Case-nho-tu-cuoc-tranh-cu-cua-Donald-Trump-hphG8AiEjRRx"
+              href="https://spiderum.com/bai-dang/Minh-17-tuoi-va-minh-dang-lam-gi-voi-Tri-tue-nhan-tao-8YEtyP60lAKB"
               padding-left="0px"
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/80ecc920189811ec89db5fe1ab601f1d.png"
+              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/1868af80283e11ecba7d6fa6c6f64658.png"
               target="_blank"
               title=""
               width="700px"
@@ -607,7 +637,10 @@
                     font-family: Noto Sans, Arial, sans-serif;
                     font-size: 12px;
                   "
-                  ><a style="color:#161616" style="color:#161616" style="color:#161616"
+                  ><a
+                    style="color: #161616"
+                    style="color: #161616"
+                    style="color: #161616"
                     href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
                     target="_blank"
                     rel="noopener norefer"
@@ -630,7 +663,7 @@
               <p
                 class="text-build-content"
                 data-testid="nxYBqWr5T"
-                style="margin: 3px 0 4px 0"
+                style="margin: 0px 0 4px 0"
               >
                 <span
                   style="
@@ -640,8 +673,14 @@
                     line-height: 22px;
                   "
                   ><b
-                    ><a style="color:#161616" style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Vi-sao-nen-truyen-thong-Viet-nen-loai-bo-muc-tieu-trieu-view-Case-nho-tu-cuoc-tranh-cu-cua-Donald-Trump-hphG8AiEjRRx" target="_blank" rel="noopener norefer"
-                      >Vì sao nền truyền thông Việt nên loại bỏ mục tiêu "triệu view"? (Case nhỏ từ cuộc tranh cử của Donald Trump)</a
+                    ><a
+                      style="color: #161616"
+                      style="color: #161616"
+                      style="color: #161616"
+                      href="https://spiderum.com/bai-dang/Minh-17-tuoi-va-minh-dang-lam-gi-voi-Tri-tue-nhan-tao-8YEtyP60lAKB"
+                      target="_blank"
+                      rel="noopener norefer"
+                      >Mình 17 tuổi, và mình đang làm gì với Trí tuệ nhân tạo ?</a
                     ></b
                   ></span
                 >
@@ -650,13 +689,14 @@
             <mj-table padding-top="8px" align="center">
               <tr align="center">
                 <td padding="0" width="32px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/KhoiNguyen"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/vuthiquynhnga"
                     target="_blank"
                     rel="noopener norefer"
                   >
                     <img
-                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/87991fb010d111eab354af7512807285.jpg"
+                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/5efaebb0e2c811e9973215fd5725988c.jpg"
                       style="
                         width: 32px;
                         height: 32px;
@@ -667,8 +707,9 @@
                   /></a>
                 </td>
                 <td align="left">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/KhoiNguyen"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/vuthiquynhnga"
                     target="_blank"
                     rel="noopener norefer"
                   >
@@ -680,7 +721,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >Đỗ Khôi Nguyên </span
+                        >Su Kem Trà Xanh </span
                       ><br />
                       <span
                         style="
@@ -689,7 +730,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        > 13 tháng 9 </span
+                        > 1 tháng 10 </span
                       >
                     </p></a
                   >
@@ -758,12 +799,12 @@
             alt="Ảnh Spiderum"
             border="none"
             height="auto"
-            href="https://spiderum.com/bai-dang/Ket-Noi-Voi-Ai-UGV4PTIFDC4w"
+            href="https://spiderum.com/bai-dang/Mot-goc-nhin-ve-cac-nghe-si-am-nhac-Viet-Nam-thong-qua-du-lieu-tu-YouTube-BnFq1WLBMaBF"
             padding-left="35px"
             padding-right="35px"
             padding-top="0px"
             padding="0px 35px 10px 35px"
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/26e8e8301b7e11ec84d351d9cd83d3d7.png"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/960da6e024f411ec9bf99facd6b80df3.jpg"
             target="_blank"
             title=""
             width="1200px"
@@ -791,7 +832,8 @@
                   font-family: Noto Sans, Arial, sans-serif;
                   font-size: 14px;
                 "
-                ><a style="color:#161616"
+                ><a
+                  style="color: #161616"
                   href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
                   target="_blank"
                   rel="noopener norefer"
@@ -824,8 +866,13 @@
                   line-height: 25px;
                 "
                 ><b
-                  ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Ket-Noi-Voi-Ai-UGV4PTIFDC4w" target="_blank" rel="noopener norefer"
-                    >Kết Nối Với Ai</a
+                  ><a
+                    style="color: #161616"
+                    style="color: #161616"
+                    href="https://spiderum.com/bai-dang/Mot-goc-nhin-ve-cac-nghe-si-am-nhac-Viet-Nam-thong-qua-du-lieu-tu-YouTube-BnFq1WLBMaBF"
+                    target="_blank"
+                    rel="noopener norefer"
+                    >Một góc nhìn về các nghệ sĩ âm nhạc Việt Nam thông qua dữ liệu từ YouTube</a
                   ></b
                 ></span
               >
@@ -853,8 +900,14 @@
                   font-family: Noto Sans, Arial, sans-serif;
                   font-size: 16px;
                 "
-                ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Ket-Noi-Voi-Ai-UGV4PTIFDC4w" target="_blank" rel="noopener norefer">
-                  Không phải cứ có Internet là được kết nối với mọi người</a
+                ><a
+                  style="color: #161616"
+                  style="color: #161616"
+                  href="https://spiderum.com/bai-dang/Mot-goc-nhin-ve-cac-nghe-si-am-nhac-Viet-Nam-thong-qua-du-lieu-tu-YouTube-BnFq1WLBMaBF"
+                  target="_blank"
+                  rel="noopener norefer"
+                >
+                  Hôm nay, mình sẽ phân tích dữ liệu từ  36 kênh YouTube của các nghệ sĩ nằm trong top 100 kênh YouTube âm nhạc Việt Nam...</a
                 ></span
               >
             </p>
@@ -874,12 +927,13 @@
           <mj-table padding="0px" align="center">
             <tr align="center">
               <td padding="0" width="32px">
-                <a style="color:#161616"
-                  href="https://spiderum.com/nguoi-dung/Huskywannafly"
+                <a
+                  style="color: #161616"
+                  href="https://spiderum.com/nguoi-dung/khoilu95"
                   target="_blank"
                   rel="noopener nofollow"
                   ><img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/0343e540c6df11eb9be3793afa050621.jpg"
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/967fddc0e2bd11ea922b2f269751e2dc.jpg"
                     style="
                       width: 32px;
                       height: 32px;
@@ -891,8 +945,9 @@
               </td>
               <td align="left">
                 <p style="margin: 0 0 5px 12px; line-height: 16px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/Huskywannafly"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/khoilu95"
                     target="_blank"
                     rel="noopener nofollow"
                   >
@@ -903,7 +958,7 @@
                         font-weight: 700;
                         color: #161616;
                       "
-                      >Huskywannafly</span
+                      >Văn Khôi Ngô</span
                     ><br />
                     <span
                       style="
@@ -912,7 +967,7 @@
                         font-size: 12px;
                         color: #b5b5b5;
                       "
-                      > 22 tháng 9 </span
+                      > 4 tháng 10 </span
                     ></a
                   >
                 </p>
@@ -961,12 +1016,12 @@
               border-radius="3px"
               border="none"
               height="auto"
-              href="https://spiderum.com/bai-dang/TU-SALES-CHUYEN-SANG-KIEM-TOAN-BAN-CO-NGHI-LA-MOT-DIEU-XA-XOI-mdyO2Ahax4N3"
+              href="https://spiderum.com/bai-dang/Vay-vung-giua-dai-duong-den-R7ExeFGLxIjh"
               padding-left="0px"
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/2264d87017d511ecaf63e5f08046639d.png"
+              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/4aa8a4c02a7111ec88d1ad32fd429786.png"
               target="_blank"
               title=""
               width="700px"
@@ -985,7 +1040,7 @@
               <p
                 class="text-build-content"
                 data-testid="nsUmNTtyU"
-                style="margin: 3px 0 4px 0"
+                style="margin: 0px 0 4px 0"
               >
                 <span
                   style="
@@ -994,7 +1049,8 @@
                     font-family: Noto Sans, Arial, sans-serif;
                     font-size: 12px;
                   "
-                  ><a style="color:#161616"
+                  ><a
+                    style="color: #161616"
                     href="https://spiderum.com/danh-muc/truyen-cam-hung"
                     target="_blank"
                     rel="noopener norefer"
@@ -1027,8 +1083,13 @@
                     line-height: 22px;
                   "
                   ><b
-                    ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/TU-SALES-CHUYEN-SANG-KIEM-TOAN-BAN-CO-NGHI-LA-MOT-DIEU-XA-XOI-mdyO2Ahax4N3" target="_blank" rel="noopener norefer"
-                      >TỪ SALES CHUYỂN SANG KIỂM TOÁN - MỘT MƠ ƯỚC VIỂN VÔNG?</a
+                    ><a
+                      style="color: #161616"
+                      style="color: #161616"
+                      href="https://spiderum.com/bai-dang/Vay-vung-giua-dai-duong-den-R7ExeFGLxIjh"
+                      target="_blank"
+                      rel="noopener norefer"
+                      >Vùng vẫy giữa đại dương đen</a
                     ></b
                   ></span
                 >
@@ -1038,12 +1099,13 @@
             <mj-table padding-top="8px" align="center">
               <tr align="center">
                 <td padding="0" width="32px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/dinhvu"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/Xet336"
                     target="_blank"
                     rel="noopener norefer"
                     ><img
-                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/cbf27e100a2411ec97a689ec21020be2.jpeg"
+                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/827c8c90b93311e6a2a477e016875c91.jpg"
                       style="
                         width: 32px;
                         height: 32px;
@@ -1055,8 +1117,9 @@
                 </td>
                 <td align="left">
                   <p style="margin: 0 0 5px 12px; line-height: 16px">
-                    <a style="color:#161616"
-                      href="https://spiderum.com/nguoi-dung/dinhvu"
+                    <a
+                      style="color: #161616"
+                      href="https://spiderum.com/nguoi-dung/Xet336"
                       target="_blank"
                       rel="noopener norefer"
                     >
@@ -1067,7 +1130,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >Dinhvu</span
+                        >V132336</span
                       ><br />
                       <span
                         style="
@@ -1076,7 +1139,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        > 17 tháng 9 </span
+                        > 10 tháng 10 </span
                       ></a
                     >
                   </p>
@@ -1126,12 +1189,12 @@
               border-radius="3px"
               border="none"
               height="auto"
-              href="https://spiderum.com/bai-dang/Tai-sao-toi-viet-oy979dY3RxwH"
+              href="https://spiderum.com/bai-dang/Friends-The-Beatles-va-mot-tam-hon-hoai-co-JkDSuc919ydo"
               padding-left="0px"
               padding-right="0px"
               padding-top="0px"
               padding="0px 0px 10px 0px"
-              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/015683001ce811eca6bd0f4a9da58162.jpg"
+              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/d2cb1d102ad511ec88d1ad32fd429786.jpg"
               target="_blank"
               title=""
               width="700px"
@@ -1164,11 +1227,12 @@
                     font-family: Noto Sans, Arial, sans-serif;
                     font-size: 12px;
                   "
-                  ><a style="color:#161616"
-                    href="https://spiderum.com/danh-muc/truyen-cam-hung"
+                  ><a
+                    style="color: #161616"
+                    href="https://spiderum.com/danh-muc/chuyen-tro-tam-su"
                     target="_blank"
                     rel="noopener norefer"
-                    > Truyền cảm hứng </a
+                    > Chuyện trò - Tâm sự </a
                   ></span
                 >
               </p>
@@ -1187,7 +1251,7 @@
               <p
                 class="text-build-content"
                 data-testid="nxYBqWr5T"
-                style="margin: 3px 0 4px 0"
+                style="margin: 0px 0 4px 0"
               >
                 <span
                   style="
@@ -1197,8 +1261,13 @@
                     line-height: 22px;
                   "
                   ><b
-                    ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Tai-sao-toi-viet-oy979dY3RxwH" target="_blank" rel="noopener norefer"
-                      >Tại sao tôi VIẾT ? </a
+                    ><a
+                      style="color: #161616"
+                      style="color: #161616"
+                      href="https://spiderum.com/bai-dang/Friends-The-Beatles-va-mot-tam-hon-hoai-co-JkDSuc919ydo"
+                      target="_blank"
+                      rel="noopener norefer"
+                      >Friends, The Beatles và một tâm hồn hoài cổ</a
                     ></b
                   ></span
                 >
@@ -1207,13 +1276,14 @@
             <mj-table padding-top="8px" align="center">
               <tr align="center">
                 <td padding="0" width="32px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/vutlonq"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/baophuccxxx"
                     target="_blank"
                     rel="noopener norefer"
                   >
                     <img
-                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c6a957a0163411ecb22f5742ff731f98.jpeg"
+                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/50126690396711eb955e7f5a3697d424.jpg"
                       style="
                         width: 32px;
                         height: 32px;
@@ -1224,8 +1294,9 @@
                   /></a>
                 </td>
                 <td align="left">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/vutlonq"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/baophuccxxx"
                     target="_blank"
                     rel="noopener norefer"
                   >
@@ -1237,7 +1308,7 @@
                           font-weight: 700;
                           color: #161616;
                         "
-                        >ThankLonq </span
+                        >Bảo Phúc </span
                       ><br />
                       <span
                         style="
@@ -1246,7 +1317,7 @@
                           font-size: 12px;
                           color: #b5b5b5;
                         "
-                        > 15 tháng 9 </span
+                        > 7 giờ trước </span
                       >
                     </p></a
                   >
@@ -1295,7 +1366,7 @@
                   font-family: Raleway, Arial, sans-serif;
                   font-size: 20px;
                 "
-                ><b>Cây viết nổi bật</b></span
+                ><b>Sách mới ra mắt</b></span
               >
             </p>
           </mj-text>
@@ -1315,12 +1386,12 @@
             alt="Ảnh Spiderum"
             border="none"
             height="auto"
-            href="https://spiderum.com/bai-dang/HUSKYWANNAFLY-Ke-ma-ai-cung-biet-la-ai-day-oil"
+            href="https://spiderum.com/bai-dang/Nguoi-Trong-Muon-Nghe-Nganh-Sang-Tao-and-Nghe-Thuat-co-gi-Kham-pha-vung-dat-hoang-so-nhieu-thu-thach-nhung-day-ap-co-hoi-blhKOp56oSbi"
             padding-left="35px"
             padding-right="35px"
             padding-top="0px"
             padding="0px 35px 10px 35px"
-            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/ee9296209fe611eaabcda77ca50bc969.jpg"
+            src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/87ab24f0266711ec9d71ddf5ca005e92.png"
             target="_blank"
             title=""
             width="1200px"
@@ -1348,11 +1419,12 @@
                   font-family: Noto Sans, Arial, sans-serif;
                   font-size: 14px;
                 "
-                ><a style="color:#161616"
-                  href="https://spiderum.com/danh-muc/truyen-cam-hung"
+                ><a
+                  style="color: #161616"
+                  href="https://spiderum.com/danh-muc/sach"
                   target="_blank"
                   rel="noopener norefer"
-                  > Truyền cảm hứng </a
+                  > Sách </a
                 ></span
               >
             </p>
@@ -1381,8 +1453,13 @@
                   line-height: 25px;
                 "
                 ><b
-                  ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/HUSKYWANNAFLY-Ke-ma-ai-cung-biet-la-ai-day-oil" target="_blank" rel="noopener norefer"
-                    >HUSKYWANNAFLY - “Kẻ-mà-ai-cũng-biết-là-ai-đấy"</a
+                  ><a
+                    style="color: #161616"
+                    style="color: #161616"
+                    href="https://spiderum.com/bai-dang/Nguoi-Trong-Muon-Nghe-Nganh-Sang-Tao-and-Nghe-Thuat-co-gi-Kham-pha-vung-dat-hoang-so-nhieu-thu-thach-nhung-day-ap-co-hoi-blhKOp56oSbi"
+                    target="_blank"
+                    rel="noopener norefer"
+                    >“Người Trong Muôn Nghề: Ngành Sáng Tạo & Nghệ Thuật có gì?”: Khám phá vùng đất hoang sơ nhiều thử thách nhưng đầy ắp cơ hội</a
                   ></b
                 ></span
               >
@@ -1410,8 +1487,14 @@
                   font-family: Noto Sans, Arial, sans-serif;
                   font-size: 16px;
                 "
-                ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/HUSKYWANNAFLY-Ke-ma-ai-cung-biet-la-ai-day-oil" target="_blank" rel="noopener norefer">
-                  Bắt đầu chia sẻ những bài viết của mình lên nền tảng Spiderum từ đầu năm 2017, hiện nay, Huskywannafly vẫn đang là tác giả có số lượng...</a
+                ><a
+                  style="color: #161616"
+                  style="color: #161616"
+                  href="https://spiderum.com/bai-dang/Nguoi-Trong-Muon-Nghe-Nganh-Sang-Tao-and-Nghe-Thuat-co-gi-Kham-pha-vung-dat-hoang-so-nhieu-thu-thach-nhung-day-ap-co-hoi-blhKOp56oSbi"
+                  target="_blank"
+                  rel="noopener norefer"
+                >
+                  CHÍNH THỨC MỞ BÁN SÁCH “NGƯỜI TRONG MUÔN NGHỀ: NGÀNH SÁNG TẠO VÀ NGHỆ THUẬT CÓ GÌ?</a
                 ></span
               >
             </p>
@@ -1431,12 +1514,13 @@
           <mj-table padding="0px" align="center">
             <tr align="center">
               <td padding="0" width="32px">
-                <a style="color:#161616"
-                  href="https://spiderum.com/nguoi-dung/humansofspiderum"
+                <a
+                  style="color: #161616"
+                  href="https://spiderum.com/nguoi-dung/spiderum"
                   target="_blank"
                   rel="noopener nofollow"
                   ><img
-                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/b15f1960969311ea940a211d49c786f1.jpg"
+                    src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/c3edf44040da11e88c56e97b1d97fbce.png"
                     style="
                       width: 32px;
                       height: 32px;
@@ -1448,8 +1532,9 @@
               </td>
               <td align="left">
                 <p style="margin: 0 0 5px 12px; line-height: 16px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/humansofspiderum"
+                  <a
+                    style="color: #161616"
+                    href="https://spiderum.com/nguoi-dung/spiderum"
                     target="_blank"
                     rel="noopener nofollow"
                   >
@@ -1460,7 +1545,7 @@
                         font-weight: 700;
                         color: #161616;
                       "
-                      >Humans of Spiderum</span
+                      >Spiderum Team</span
                     ><br />
                     <span
                       style="
@@ -1469,13 +1554,27 @@
                         font-size: 12px;
                         color: #b5b5b5;
                       "
-                      > 19 tháng 5 2020 </span
+                      > 6 tháng 10 </span
                     ></a
                   >
                 </p>
               </td>
             </tr>
           </mj-table>
+          <mj-button width="200px"
+                     height="30px"
+                     css-class="box-shadow"
+                     font-size="20px"
+                     font-weight="bold"
+                     target="_blank"
+                     border-radius="30px"
+                     color="#ffffff"
+                     background-color="#d81868"
+                     padding-top="30px"
+                     href="https://book.spiderum.vn/ntmn-sang-tao"
+                     rel="noreferrer nofollow">
+            TÌM HIỂU NGAY
+          </mj-button>
         </mj-column>
       </mj-section>
       <mj-section
@@ -1499,320 +1598,11 @@
             padding="20px 35px 16px 35px"
             width="100%"
           ></mj-divider>
+          
         </mj-column>
+        
       </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="15px"
-        padding-left="35px"
-        padding-right="35px"
-        padding-top="10px"
-        padding="10px 35px 15px 35px"
-        text-align="center"
-      >
-        <mj-group>
-          <mj-column width="33%">
-            <mj-image
-              align="center"
-              alt=""
-              border-radius="3px"
-              border="none"
-              height="auto"
-              href="https://spiderum.com/bai-dang/Tai-sao-Thuy-Si-KHONG-THE-BI-XAM-LUOC-pdqHtQBL0QxC"
-              padding-left="0px"
-              padding-right="0px"
-              padding-top="0px"
-              padding="0px 0px 10px 0px"
-              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/319b96d017c111ecaf63e5f08046639d.jpg"
-              target="_blank"
-              title=""
-              width="700px"
-            ></mj-image>
-          </mj-column>
-          <mj-column width="67%">
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="14px"
-              padding-bottom="0px"
-              padding-top="0px"
-              padding="10px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="nsUmNTtyU"
-                style="margin: 3px 0 4px 0"
-              >
-                <span
-                  style="
-                    text-transform: uppercase;
-                    color: #55575d;
-                    font-family: Noto Sans, Arial, sans-serif;
-                    font-size: 12px;
-                  "
-                  ><a style="color:#161616"
-                    href="https://spiderum.com/danh-muc/quan-diem-tranh-luan"
-                    target="_blank"
-                    rel="noopener norefer"
-                    > Quan điểm - Tranh luận </a
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="16px"
-              padding-bottom="0px"
-              padding-left="25px"
-              padding-right="25px"
-              padding-top="0px"
-              padding="0px 25px 0px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="rONVzgIrML"
-                style="margin: 10px 0; margin-top: 10px; margin-bottom: 10px"
-              >
-                <span
-                  style="
-                    color: #161616;
-                    font-family: Raleway, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 22px;
-                  "
-                  ><b
-                    ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/Tai-sao-Thuy-Si-KHONG-THE-BI-XAM-LUOC-pdqHtQBL0QxC" target="_blank" rel="noopener norefer"
-                      >Tại sao Thụy Sĩ KHÔNG THỂ BỊ XÂM LƯỢC</a
-                    ></b
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <!-- author card -->
-            <mj-table padding-top="8px" align="center">
-              <tr align="center">
-                <td padding="0" width="32px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/viethung292905"
-                    target="_blank"
-                    rel="noopener norefer"
-                    ><img
-                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/dbb6eca0fd0e11eb815ddd4307f37617.jpeg"
-                      style="
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 0;
-                      "
-                  /></a>
-                </td>
-                <td align="left">
-                  <p style="margin: 0 0 5px 12px; line-height: 16px">
-                    <a style="color:#161616"
-                      href="https://spiderum.com/nguoi-dung/viethung292905"
-                      target="_blank"
-                      rel="noopener norefer"
-                    >
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-size: 14px;
-                          font-weight: 700;
-                          color: #161616;
-                        "
-                        >Navyblue Nerd</span
-                      ><br />
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-weight: 400;
-                          font-size: 12px;
-                          color: #b5b5b5;
-                        "
-                        > 11 tháng 9 </span
-                      ></a
-                    >
-                  </p>
-                </td>
-              </tr>
-            </mj-table>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="0px"
-        padding-left="0px"
-        padding-right="0px"
-        padding-top="0px"
-        padding="0px 0px 0px 0px"
-        text-align="center"
-      >
-        <mj-column>
-          <mj-divider
-            border-color="#e3e3e3"
-            border-style="solid"
-            border-width="1px"
-            padding-bottom="16px"
-            padding-left="35px"
-            padding-right="35px"
-            padding-top="10px"
-            padding="10px 35px 16px 35px"
-            width="100%"
-          ></mj-divider>
-        </mj-column>
-      </mj-section>
-      <mj-section
-        background-repeat="repeat"
-        padding-bottom="30px"
-        padding-left="35px"
-        padding-right="35px"
-        padding-top="16px"
-        padding="16px 35px 30px 35px"
-        text-align="center"
-      >
-        <mj-group>
-          <mj-column width="33%">
-            <mj-image
-              align="center"
-              alt=""
-              border-radius="3px"
-              border="none"
-              height="auto"
-              href="https://spiderum.com/bai-dang/10-website-hay-ho-khong-phai-dev-nao-cung-biet-0ofddqRGay1T"
-              padding-left="0px"
-              padding-right="0px"
-              padding-top="0px"
-              padding="0px 0px 10px 0px"
-              src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-thumbnails/22f279701c6a11ecbc7d034cc144467c.png"
-              target="_blank"
-              title=""
-              width="700px"
-            ></mj-image>
-          </mj-column>
-          <mj-column width="67%">
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="14px"
-              padding-bottom="0px"
-              padding-top="0px"
-              padding="10px 25px"
-            >
-              <p
-                class="text-build-content"
-                style="
-                  line-height: 10px;
-                  margin: 10px 0;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                "
-                data-testid="nsUmNTtyU"
-              >
-                <span
-                  style="
-                    text-transform: uppercase;
-                    color: #55575d;
-                    font-family: Noto Sans, Arial, sans-serif;
-                    font-size: 12px;
-                  "
-                  ><a style="color:#161616"
-                    href="https://spiderum.com/danh-muc/ky-nang"
-                    target="_blank"
-                    rel="noopener norefer"
-                    > Kỹ năng </a
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-text
-              align="left"
-              color="#000000"
-              font-family="Arial, sans-serif"
-              font-size="16px"
-              padding-bottom="0px"
-              padding-left="25px"
-              padding-right="25px"
-              padding-top="0px"
-              padding="0px 25px 0px 25px"
-            >
-              <p
-                class="text-build-content"
-                data-testid="nxYBqWr5T"
-                style="margin: 3px 0 4px 0"
-              >
-                <span
-                  style="
-                    color: #161616;
-                    font-family: Raleway, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 22px;
-                  "
-                  ><b
-                    ><a style="color:#161616" style="color:#161616" href="https://spiderum.com/bai-dang/10-website-hay-ho-khong-phai-dev-nao-cung-biet-0ofddqRGay1T" target="_blank" rel="noopener norefer"
-                      >10 website hay ho không phải dev nào cũng biết</a
-                    ></b
-                  ></span
-                >
-              </p>
-            </mj-text>
-            <mj-table padding-top="8px" align="center">
-              <tr align="center">
-                <td padding="0" width="32px">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/vuthanhnam94"
-                    target="_blank"
-                    rel="noopener norefer"
-                  >
-                    <img
-                      src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-xs-avatar/e0134d8000c911ebb2e9f38cb09f8367.png"
-                      style="
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 0;
-                      "
-                  /></a>
-                </td>
-                <td align="left">
-                  <a style="color:#161616"
-                    href="https://spiderum.com/nguoi-dung/vuthanhnam94"
-                    target="_blank"
-                    rel="noopener norefer"
-                  >
-                    <p style="margin: 0 0 5px 12px; line-height: 16px">
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-size: 14px;
-                          font-weight: 700;
-                          color: #161616;
-                        "
-                        >Ntech  </span
-                      ><br />
-                      <span
-                        style="
-                          font-family: 'Noto Sans', Arial, sans-serif;
-                          font-weight: 400;
-                          font-size: 12px;
-                          color: #b5b5b5;
-                        "
-                        > Hôm qua </span
-                      >
-                    </p></a
-                  >
-                </td>
-              </tr>
-            </mj-table>
-          </mj-column>
-        </mj-group>
-      </mj-section>
+      
     </mj-wrapper>
     <!-- footer -->
     <mj-section background-color="#3398D4" padding="0">
@@ -1870,7 +1660,7 @@
         >
           <p style="margin: 0">
             Theo dõi những chủ đề bạn quan tâm hoặc bỏ theo dõi chúng
-            <a 
+            <a
               class="link-blue"
               href="[[UNSUB_LINK_EN]]"
               style="font-weight: 700; color: #3398d4"
