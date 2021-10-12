@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+.confuse {
+  background-color: #f9f9f9 !important;
+}
+.confuse * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.icon-container table {
+  text-align: center !important;
+}
+a {
+  text-decoration: none !important;
+}
+a:hover p,
+img:hover,
+a:hover {
+  opacity: 0.7 !important;
+}
+.logo-spiderum {
+  margin: 27px 0 22px 0 !important;
+}
+@media (min-width: 385px) {
+  .logo-spiderum {
+    margin-bottom: 8px !important;
+  }
+}
+.heading-top {
+  font-family: "Noto Serif", serif !important;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 0px 30px 24px 30px !important;
+}
+@media (min-width: 385px) {
+  .heading-top {
+    font-family: "Noto Serif", serif !important;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 10% 30px 10% !important;
+  }
+}
+.user-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  height: 36px !important;
+  margin: 0 0 62px 0 !important;
+}
+.user-container img {
+  width: 32px !important;
+  height: 32px;
+  border-radius: 50% !important;
+}
+@media (min-width: 385px) {
+  .user-container {
+    margin: 0 0 32px 0 !important;
+  }
+}
+.sub-author-container {
+  text-align: left !important;
+  line-height: 16px !important;
+  height: 36px !important;
+  margin: 3px 0 0 12px !important;
+}
+.sub-author-container p {
+  width: auto !important;
+  font-size: 14px !important;
+  color: #161616 !important;
+  font-family: "Noto Sans", sans-serif !important;
+}
+.sub-author-container .author-id {
+  font-size: 12px !important;
+  color: #616161 !important;
+  font-family: "Noto Sans", sans-serif !important;
+  line-height: 14px !important;
+}
+.main-hr {
+  padding: 12px 20px 25px 20px !important;
+}
+@media (min-width: 385px) {
+  .main-hr {
+    padding: 12px 27px 25px 27px !important;
+  }
+}
+.content {
+  padding: 0 20.5px 0 20.5px !important;
+}
+@media (min-width: 385px) {
+  .content {
+    padding: 0 6.3% 0 6.3% !important;
+  }
+}
+.title-top {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3398d4;
+}
+.category {
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3398d4;
+  padding: 12px 0 12px 0 !important;
+}
+.category .info {
+  color: #b5b5b5;
+  font-weight: 700;
+}
+.main-content {
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0 0 48px 0 !important;
+}
+@media (min-width: 385px) {
+  .main-content {
+    padding: 0 0 56px 0 !important;
+  }
+}
+.article {
+  padding: 0 20px 0 20px !important;
+}
+@media (min-width: 385px) {
+  .article {
+    padding: 0 5.1% 0 5.1% !important;
+  }
+}
+.author-container {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: left !important;
+  -ms-flex-pack: left !important;
+  justify-content: left !important;
+  padding: 0 20px 0 20px !important;
+  margin: 0 !important;
+}
+@media (min-width: 385px) {
+  .author-container {
+    margin: 0px !important;
+    padding: 0 5.1% 0 5.1% !important;
+  }
+}
+.author-container .author-id {
+  color: #b5b5b5 !important;
+}
+.author-container .sub-author-container {
+  margin: 3px 0 0 12px !important;
+}
+.article-img {
+  padding: 11px 0 11px 0 !important;
+}
+@media (min-width: 385px) {
+  .article-img {
+    padding: 10px 0 17px 0 !important;
+  }
+}
+.text-article .category a {
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #616161 !important;
+  padding: 0px !important;
+}
+.title-article {
+  border: 1px solid black;
+  font-family: "Raleway", Arial, sans-serif !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #161616 !important;
+  margin: 10px 0 16px 0 !important;
+}
+@media (min-width: 385px) {
+  .title-article {
+    margin-top: 12px !important;
+  }
+}
+.description-article {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #616161 !important;
+}
+@media (min-width: 385px) {
+  .description-article {
+    color: #161616 !important;
+  }
+}
+.link-article {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3398d4 !important;
+  padding-top: 16px !important;
+}
+.sub-hr {
+  width: 89.54% !important;
+  padding: 11px 0 10px 0 !important;
+}
+@media (min-width: 385px) {
+  .sub-hr {
+    width: 92.7% !important;
+    padding: 17px 0 26px 0 !important;
+  }
+}
+.link-article-bot {
+  margin-bottom: 19px !important;
+}
+@media (min-width: 385px) {
+  .link-article-bot {
+    margin-bottom: 23px !important;
+  }
+}
+.column-80 {
+  width: 80% !important;
+}
+.column-80 p {
+  margin: 16px 0 0 0 !important;
+}
+.column-90 {
+  width: 90% !important;
+}
+.column-90 p {
+  margin: 5px !important;
+}
+.icon-container {
+  text-align: center !important;
+  margin: 10px 0 16px 0 !important;
+}
+.icon-container tr {
+  text-align: center !important;
+  display: inline !important;
+  margin: 2px !important;
+}
+.company {
+  padding: 17px 0 0 0 !important;
+}
+.logo-company {
+  padding: 8px 0 25px 0 !important;
+} /*#
+      sourceMappingURL=final2.css.map */
